@@ -19,10 +19,7 @@ trilium is an excellent note taking app with powerful features, however, the exc
 
 In order to provide a better-looking interface, the Allure theme has made some interface element changes, take a look by screenshots below
 
-<img src="./resources/screenshot-desktop.png">
-
-<img style="width: 40%; border: 1px solid #d6d6d6; margin: 0 12px;" src="./resources/screenshot-mobile-list.jpg">
-<img style="width: 40%; border: 1px solid #d6d6d6; margin: 0 12px;" src="./resources/screenshot-mobile-detail.jpg">
+![screenshot](./resources/screenshot.jpg)
 
 ## Steps
 
@@ -40,6 +37,4 @@ Install the theme by following these steps:
 
 If Allure theme has helped you, considering buying me a cup of coffee
 
-| ![Alipay](./resources/donation-alipay.jpg) | ![Wechat pay](./resources/donation-wechat.png) | ![Paypal](./resources/donation-paypal.jpg) |
-|:-:|:-:|:-:|
-| **Alipay** | **Wechat pay** | **Paypal** |
+![donation](./resources/donation.jpg)
