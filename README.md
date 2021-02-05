@@ -19,7 +19,7 @@ trilium is an excellent note taking app with powerful features, however, the exc
 
 In order to provide a better-looking interface, the Allure theme has made some interface element changes, take a look by screenshots below
 
-![screenshot](./resources/screenshot.jpg)
+![screenshot](./resources/screenshot.png)
 
 ## Steps
 
@@ -37,4 +37,4 @@ Install the theme by following these steps:
 
 If Allure theme has helped you, considering buying me a cup of coffee
 
-![donation](./resources/donation.jpg)
+![donation](./resources/donation.png)

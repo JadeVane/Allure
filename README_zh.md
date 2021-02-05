@@ -19,7 +19,7 @@ trilium 作为一款笔记应用，功能已经足够强大，但是与强大功
 
 为了简化界面，Allure 主题对 trilium 上世纪的画风进行了不少改动，可以参考截图：
 
-![screenshot](./resources/screenshot.jpg)
+![screenshot](./resources/screenshot.png)
 
 ## 安装步骤
 
@@ -37,4 +37,4 @@ trilium 作为一款笔记应用，功能已经足够强大，但是与强大功
 
 如果你觉得本主题帮助到了你，可以考虑请我喝一杯咖啡
 
-![donation](./resources/donation_zh.jpg)
+![donation](./resources/donation_zh.png)
