@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------- */
-/* FONT DECLARATIONS
+/* FONT DECLARATIONS                                                             */
 /* ----------------------------------------------------------------------------- */
 
 /* Icons */
@@ -89,7 +89,7 @@
 
 html {
 /* ----------------------------------------------------------------------------- */
-/* COLOR VARIABLES
+/* COLOR VARIABLES                                                               */
 /* ----------------------------------------------------------------------------- */
 
     --color-gray-lighter    : #F6F7F8;
@@ -100,7 +100,6 @@ html {
     --color-dark            : #333;
     --color-blue            : #277bf9;
     --color-white           : #FFF;
-    --color-shadow          : rgba(181, 181, 181, 0.6);
 
     --color-line-grey       : var(--color-gray-darker);
     --color-line-grey-light : var(--color-gray-lighter);
@@ -125,7 +124,7 @@ html {
 
 
 /* ----------------------------------------------------------------------------- */
-/* BORDER VARIABLES
+/* BORDER VARIABLES                                                              */
 /* ----------------------------------------------------------------------------- */
 
     --border-radius         : 3px;
@@ -134,14 +133,14 @@ html {
     --border-accent-alt     : 2px solid var(--color-gray-lighter);
     --border-accent-muted   : 2px solid var(--color-gray-dark);
 
-    --shadow-standard       : 3px 4px 3px -3px var(--color-shadow);
-    --shadow-card           : 0px 0px 18px -8px var(--color-shadow);
+    --shadow-standard       : 3px 4px 3px -3px var(--color-gray-light);
+    --shadow-card           : 0px 0px 18px -8px var(--color-gray-light);
     --shadow-accented       : 2px 2px 5px -2px var(--color-gray-dark);
-    --shadow-mobile         : 0px 0px 6px 0px var(--color-shadow);
+    --shadow-mobile         : 0px 0px 12px 0px var(--color-gray-light);
 
 
 /* ----------------------------------------------------------------------------- */
-/* FONT VARIABLES
+/* FONT VARIABLES                                                                */
 /* ----------------------------------------------------------------------------- */
     --main-font-family-sans   : 'Open Sans', 'Source Sans Pro', 'Liberation Sans', Arial, Sans-serif;
     --main-font-family-serif  : 'Roboto Slab', Serif;
@@ -165,7 +164,7 @@ html {
 
 
 /* ----------------------------------------------------------------------------- */
-/* HYPERLINKS
+/* HYPERLINKS                                                                    */
 /* ----------------------------------------------------------------------------- */
 
 body.theme-allure a,
@@ -180,7 +179,7 @@ body.theme-allure .modal-dialog a {
 
 
 /* ----------------------------------------------------------------------------- */
-/* LAYOUT
+/* LAYOUT                                                                        */
 /* ----------------------------------------------------------------------------- */
 
 /* Hr line of the note details */
@@ -229,7 +228,7 @@ body.theme-allure img {
 
 
 /* ----------------------------------------------------------------------------- */
-/* CONTEXT MENU & FLOATING ELEMENTS
+/* CONTEXT MENU & FLOATING ELEMENTS                                              */
 /* ----------------------------------------------------------------------------- */
 
 body.theme-allure #context-menu-container {
@@ -249,12 +248,6 @@ body.theme-allure #context-menu-container li.dropdown-item {
     font-size: 1rem;
     font-family: var(--font-headers);
     font-weight: normal;
-}
-
-/* item hover effect */
-body.theme-allure #context-menu-container .dropdown-menu a:hover:not(.disabled),
-body.theme-allure #context-menu-container .dropdown-item:hover:not(.disabled) {
-    background-color: var(--color-background-grey) !important;
 }
 
 /* menu item divider */
@@ -413,10 +406,6 @@ body.theme-allure div#note-revision-title-buttons button:nth-of-type(3).btn.btn-
 
 
 
-/* ######################### add by wenjinyu start  ########################## */
-
-
-
 body.theme-allure form#clone-to-form  {
     padding: 20px;
 }
@@ -425,7 +414,6 @@ body.theme-allure form#clone-to-form .modal-footer {
     padding: .75rem 0;
 }
 
-/* ####### left panel ####### */
 body.theme-allure div#left-pane .fancytree-active {
     background: var(--color-blue);
     color: var(--color-text-white);
@@ -536,18 +524,10 @@ body.mobile a.icon-action.bx.bx-crosshair {
 }
 
 
-
-
-
 body.theme-allure span.fancytree-node.fancytree-active.fancytree-has-children.fancytree-lazy.type-code.mime-text-css.fancytree-exp-cd.fancytree-ico-c span.fancytree-custom-icon {
     color: var(--color-button-white);
 }
 
-/* ####### left panel end ####### */
-
-
-
-/* ######## right panel start #################*/
 
 body.theme-allure .hide-right-pane-button,
 body.theme-allure .show-right-pane-button {
@@ -559,18 +539,6 @@ body.theme-allure button.icon-button {
     font-size: 1em;
     padding: 3px;
 }
-
-
-/* ####### right panel end ##################*/
-
-/******************** top menu bar start **************/
-
-/*body.theme-allure button.btn.btn-sm.dropdown-toggle:focus {
-    background: var(--color-button-gray-dark);
-}*/
-
-/******************** top menu bar end ***************/
-
 
 body.theme-allure .modal-header .close {
     color: var(--color-button-gray);
@@ -780,12 +748,10 @@ body.mobile ::-webkit-scrollbar-thumb {
     background-color: var(--color-button-gray-dark);
 }
 
-/* ######################### add by wenjinyu end ########################## */
-
 
 
 /* ----------------------------------------------------------------------------- */
-/* TOP PANE
+/* TOP PANE                                                                      */
 /* ----------------------------------------------------------------------------- */
 
 /* selects first "component"-classed child of #root-widget */
@@ -868,9 +834,6 @@ body.theme-allure .note-tab-row {
 
 /* TAB ROW - WRAPPER */
 body.theme-allure .note-tab .note-tab-wrapper {
-    /*background-image: none;
-    background-color: var(--color-gray-lighter);
-    box-shadow: inset 0 -15px 7px -12px var(--color-shadow);*/
     font-size: 90%;
 }
 
@@ -999,7 +962,7 @@ body.theme-allure button.enter-protected-session-button span.bx-log-in:before {
 
 
 /* ----------------------------------------------------------------------------- */
-/* LEFT PANE
+/* LEFT PANE                                                                     */
 /* ----------------------------------------------------------------------------- */
 
 /* GLOBAL BUTTONS */
@@ -1189,7 +1152,7 @@ body.theme-allure span.fancytree-active .fancytree-title {
 
 
 /* ----------------------------------------------------------------------------- */
-/* CENTER PANE
+/* CENTER PANE                                                                   */
 /* ----------------------------------------------------------------------------- */
 
 body.theme-allure div#center-pane {
@@ -1772,7 +1735,7 @@ body.theme-allure .ck-content .todo-list .todo-list__label > input[checked]::bef
 
 
 /* ----------------------------------------------------------------------------- */
-/* RIGHT PANE
+/* RIGHT PANE                                                                    */
 /* ----------------------------------------------------------------------------- */
 body.theme-allure div#right-pane {
 /*     font-size: 1rem; */
@@ -1885,7 +1848,7 @@ body.theme-allure a.widget-toggle-button.no-arrow.bx.bx-window:before {
 
 
 /* ----------------------------------------------------------------------------- */
-/* MOBILE
+/* MOBILE                                                                        */
 /* ----------------------------------------------------------------------------- */
 
 
@@ -1896,11 +1859,11 @@ body.mobile :not(.fancytree-custom-icon):after,
 body.mobile :not(.fancytree-custom-icon):before {
     font-size: 1.3rem;
     font-family: 'trilium-allure-icons';
-    color: var(--color-button-gray);
+    /*color: var(--color-button-gray);*/
 }
 body.mobile div#global-buttons {
     box-shadow: var(--shadow-mobile);
-    padding: 10px 0 !important;
+    padding: 9px 0 !important;
     margin: 0 !important;
 }
 body.mobile div#global-buttons a.dropdown-item {
@@ -1941,9 +1904,12 @@ body.mobile div.note-detail-read-only-code-content,
 body.mobile div.note-detail-editable-text-editor {
     padding: 15px 10px;
 }
+body.mobile div.note-detail-editable-text-editor {
+    margin-left: 24px;
+}
 
 body.mobile div.component div.tree {
-	margin: 0 5px;
+	margin: 5px;
 }
 body.mobile div.note-detail-readonly-text {
     padding: 0 14px;
