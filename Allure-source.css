@@ -136,7 +136,7 @@ html {
     --shadow-standard       : 3px 4px 3px -3px var(--color-gray-light);
     --shadow-card           : 0px 0px 18px -8px var(--color-gray-light);
     --shadow-accented       : 2px 2px 5px -2px var(--color-gray-dark);
-    --shadow-mobile         : 0px 0px 12px 0px var(--color-gray-light);
+    --shadow-mobile         : 0px 12px 12px -12px var(--color-gray-light);
 
 
 /* ----------------------------------------------------------------------------- */
@@ -1949,12 +1949,10 @@ body.mobile span.bx-trash {
 
 /* Note list */
 body.mobile div.component {
-    box-shadow: var(--shadow-mobile);
     padding: 0;
 }
-body.mobile div.component {
+body.mobile .component > .component:nth-of-type(2) > .component {
     box-shadow: var(--shadow-mobile);
-    padding: 0;
 }
 body.mobile div.component div.tree-wrapper {
     box-shadow: none;
