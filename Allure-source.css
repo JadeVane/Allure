@@ -1652,17 +1652,17 @@ body.mobile h2 {
     font-size: 1.5em;
     margin-bottom: 0;
     margin-top: 1.6rem;
-    display: inline-grid;
     padding: 3px 0px;
     font-weight: bold;
 }
 body.theme-allure div.ck-content h2:after,
 body.mobile div.ck-content h2:after {
-    font-family: 'trilium-allure-icons';
-    font-size: 1em;
-    color: var(--color-blue);
-    margin-right: 8px;
-    content: '\e633';
+    content: '';
+    display: block;
+    width: 30px;
+    margin-top: 10px;
+    border-bottom: 4px solid var(--color-blue);
+    border-radius: 5px;
 }
 
 /* h2 following directly after h1 */
@@ -1694,7 +1694,7 @@ body.mobile div.ck-content h3:before {
     content: '\e617';
 }
 
-/* h4 */
+/* h4, h5, h6 */
 body.theme-allure h4:not(.include-note-title),
 body.theme-allure h5,
 body.theme-allure h6,
