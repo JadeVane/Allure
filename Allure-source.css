@@ -237,6 +237,7 @@ body.theme-allure #context-menu-container {
     border: var(--border-standard);
     /*border-top: var(--border-accent);*/
     /*border-bottom: var(--border-accent);*/
+    padding: 8px 0;
 }
 
 body.theme-allure .help-button {
