@@ -513,6 +513,7 @@ body.theme-allure div.search-results.component {
     padding: 5px 5px 5px 15px;
     border-bottom: var(--border-standard);
     box-shadow: var(--shadow-standard);
+    flex-basis: 80%;
 }
 
 /* Four button above search box on left pane */
