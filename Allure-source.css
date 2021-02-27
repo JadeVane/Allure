@@ -625,6 +625,15 @@ body.mobile p {
     margin: 1.4em 0;
 }
 
+body.theme-allure blockquote,
+body.mobile blockquote {
+    margin: 1.4rem 0;
+}
+body.theme-allure blockquote p,
+body.mobilx blockquote p {
+    margin: 0;
+}
+
 body.theme-allure .tab-content {
     background: var(--color-background-white);
     padding: 0 24px 24px;
