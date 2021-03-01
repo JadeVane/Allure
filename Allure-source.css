@@ -1272,7 +1272,7 @@ body.theme-allure div#center-pane div.similar-notes-widget a {
 body.theme-allure div#center-pane div.component.title-row div.dropdown {
     margin: 0 4px;
 }
-body.theme-allure div#center-pane div.component.title-row button {
+body.theme-allure div#center-pane div.component.title-row button:not(.execute-script-button) {
     font-size: 0;
     padding: 2px 6px;
 }
