@@ -1651,9 +1651,9 @@ body.theme-allure h1 {
 }
 
 /* first h2 in a note should not have such a large top margin */
-body.theme-allure h2:first-of-type {
+/*body.theme-allure h2:first-of-type {
     margin-top: 0.8rem;
-}
+}*/
 
 /* h2 */
 body.theme-allure h2,
@@ -1661,8 +1661,8 @@ body.mobile h2 {
     color: var(--color-text-grey);
     font-family: var(--font-headers);
     font-size: 1.5em;
-    margin-bottom: 1rem;
-    margin-top: 3rem;
+    margin-bottom: 1.8rem;
+    margin-top: 5rem;
     padding: 3px 0px;
     font-weight: bold;
 }
