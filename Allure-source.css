@@ -914,7 +914,7 @@ body.theme-allure #root-widget > div.component:first-of-type div.note-tab[active
 /* SECONDARY MENU BAR */
 
 body.theme-allure #root-widget > div.component:first-of-type {
-    width: calc(100% - 135px);
+    width: calc(100% - 178px);
     float: left;
     border-bottom: var(--border-standard);
 }
@@ -1333,10 +1333,13 @@ body.theme-allure .note-book-children .note-book-open-children-button {
 }
 
 /* book view */
-body.theme-allure .note-detail .note-detail-book > .note-detail-book-content > div.note-book-card .note-book-content {
-    /* display: none; */ /* <-- uncomment this to hide note-contents in book view */
-/*     font-family: var(--font-body); */
+body.theme-allure .note-detail-book > .note-detail-book-content > div.note-book-card .note-book-content {
     flex-grow: 0;
+    margin: 12px;
+    background: var(--color-background-white);
+}
+body.theme-allure .note-detail-book > .note-detail-book-content > div.note-book-card .note-book-content * {
+    margin: .5rem 0;
 }
 
 /* structure nested notes in book view */
@@ -1458,15 +1461,6 @@ body.mobile section.include-note div.include-note-content.type-text br {
     display: none;
 }
 
-
-body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .note-book-card h1,
-body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .note-book-card h2,
-body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .note-book-card h3,
-body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .note-book-card h4,
-body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .note-book-card h5 {
-    font-size: 1rem;
-}
-
 /*body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .note-book-card .note-book-card h5 {
      padding: 5px 5px 10px;
      font-size: 95%;
@@ -1481,13 +1475,15 @@ body.theme-allure div.note-book-auto-message a {
 }
 
 body.theme-allure .note-book-card {
-    background-color: var(--color-text-white);
+    background-color: var(--color-background-white);
     border: var(--border-standard);
     border-radius: unset;
     /*box-shadow: var(--shadow-standard);*/
     flex-grow: 1;
     margin: 12px;
     box-shadow: var(--shadow-card);
+    padding: 0;
+    border-radius: var(--border-radius);
 }
 
 body.theme-allure .note-detail-book-content {
@@ -1496,12 +1492,20 @@ body.theme-allure .note-detail-book-content {
 
 body.theme-allure .note-book-children {
     padding: 4px 15px 5px;
+    background: var(--color-background-white);
 }
 
 /* note title in book view */
-body.theme-allure .note-book-card h5 {
+body.theme-allure .note-detail h5.note-book-title {
+    font-size: 1rem;
     font-family: var(--font-headers);
     font-weight: bold;
+    padding: 8px 10px;
+    margin: 0;
+    border-bottom: var(--border-standard);
+    background: var(--color-background-grey);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
 }
 body.theme-allure .note-book-card h5 a {
     display: inline-table;
@@ -1704,7 +1708,7 @@ body.mobile div.ck-content h3:before {
 
 /* h4, h5, h6 */
 body.theme-allure h4:not(.include-note-title),
-body.theme-allure h5:not(.modal-title),
+body.theme-allure h5:not(.modal-title):not(.note-book-title),
 body.theme-allure h6,
 body.mobile h4:not(.include-note-title),
 body.mobile h5,
