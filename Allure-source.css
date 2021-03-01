@@ -5,12 +5,12 @@
 /* Icons */
 @font-face {
   font-family: 'trilium-allure-icons';  /* project id 2347067 */
-  src: url('//at.alicdn.com/t/font_2347067_x9v9lfzqeo7.eot');
-  src: url('//at.alicdn.com/t/font_2347067_x9v9lfzqeo7.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2347067_x9v9lfzqeo7.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_2347067_x9v9lfzqeo7.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2347067_x9v9lfzqeo7.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2347067_x9v9lfzqeo7.svg#trilium-allure-icons') format('svg');
+  src: url('//at.alicdn.com/t/font_2347067_r98lox8l0l.eot');
+  src: url('//at.alicdn.com/t/font_2347067_r98lox8l0l.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2347067_r98lox8l0l.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2347067_r98lox8l0l.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2347067_r98lox8l0l.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2347067_r98lox8l0l.svg#trilium-allure-icons') format('svg');
 }
 
 /* Open Sans */
@@ -920,8 +920,8 @@ body.theme-allure #root-widget > div.component:first-of-type {
 }
 body.theme-allure div.standard-top-widget {
     position: absolute;
-    margin-left: calc(100% - 135px);
-    width: 135px;
+    margin-left: calc(100% - 178px);
+    width: 178px;
     background: var(--color-background-grey);
     padding-left: 20px;
     padding-bottom: 5px;
@@ -930,7 +930,7 @@ body.theme-allure div.standard-top-widget {
 }
 
 body.theme-allure div#plugin-buttons {
-    margin-right: 1rem;
+    font-size: 0;
 }
 
 body.theme-allure ul.fancytree-container {
@@ -944,31 +944,28 @@ body.theme-allure div.dropdown.global-menu button.dropdown-toggle span {
     display: flex;
 }
 body.theme-allure div.dropdown.global-menu button.dropdown-toggle,
-body.theme-allure button.enter-protected-session-button,
-body.theme-allure button.recent-changes-button,
-body.theme-allure button.jump-to-note-dialog-button {
+body.theme-allure div.standard-top-widget button {
     font-size: 0;
 }
-body.theme-allure button.enter-protected-session-button span,
-body.theme-allure button.recent-changes-button span,
-body.theme-allure button.jump-to-note-dialog-button span {
+body.theme-allure div.standard-top-widget button span:first-of-type {
     font-size: initial;
     top: inherit;
 }
-body.theme-allure button.jump-to-note-dialog-button span.bx-crosshair:before {
+body.theme-allure div.standard-top-widget button span:before {
     font-family: 'trilium-allure-icons';
     font-size: 1.1em;
+}
+body.theme-allure button.jump-to-note-dialog-button span:before {
     content: '\e601';
 }
-body.theme-allure button.recent-changes-button span.bx-history:before {
-    font-family: 'trilium-allure-icons';
-    font-size: 1.1em;
+body.theme-allure button.recent-changes-button span:before {
     content: '\e6da';
 }
-body.theme-allure button.enter-protected-session-button span.bx-log-in:before {
-    font-family: 'trilium-allure-icons';
-    font-size: 1.1em;
+body.theme-allure button.enter-protected-session-button span:before {
     content: '\e736';
+}
+body.theme-allure button#toolbar-button-Today span:before {
+    content: '\e745';
 }
 
 
@@ -983,7 +980,7 @@ body.theme-allure div#left-pane .global-buttons {
     margin: 0;
     position: absolute;
     top: 4px;
-    right: 126px;
+    right: 168px;
     font-size: 12px;
 }
 body.theme-allure div#left-pane .global-buttons a {
@@ -1707,7 +1704,7 @@ body.mobile div.ck-content h3:before {
 
 /* h4, h5, h6 */
 body.theme-allure h4:not(.include-note-title),
-body.theme-allure h5,
+body.theme-allure h5:not(.modal-title),
 body.theme-allure h6,
 body.mobile h4:not(.include-note-title),
 body.mobile h5,
