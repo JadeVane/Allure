@@ -628,6 +628,9 @@ body.mobile p {
 body.theme-allure blockquote,
 body.mobile blockquote {
     margin: 1.4rem 0;
+    font-style: normal;
+    border-left: solid 3px hsl(0, 0%, 80%);
+    color: var(--color-text-grey-light);
 }
 body.theme-allure blockquote p,
 body.mobilx blockquote p {
