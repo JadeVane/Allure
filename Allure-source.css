@@ -1659,7 +1659,8 @@ body.theme-allure h1 {
 }
 
 /* first element in a note should not have such a top margin */
-body.theme-allure .ck-content *:first-child {
+body.theme-allure .ck-content *:first-child,
+body.mobile .ck-content *:first-child {
     margin-top: 0;
 }
 
