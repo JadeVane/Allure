@@ -121,8 +121,6 @@ html {
     --border-standard       : 1px solid var(--color-gray-light);
     --border-transparent    : 1px solid transparent;
 
-
-
 /* ----------------------------------------------------------------------------- */
 /* BORDER VARIABLES                                                              */
 /* ----------------------------------------------------------------------------- */
@@ -151,6 +149,12 @@ html {
     --font-headers : 'PingFang SC', 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, Sans-serif;
     --font-body    : 'Open Sans', 'Source Sans Pro', 'Liberation Sans', Arial, Sans-serif;
     --font-code    : 'Fira Code', 'Source Code Pro', Courier, Monospace;
+
+/* ----------------------------------------------------------------------------- */
+/* LAYOUT VARIABLES                                                                */
+/* ----------------------------------------------------------------------------- */
+
+    --spacing-content-normal: 0.8rem;
 }
 
 /* VARS to test */
@@ -622,12 +626,12 @@ body.theme-allure .modal-footer {
 body.theme-allure p,
 body.mobile p {
     font-size: 1rem;
-    margin: 1.4em 0;
+    margin: var(--spacing-content-normal) 0;
 }
 
 body.theme-allure blockquote,
 body.mobile blockquote {
-    margin: 1.4rem 0;
+    margin: var(--spacing-content-normal) 0;
     font-style: normal;
     border-left: solid 3px hsl(0, 0%, 80%);
     color: var(--color-text-grey-light);
@@ -1654,10 +1658,10 @@ body.theme-allure h1 {
     margin-bottom: 1rem;
 }
 
-/* first h2 in a note should not have such a large top margin */
-/*body.theme-allure h2:first-of-type {
-    margin-top: 0.8rem;
-}*/
+/* first element in a note should not have such a top margin */
+body.theme-allure .ck-content *:first-child {
+    margin-top: 0;
+}
 
 /* h2 */
 body.theme-allure h2,
@@ -1665,8 +1669,8 @@ body.mobile h2 {
     color: var(--color-text-grey);
     font-family: var(--font-headers);
     font-size: 1.5em;
-    margin-bottom: 1.8rem;
-    margin-top: 5rem;
+    margin-bottom: 1.4rem;
+    margin-top: 3.4rem;
     padding: 3px 0px;
     font-weight: bold;
 }
@@ -1680,10 +1684,14 @@ body.mobile div.ck-content h2:after {
     border-radius: 5px;
 }
 
-/* h2 following directly after h1 */
-body.theme-allure h1 + h2,
-body.mobile h1 + h2 {
-    margin-top: 0.6rem;
+/* h3, h4, h5 following directly after h2, h3, h4 */
+body.theme-allure h2 + h3,
+body.theme-allure h3 + h4,
+body.theme-allure h4 + h5,
+body.mobile h2 + h3,
+body.mobile h3 + h4,
+body.mobile h4 + h5 {
+    margin-top: var(--spacing-content-normal);
 }
 
 /* h3 */
@@ -1729,7 +1737,7 @@ body.mobile h6 {
 body.theme-allure .ck-content pre {
     background: var(--color-gray-lighter);
     border: var(--border-standard);
-    margin: 1rem 0;
+    margin: var(--spacing-content-normal) 0;
 /*     border-left: var(--border-accent-muted); */
 
 }
