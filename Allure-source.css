@@ -5,12 +5,12 @@
 /* Icons */
 @font-face {
   font-family: 'trilium-allure-icons';  /* project id 2347067 */
-  src: url('//at.alicdn.com/t/font_2347067_r98lox8l0l.eot');
-  src: url('//at.alicdn.com/t/font_2347067_r98lox8l0l.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2347067_r98lox8l0l.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_2347067_r98lox8l0l.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2347067_r98lox8l0l.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2347067_r98lox8l0l.svg#trilium-allure-icons') format('svg');
+  src: url('//at.alicdn.com/t/font_2347067_gofeppuc6d.eot');
+  src: url('//at.alicdn.com/t/font_2347067_gofeppuc6d.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2347067_gofeppuc6d.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2347067_gofeppuc6d.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2347067_gofeppuc6d.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2347067_gofeppuc6d.svg#trilium-allure-icons') format('svg');
 }
 
 /* Open Sans */
@@ -148,7 +148,7 @@ html {
     --detail-text-font-family : 'Open Sans', 'Source Sans Pro', 'Liberation Sans', Arial, Sans-serif;
 
     /*--font-headers: 'Roboto Slab', Serif;*/
-    --font-headers : 'PingFang SC', 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, Sans-serif;
+    --font-headers : 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, Sans-serif;
     --font-body    : 'Open Sans', 'Source Sans Pro', 'Liberation Sans', Arial, Sans-serif;
     --font-code    : 'Fira Code', 'Source Code Pro', Courier, Monospace;
 }
@@ -245,10 +245,10 @@ body.theme-allure .help-button {
 }
 
 body.theme-allure #context-menu-container li.dropdown-item {
-    padding: 2px 5px 2px 8px;
     font-size: 1rem;
     font-family: var(--font-headers);
-    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
 }
 
 /* menu item divider */
@@ -1557,6 +1557,53 @@ body.mobile input.note-title.protected {
     background-image: repeating-linear-gradient(-45deg, transparent, transparent 20px, rgb(255, 255, 255) 20px, rgb(255, 255, 255) 40px) !important;
 }
 
+/* note type dropdown */
+body.theme-allure .dropdown-item strong {
+    font-weight: normal;
+}
+body.theme-allure .dropdown-item span.check {
+    float: right;
+}
+body.theme-allure .dropdown-item[data-mime-type] {
+    padding: 0 1rem 0 2.6rem;
+}
+body.theme-allure .dropdown-item[data-note-type=text] strong:before {
+    content: '\e61c';
+    font-family: 'trilium-allure-icons';
+    font-size: 1rem;
+    margin-right: 10px;
+}
+body.theme-allure .dropdown-item[data-note-type=relation-map] strong:before {
+    content: '\e617';
+    font-family: 'trilium-allure-icons';
+    font-size: 1rem;
+    margin-right: 10px;
+}
+body.theme-allure .dropdown-item[data-note-type=render] strong:before {
+    content: '\e60f';
+    font-family: 'trilium-allure-icons';
+    font-size: 1rem;
+    margin-right: 10px;
+}
+body.theme-allure .dropdown-item[data-note-type=book] strong:before {
+    content: '\eb1f';
+    font-family: 'trilium-allure-icons';
+    font-size: 1rem;
+    margin-right: 10px;
+}
+body.theme-allure .dropdown-item[data-note-type=code] strong:before {
+    content: '\efa4';
+    font-family: 'trilium-allure-icons';
+    font-size: 1rem;
+    margin-right: 10px;
+}
+body.theme-allure .dropdown-item[data-note-type=code] strong:before {
+    content: '\e6b0';
+    font-family: 'trilium-allure-icons';
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
 /* note body */
 body.theme-allure div.note-detail {
     font-family: monospace;
@@ -1698,15 +1745,6 @@ body.mobile h3 {
     display: table;
     padding: 3px 0px;
     font-weight: bold;
-}
-body.theme-allure div.ck-content h3:before,
-body.mobile div.ck-content h3:before {
-    font-family: 'trilium-allure-icons';
-    font-size: 1.2rem;
-    color: var(--color-blue);
-    /*vertical-align: middle;*/
-    margin-right: 8px;
-    content: '\e617';
 }
 
 /* h4, h5, h6 */
