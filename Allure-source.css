@@ -101,16 +101,16 @@ html {
     --color-blue            : #277bf9;
     --color-white           : #FFF;
 
-    --color-line-grey       : var(--color-gray-darker);
-    --color-line-grey-light : var(--color-gray-lighter);
+    --color-line-gray       : var(--color-gray-darker);
+    --color-line-gray-light : var(--color-gray-lighter);
 
-    --color-text-grey       : var(--color-gray-darker);
-    --color-text-grey-light : var(--color-gray);
+    --color-text-gray       : var(--color-gray-darker);
+    --color-text-gray-light : var(--color-gray);
     --color-text-gray-dark  : var(--color-gray-dark);
     --color-text-white      : var(--color-gray-lighter);
 
     --color-background-white: var(--color-white);
-    --color-background-grey : var(--color-gray-lighter);
+    --color-background-gray : var(--color-gray-lighter);
     --color-background-blue : var(--color-blue);
 
     --color-button-white    : var(--color-white);
@@ -175,7 +175,7 @@ body.theme-allure a:visited,
 body.theme-allure a:hover,
 body.theme-allure .note-detail a,
 body.theme-allure .modal-dialog a {
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     text-decoration: none;
     word-break: break-all;
 }
@@ -187,7 +187,7 @@ body.theme-allure .modal-dialog a {
 
 /* Hr line of the note details */
 body.theme-allure div.gutter.gutter-horizontal {
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
 }
 body.theme-allure div.component div:nth-of-type(2).gutter.gutter-horizontal {
     border-left: var(--border-standard);
@@ -201,8 +201,8 @@ body.theme-allure .btn {
     border-radius: var(--border-radius);
 }
 body.theme-allure .btn:not(.btn-primary):not(.btn-secondary):not(.btn-danger) {
-     background-color: var(--color-button-light-grey);
-     color: var(--color-text-grey);
+     background-color: var(--color-button-light-gray);
+     color: var(--color-text-gray);
      border: var(--border-transparent);
      box-shadow: none;
      padding: 6px;
@@ -210,7 +210,7 @@ body.theme-allure .btn:not(.btn-primary):not(.btn-secondary):not(.btn-danger) {
 body.theme-allure .btn.btn-primary {
     border: var(--border-standard);
     background-color: var(--color-button-gray-dark);
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
 }
 
 /* global menu button*/
@@ -219,8 +219,8 @@ body.theme-allure div.global-menu-wrapper div.global-menu button {
     border: none;
     font-size: 1.1rem;
     font-weight: bold;
-    /*color: var(--color-background-grey);*/
-    background-color: var(--color-text-grey);
+    /*color: var(--color-background-gray);*/
+    background-color: var(--color-text-gray);
 }
 
 /* Image */
@@ -261,7 +261,7 @@ body.theme-allure #center-pane .dropdown-divider {
     height: 2px;
     margin: 0.3rem 0px;
     overflow: hidden;
-    background-color: var(--color-background-grey);
+    background-color: var(--color-background-gray);
 }
 
 
@@ -324,7 +324,7 @@ body.theme-allure div.modal-content > div.modal-header {
     display: flex;
     align-items: center;
     background: var(--color-text-white);
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
 }
 
 /* modal header */
@@ -336,7 +336,7 @@ body.theme-allure div.modal-content > div.modal-header h5 {
 
 /* modal header - revisions - delete all button */
 body.theme-allure div.modal-content > div.modal-header > button#note-revisions-erase-all-revisions-button {
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     height: 30px;
     margin: 0 10px 0 5px;
 }
@@ -368,8 +368,8 @@ body.theme-allure.modal-open div#recent-changes-dialog div.modal-content div.mod
 
 /* modal body primary button */
 body.theme-allure div.modal-content button.btn-primary {
-    color: var(--color-text-grey);
-    background-color: var(--color-background-grey);
+    color: var(--color-text-gray);
+    background-color: var(--color-background-gray);
     border: var(--border-standard);
     margin: 0;
 }
@@ -390,7 +390,7 @@ body.theme-allure div.modal-content .modal-body {
 
 /* note revisions - three operation buttons */
 body.theme-allure div#note-revision-title-buttons {
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
     padding: 8px;
 }
 body.theme-allure div#note-revision-title-buttons button.btn.btn-sm {
@@ -446,7 +446,7 @@ body.theme-allure span.fancytree-custom-icon {
 }
 
 body.theme-allure .tree-settings-popup.show {
-    background: var(--color-background-grey) !important;
+    background: var(--color-background-gray) !important;
 }
 
 body.theme-allure button.btn.btn-sm.icon-button.bx.bx-cog.tree-settings-button:hover {
@@ -486,7 +486,7 @@ body.theme-allure input.search-text.form-control {
     border-radius: unset;
     box-shadow: unset;
     border: unset;
-    background: var(--color-background-grey) !important;
+    background: var(--color-background-gray) !important;
 }
 body.theme-allure div.search-box.component {
     margin: 0;
@@ -570,7 +570,7 @@ body.theme-allure .modal-dialog.modal-md form.protected-session-password-form {
 }
 
 body.theme-allure .btn.btn-primary kbd {
-    color: var(--color-text-grey-light);
+    color: var(--color-text-gray-light);
     line-height: 1rem;
     display: inline-block;
 }
@@ -589,11 +589,11 @@ body.theme-allure .modal-dialog.modal-lg.modal-dialog-scrollable {
 
 body.theme-allure .nav-tabs .nav-item.show .nav-link,
 body.theme-allure .nav-tabs .nav-link.active {
-    color: var(--color-text-grey) !important;
+    color: var(--color-text-gray) !important;
 }
 
 body.theme-allure .nav-tabs .nav-link {
-    /*background: var(--color-background-grey);*/
+    /*background: var(--color-background-gray);*/
     border-bottom: var(--border-standard);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
@@ -604,7 +604,7 @@ body.theme-allure div.modal-dialog.modal-lg.modal-dialog-scrollable div.modal-he
 }
 
 body.theme-allure .nav-tabs {
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
     margin: -1rem -1rem 0 -1rem;
     padding: 0 20px;
 }
@@ -633,10 +633,10 @@ body.mobile blockquote {
     margin: var(--spacing-content-normal) 0;
     font-style: normal;
     border-left: solid 3px hsl(0, 0%, 80%);
-    color: var(--color-text-grey-light);
+    color: var(--color-text-gray-light);
     padding: 1.5em;
     border-radius: var(--border-radius);
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
 }
 body.theme-allure blockquote p,
 body.mobilx blockquote p {
@@ -650,7 +650,7 @@ body.theme-allure .tab-content {
 
 body.theme-allure .nav-item a.active {
     background: var(--color-background-white) !important;
-    color: var(--color-text-grey) !important;
+    color: var(--color-text-gray) !important;
     border-color: var(--color-gray-light) var(--color-gray-light) var(--color-background-white) !important;
 }
 
@@ -680,7 +680,7 @@ body.theme-allure .dropdown-menu {
 
 /* note revisions */
 body.theme-allure div#note-revision-content-wrapper {
-    /*background: var(--color-background-grey);*/
+    /*background: var(--color-background-gray);*/
     margin-left: 0 !important;
     padding-left: 0;
     border: var(--border-standard);
@@ -710,7 +710,7 @@ body.theme-allure .note-detail-book {
 
 body.theme-allure .btn:hover {
     border: var(--border-standard) !important;
-    /*color: var(--color-text-grey)             !important;*/
+    /*color: var(--color-text-gray)             !important;*/
     box-shadow: none !important;
     background: var(--color-button-white) !important;
     /*border: transparent;*/
@@ -737,7 +737,7 @@ body.theme-allure div.modal-content > div.modal-body div#note-revision-list {
     border: var(--border-standard);
     /*border-right: var(--border-standard);*/
     /*border-top: var(--border-standard);*/
-    /*background: var(--color-background-grey);*/
+    /*background: var(--color-background-gray);*/
     padding: 0;
     border-radius: unset;
     border-right: none;
@@ -805,7 +805,7 @@ body.theme-allure #root-widget > div.component:first-of-type .tab-row-filler .ta
 
 /* TAB / BUTTON [CLOSE TAB] */
 body.theme-allure #root-widget > div.component:first-of-type .note-tab-row .note-tab .note-tab-close {
-    /*color: var(--color-text-grey);*/
+    /*color: var(--color-text-gray);*/
     border: var(--border-transparent);
     position: absolute;
     right: 5px;
@@ -813,7 +813,7 @@ body.theme-allure #root-widget > div.component:first-of-type .note-tab-row .note
 body.theme-allure #root-widget > div.component:first-of-type .note-tab-row .note-tab .note-tab-close:hover {
     background-color: var(--color-background-white);
     border: var(--border-standard);
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
 }
 
 
@@ -842,7 +842,7 @@ body.theme-allure .note-new-tab {
 body.theme-allure .note-new-tab:hover {
     border-radius: var(--border-radius);
     background-color: var(--color-background-white);
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     border: var(--border-standard);
 }
 
@@ -864,7 +864,7 @@ body.theme-allure .note-tab-row .note-tab .note-tab-drag-handle {
 
 /* TAB [INACTIVE & ACTIVE] - TITLE */
 body.theme-allure .note-tab .note-tab-wrapper .note-tab-title {
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     text-overflow: ellipsis;
     font-family: var(--main-font-family-sans);
 }
@@ -904,12 +904,12 @@ body.theme-allure #root-widget > div.component:first-of-type div.note-tab .note-
 body.theme-allure #root-widget > div.component:first-of-type div.note-tab:hover {
     border: var(--border-standard);
     background: var(--color-background-white);
-    /*color: var(--color-text-grey);*/
+    /*color: var(--color-text-gray);*/
 }
 body.theme-allure #root-widget > div.component:first-of-type div.note-tab:hover div.note-tab-close {
     /*border: var(--border-standard);*/
-    background: var(--color-background-grey);
-    color: var(--color-text-grey);
+    background: var(--color-background-gray);
+    color: var(--color-text-gray);
 }
 
 /* TAB [ACTIVE] */
@@ -931,7 +931,7 @@ body.theme-allure div.standard-top-widget {
     position: absolute;
     margin-left: calc(100% - 178px);
     width: 178px;
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
     padding-left: 20px;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -1014,8 +1014,8 @@ body.theme-allure div#left-pane button.tree-settings-button:before {
 }
 body.theme-allure div.tree-settings-popup button,
 body.mobile div.tree-settings-popup button {
-    color: var(--color-text-grey);
-    background: var(--color-background-grey);
+    color: var(--color-text-gray);
+    background: var(--color-background-gray);
     border: var(--border-standard);
     font-size: 0;
 }
@@ -1037,7 +1037,7 @@ body.theme-allure div#left-pane div.tree-settings-popup {
 /* unhoist button */
 body.theme-allure div#root-widget div#left-pane span > a.unhoist-button {
     font-size: 0.8rem;
-    color: var(--color-background-grey) !important;
+    color: var(--color-background-gray) !important;
     text-decoration: none !important;
     background-color: var(--color-gray-lighter);
     padding: 2px 4px;
@@ -1047,7 +1047,7 @@ body.theme-allure div#root-widget div#left-pane span > a.unhoist-button {
 
 /* SIDEBAR */
 body.theme-allure div#left-pane {
-    background-color: var(--color-background-grey);
+    background-color: var(--color-background-gray);
     box-sizing: unset;
     box-shadow: unset;
 }
@@ -1088,7 +1088,7 @@ body.theme-allure span.fancytree-selected .fancytree-title {
     background-color: var(--color-gray-light);
     border-color: var(--main-background-color) ; /* invisible border */
     border-radius: 0;
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     font-style: normal;
 }
 
@@ -1109,7 +1109,7 @@ body.theme-allure span.fancytree-title {
 }
 body.theme-allure span.fancytree-title:hover {
     border: none;
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
 }
 
 body.theme-allure span.fancytree-active:not(.fancytree-focused) .fancytree-title {
@@ -1165,7 +1165,7 @@ body.theme-allure span.fancytree-active .fancytree-title {
 body.theme-allure div#center-pane {
     margin: 0;
     padding: 10px 20px 5px;
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
     /*border: var(--border-standard);*/
 }
 
@@ -1187,11 +1187,11 @@ body.theme-allure div#center-pane div.similar-notes-widget {
     border: var(--border-standard);
     border-radius: var(--border-radius);
     padding: 5px;
-    background-color: var(--color-background-grey);
+    background-color: var(--color-background-gray);
 }*/
 
 body.theme-allure div#center-pane div.similar-notes-widget {
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
     /*padding: 3px;*/
 }
 
@@ -1231,7 +1231,7 @@ body.theme-allure input#jump-to-note-autocomplete {
 /* similar notes and attributes - title */
 body.theme-allure div#center-pane div.attr-expander,
 body.theme-allure div#center-pane div.similar-notes-expander {
-    color: var(--color-text-grey-light);
+    color: var(--color-text-gray-light);
     font-family: var(--font-headers);
     display: inline-flex;
     width: 100%;
@@ -1245,12 +1245,12 @@ body.theme-allure div#center-pane hr {
     display: none !important;
 }
 body.theme-allure div#center-pane div.all-attr-wrapper p {
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     font-size: .9rem;
     font-family: var(--font-code);
 }
 body.theme-allure div#center-pane div.all-attr-wrapper div.inherited-attributes-wrapper {
-    color: var(--color-text-grey-light);
+    color: var(--color-text-gray-light);
     padding-left: 18px;
     max-height: unset;
     font-size: .9rem;
@@ -1357,7 +1357,7 @@ body.mobile section.include-note {
     background: unset;
     box-shadow: var(--shadow-card);
     padding: 0;
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     margin: 20px 0;
 }
 body.theme-allure h4.include-note-title,
@@ -1413,7 +1413,7 @@ body.mobile .ck-content .image > figcaption {
     font-size: 14px;
     line-height: 16px;
     text-align: center;
-    color: var(--color-text-grey-light) !important;
+    color: var(--color-text-gray-light) !important;
     margin-top: 20px;
     background-color: unset !important;
     padding: 0;
@@ -1451,7 +1451,7 @@ body.mobile section:not([data-box-size=full]).include-note div.ck-content *:not(
     margin: unset !important;
     padding: unset !important;
     font-size: 1rem !important;
-    color: var(--color-text-grey) !important;
+    color: var(--color-text-gray) !important;
     font-family: var(--detail-text-font-family) !important;
     white-space: initial !important;
 }
@@ -1502,7 +1502,7 @@ body.theme-allure .note-detail h5.note-book-title {
     padding: 8px 10px;
     margin: 0;
     border-bottom: var(--border-standard);
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
 }
@@ -1532,7 +1532,7 @@ body.theme-allure input.note-title {
     /*font-weight: 600;*/
     padding: 0;
     outline: none;
-    color: var(--color-text-grey) !important;
+    color: var(--color-text-gray) !important;
     background: unset !important;
 }
 body.theme-allure input.note-title:focus {
@@ -1636,7 +1636,7 @@ body.theme-allure button.ck-button-cancel {
 }
 body.theme-allure .ck-math-view .ck-labeled-input__status,
 body.theme-allure .ck-math-view .ck-label {
-    color: var(--color-text-grey-light);
+    color: var(--color-text-gray-light);
     font-weight: normal;
 }
 body.theme-allure button.ck-button-display-toggle {
@@ -1695,7 +1695,7 @@ body.theme-allure .note-detail-book-content a:visited {
 } */
 
 body.theme-allure .note-detail-text {
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
 /*     font-family: var(--font-body); */
     line-height: 1.45;
 }
@@ -1718,13 +1718,13 @@ body.theme-allure .ck-content hr {
 /* p */
 body.theme-allure .ck-content i,
 body.mobile .ck-content i {
-    color: var(--color-text-grey-light);
+    color: var(--color-text-gray-light);
 }
 
 /* h1 */
 body.theme-allure .ck-content h1 {
     border-bottom: 2px solid var(--color-text-gray-dark);
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     display: table;
     font-family: var(--font-headers);
     font-size: 28px;
@@ -1733,16 +1733,10 @@ body.theme-allure .ck-content h1 {
     margin-bottom: 1rem;
 }
 
-/* first element in a note should not have such a top margin */
-body.theme-allure .ck-content *:first-child,
-body.mobile .ck-content *:first-child {
-    margin-top: 0;
-}
-
 /* h2 */
 body.theme-allure .ck-content h2,
 body.mobile .ck-content h2 {
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     font-family: var(--font-headers);
     font-size: 1.5em;
     margin-bottom: 1.4rem;
@@ -1773,12 +1767,12 @@ body.mobile .ck-content h4 + h5 {
 /* h3 */
 body.theme-allure .ck-content h3,
 body.mobile .ck-content h3 {
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     font-family: var(--font-headers);
     font-size: 1.4em;
     margin-bottom: 1.4rem;
     margin-top: 2.6rem;
-    /*border-bottom: 1px dotted var(--color-text-grey);*/
+    /*border-bottom: 1px dotted var(--color-text-gray);*/
     display: table;
     padding: 3px 0px;
     font-weight: bold;
@@ -1791,7 +1785,7 @@ body.theme-allure .ck-content h6,
 body.mobile .ck-content h4:not(.include-note-title),
 body.mobile .ck-content h5,
 body.mobile .ck-content h6 {
-    color: var(--color-text-grey);
+    color: var(--color-text-gray);
     font-family: var(--font-headers);
     font-size: 1.2em;
     font-weight: bold;
@@ -1810,7 +1804,7 @@ body.theme-allure .ck-content pre {
 }
 
 body.theme-allure .ck-content pre code {
-/*     color: var(--color-text-grey) !important; */
+/*     color: var(--color-text-gray) !important; */
     font-family: var(--font-code);
 }
 
@@ -1848,7 +1842,7 @@ body.theme-allure div#right-pane {
 /*     font-size: 1rem; */
     color: var(--color-gray-dark);
     /*padding: 20px;*/
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
 }
 
 /* List Items */
@@ -1872,7 +1866,7 @@ body.theme-allure div#right-pane .card-header {
     height: 38px;
     justify-content: space-between;
     align-items: center;
-    background: var(--color-background-grey);
+    background: var(--color-background-gray);
     padding: 3px 3px 3px 10px;
 }
 body.theme-allure div.card-header div:nth-of-type(1) {
