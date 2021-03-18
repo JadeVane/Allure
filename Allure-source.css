@@ -118,15 +118,14 @@ html {
     --color-button-gray-dark: var(--color-gray-light);
     --color-button-blue     : var(--color-blue);
 
-    --border-standard       : 1px solid var(--color-gray-light);
-    --border-transparent    : 1px solid transparent;
-
 /* ----------------------------------------------------------------------------- */
 /* BORDER VARIABLES                                                              */
 /* ----------------------------------------------------------------------------- */
 
     --border-radius         : 3px;
 
+    --border-standard       : 1px solid var(--color-gray-light);
+    --border-transparent    : 1px solid transparent;
     --border-accent         : 2px solid var(--color-blue);
     --border-accent-alt     : 2px solid var(--color-gray-lighter);
     --border-accent-muted   : 2px solid var(--color-gray-dark);
@@ -1032,16 +1031,6 @@ body.theme-allure div#left-pane div.tree-settings-popup {
     width: auto;
 }
 
-
-body.theme-allure div#confirm-dialog-content,
-body.theme-allure .note-detail-editable-text {
-    padding: 16px;
-}
-
-body.theme-allure .note-detail-read-only-code-content {
-    padding: 24px;
-}
-
 /* unhoist button */
 body.theme-allure div#root-widget div#left-pane span > a.unhoist-button {
     font-size: 0.8rem;
@@ -1617,9 +1606,39 @@ body.theme-allure div.note-detail {
     box-shadow: var(--shadow-card);
     border-radius: var(--border-radius);
 }
-body.theme-allure div.note-detail-readonly-text,
-body.theme-allure div.note-detail-relation-map {
-    padding: 25px;
+body.theme-allure #confirm-dialog-content,
+body.theme-allure .note-detail-readonly-text,
+body.theme-allure .note-detail-relation-map,
+body.theme-allure .note-detail-editable-text,
+body.theme-allure .note-detail-read-only-code-content {
+    padding: 24px;
+}
+body.theme-allure p code {
+    font-size: 0.7rem;
+    padding: 2px 4px;
+    margin: 0 4px;
+    border: var(--border-standard);
+    font-family: var(--font-code);
+}
+/* Insert math */
+body.theme-allure .ck-math-view input {
+    font-family: var(--font-code);
+    font-size: 1rem;
+    padding: 4px 8px;
+    box-shadow: none;
+}
+body.theme-allure button.ck-button-save,
+body.theme-allure button.ck-button-cancel {
+    display: none;
+}
+body.theme-allure .ck-math-view .ck-labeled-input__status,
+body.theme-allure .ck-math-view .ck-label {
+    color: var(--color-text-grey-light);
+    font-weight: normal;
+}
+body.theme-allure button.ck-button-display-toggle {
+    border: var(--border-standard);
+    margin: 6px;
 }
 
 /* Edit button */
@@ -1694,7 +1713,7 @@ body.theme-allure .ck-content hr {
 }
 
 /* h1 */
-body.theme-allure h1 {
+body.theme-allure .ck-content h1 {
     border-bottom: 2px solid var(--color-text-gray-dark);
     color: var(--color-text-grey);
     display: table;
@@ -1712,8 +1731,8 @@ body.mobile .ck-content *:first-child {
 }
 
 /* h2 */
-body.theme-allure h2,
-body.mobile h2 {
+body.theme-allure .ck-content h2,
+body.mobile .ck-content h2 {
     color: var(--color-text-grey);
     font-family: var(--font-headers);
     font-size: 1.5em;
@@ -1722,8 +1741,8 @@ body.mobile h2 {
     padding: 3px 0px;
     font-weight: bold;
 }
-body.theme-allure div.ck-content h2:after,
-body.mobile div.ck-content h2:after {
+body.theme-allure .ck-content h2:after,
+body.mobile .ck-content h2:after {
     content: '';
     display: block;
     width: 30px;
@@ -1733,18 +1752,18 @@ body.mobile div.ck-content h2:after {
 }
 
 /* h3, h4, h5 following directly after h2, h3, h4 */
-body.theme-allure h2 + h3,
-body.theme-allure h3 + h4,
-body.theme-allure h4 + h5,
-body.mobile h2 + h3,
-body.mobile h3 + h4,
-body.mobile h4 + h5 {
+body.theme-allure .ck-content h2 + h3,
+body.theme-allure .ck-content h3 + h4,
+body.theme-allure .ck-content h4 + h5,
+body.mobile .ck-content h2 + h3,
+body.mobile .ck-content h3 + h4,
+body.mobile .ck-content h4 + h5 {
     margin-top: var(--spacing-content-normal);
 }
 
 /* h3 */
-body.theme-allure h3,
-body.mobile h3 {
+body.theme-allure .ck-content h3,
+body.mobile .ck-content h3 {
     color: var(--color-text-grey);
     font-family: var(--font-headers);
     font-size: 1.4em;
@@ -1757,12 +1776,12 @@ body.mobile h3 {
 }
 
 /* h4, h5, h6 */
-body.theme-allure h4:not(.include-note-title),
-body.theme-allure h5:not(.modal-title):not(.note-book-title),
-body.theme-allure h6,
-body.mobile h4:not(.include-note-title),
-body.mobile h5,
-body.mobile h6 {
+body.theme-allure .ck-content h4:not(.include-note-title),
+body.theme-allure .ck-content h5:not(.modal-title):not(.note-book-title),
+body.theme-allure .ck-content h6,
+body.mobile .ck-content h4:not(.include-note-title),
+body.mobile .ck-content h5,
+body.mobile .ck-content h6 {
     color: var(--color-text-grey);
     font-family: var(--font-headers);
     font-size: 1.2em;
@@ -1787,14 +1806,29 @@ body.theme-allure .ck-content pre code {
 }
 
 /* Checklists */
-body.theme-allure .ck-content .todo-list .todo-list__label > input::before {
-    background: var(--color-gray-lighter);
-    border: var(--border-standard) !important;
-    border-color: var(--color-gray-lighter) !important;
+body.theme-allure .ck-content .todo-list .todo-list__label > input::before,
+body.mobile .ck-content .todo-list .todo-list__label > input::before {
+    background: var(--color-gray-light);
+    border: none !important;
+    border-radius: 10px;
 }
-body.theme-allure .ck-content .todo-list .todo-list__label > input[checked]::before {
-    background: var(--color-gray-lighter);
+body.theme-allure .ck-content .todo-list .todo-list__label > input[checked]::before,
+body.mobile .ck-content .todo-list .todo-list__label > input[checked]::before {
+    background: var(--color-button-blue);
     border-color: var(--color-dark);
+}
+body.theme-allure label.todo-list__label,
+body.mobile label.todo-list__label {
+    margin-bottom: 0;
+}
+body.theme-allure .todo-list li,
+body.mobile .todo-list li {
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+body.theme-allure .todo-list input[type="checkbox"],
+body.mobile .todo-list input[type="checkbox"] {
+    outline: none;
 }
 
 
