@@ -1469,6 +1469,56 @@ body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .no
      border-top: none;
 }*/
 
+
+/* Table */
+body.theme-allure .ck-content table td,
+body.mobile .ck-content table td {
+    padding: .6em .8em;
+    border-left: none;
+    border-right: none;
+    color: var(--color-text-grey);
+    text-align: center;
+    position: relative;
+}
+body.theme-allure table ol,
+body.theme-allure table ul,
+body.mobile table ol,
+body.mobile table ul {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 20px;
+}
+body.theme-allure table li,
+body.mobile table li {
+    text-align: left;
+}
+/* Table - header */
+body.theme-allure .ck-content table tr:first-child,
+body.mobile .ck-content table tr:first-child {
+    background: var(--color-gray-light);
+}
+/*body.theme-allure .ck-content table tr:first-child td {
+    color: var(--color-text-grey);
+}*/
+/* Table - body */
+body.theme-allure .ck-widget.table td.ck-editor__nested-editable.ck-editor__nested-editable_focused,
+body.theme-allure .ck-widget.table td.ck-editor__nested-editable:focus,
+body.theme-allure .ck-widget.table th.ck-editor__nested-editable.ck-editor__nested-editable_focused,
+body.theme-allure .ck-widget.table th.ck-editor__nested-editable:focus,
+body.mobile .ck-widget.table td.ck-editor__nested-editable.ck-editor__nested-editable_focused,
+body.mobile .ck-widget.table td.ck-editor__nested-editable:focus,
+body.mobile .ck-widget.table th.ck-editor__nested-editable.ck-editor__nested-editable_focused,
+body.mobile .ck-widget.table th.ck-editor__nested-editable:focus
+{
+    background: var(--color-background-grey);
+    border-style: none;
+    outline: none;
+    outline-offset: unset;
+    box-shadow: none;
+}
+
 body.theme-allure div.note-book-auto-message a {
     color: var(--color-background-blue);
 }
