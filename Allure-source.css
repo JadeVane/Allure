@@ -153,7 +153,7 @@ html {
 /* LAYOUT VARIABLES                                                                */
 /* ----------------------------------------------------------------------------- */
 
-    --spacing-content-normal: 0.8rem;
+    --spacing-content-normal: 1rem;
 }
 
 /* VARS to test */
@@ -1713,6 +1713,12 @@ body.theme-allure .ck-content hr {
     max-width: 100%;
     border: none;
     height: 1px;
+}
+
+/* p */
+body.theme-allure .ck-content i,
+body.mobile .ck-content i {
+    color: var(--color-text-grey-light);
 }
 
 /* h1 */
