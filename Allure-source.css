@@ -634,6 +634,9 @@ body.mobile blockquote {
     font-style: normal;
     border-left: solid 3px hsl(0, 0%, 80%);
     color: var(--color-text-grey-light);
+    padding: 1.5em;
+    border-radius: var(--border-radius);
+    background: var(--color-background-grey);
 }
 body.theme-allure blockquote p,
 body.mobilx blockquote p {
