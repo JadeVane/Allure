@@ -1476,6 +1476,10 @@ body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .no
 
 
 /* Table */
+body.theme-allure .ck-content table,
+body.mobile .ck-content table {
+    width: auto;
+}
 body.theme-allure .ck-content table td,
 body.mobile .ck-content table td {
     padding: .6em .8em;
@@ -1484,6 +1488,7 @@ body.mobile .ck-content table td {
     color: var(--color-text-grey);
     text-align: center;
     position: relative;
+    vertical-align: middle;
 }
 body.theme-allure table ol,
 body.theme-allure table ul,
@@ -1499,6 +1504,13 @@ body.theme-allure table li,
 body.mobile table li {
     text-align: left;
 }
+body.theme-allure .ck-widget,
+body.theme-allure .ck-widget.ck-widget_with-selection-handle,
+body.mobile .ck-widget,
+body.mobile .ck-widget.ck-widget_with-selection-handle {
+    width: auto;
+    margin-left: 0;
+}
 /* Table - header */
 body.theme-allure .ck-content table tr:first-child,
 body.mobile .ck-content table tr:first-child {
@@ -1508,14 +1520,20 @@ body.mobile .ck-content table tr:first-child {
     color: var(--color-text-grey);
 }*/
 /* Table - body */
-body.theme-allure .ck-widget.table td.ck-editor__nested-editable.ck-editor__nested-editable_focused,
-body.theme-allure .ck-widget.table td.ck-editor__nested-editable:focus,
-body.theme-allure .ck-widget.table th.ck-editor__nested-editable.ck-editor__nested-editable_focused,
-body.theme-allure .ck-widget.table th.ck-editor__nested-editable:focus,
-body.mobile .ck-widget.table td.ck-editor__nested-editable.ck-editor__nested-editable_focused,
-body.mobile .ck-widget.table td.ck-editor__nested-editable:focus,
-body.mobile .ck-widget.table th.ck-editor__nested-editable.ck-editor__nested-editable_focused,
-body.mobile .ck-widget.table th.ck-editor__nested-editable:focus
+body.theme-allure .ck-widget_selected,
+body.theme-allure .ck-widget_selected:hover,
+body.mobile .ck-widget_selected,
+body.mobile .ck-widget_selected:hover {
+    width: auto;
+}
+body.theme-allure .ck-editor__nested-editable.ck-editor__nested-editable_focused,
+body.theme-allure .ck-editor__nested-editable:focus,
+body.theme-allure .ck-editor__nested-editable.ck-editor__nested-editable_focused,
+body.theme-allure .ck-editor__nested-editable:focus,
+body.mobile .ck-editor__nested-editable.ck-editor__nested-editable_focused,
+body.mobile .ck-editor__nested-editable:focus,
+body.mobile .ck-editor__nested-editable.ck-editor__nested-editable_focused,
+body.mobile .ck-editor__nested-editable:focus
 {
     background: var(--color-background-grey);
     border-style: none;
@@ -1524,7 +1542,7 @@ body.mobile .ck-widget.table th.ck-editor__nested-editable:focus
     box-shadow: none;
 }
 
-body.theme-allure div.note-book-auto-message a {
+body.theme-allure .note-book-auto-message a {
     color: var(--color-background-blue);
 }
 
