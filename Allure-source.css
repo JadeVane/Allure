@@ -1504,6 +1504,8 @@ body.mobile table ul {
 body.theme-allure table li,
 body.mobile table li {
     text-align: left;
+    line-height: 1.6rem;
+    padding-left: 10px;
 }
 body.theme-allure .ck-widget,
 body.theme-allure .ck-widget.ck-widget_with-selection-handle,
@@ -1778,6 +1780,11 @@ body.theme-allure .note-detail-text {
     color: var(--color-text-gray);
 /*     font-family: var(--font-body); */
     line-height: 1.45;
+}
+
+body.theme-allure .ck-content > *:not(figure):first-child,
+body.mobile .ck-content > *:not(figure):first-child {
+    margin-top: 0;
 }
 
 /* images */
