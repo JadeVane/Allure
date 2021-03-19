@@ -133,7 +133,8 @@ html {
     --shadow-standard       : 3px 4px 3px -3px var(--color-gray-light);
     --shadow-card           : 0px 0px 18px -8px var(--color-gray-light);
     --shadow-accented       : 2px 2px 5px -2px var(--color-gray-dark);
-    --shadow-mobile         : 0px 12px 12px -12px var(--color-gray-light);
+    --shadow-mobile         : 0px 0px 12px 0px var(--color-gray-light);
+    --shadow-mobile-popup   : 0px 0px 16px 0px var(--color-gray-light);
 
 
 /* ----------------------------------------------------------------------------- */
@@ -2046,10 +2047,6 @@ body.mobile div#global-buttons {
     padding: 9px 0 !important;
     margin: 0 !important;
 }
-body.mobile div#global-buttons a.dropdown-item {
-    font-size: 1rem;
-    padding: 10px 20px;
-}
 body.mobile .btn.btn-primary {
     border: none;
     background-color: var(--color-button-blue);
@@ -2057,17 +2054,37 @@ body.mobile .btn.btn-primary {
 }
 
 
+/* Menu */
+
 /* Expanded menu in the upper left corner */
 body.mobile div#context-menu-container {
-    padding: 12px 12px 0;
-    top: 48px !important;
-    left: 210px !important;
+    padding: 12px;
+    top: 16px !important;
+    left: 240px !important;
     border-radius: var(--border-radius);
     border: none;
-    box-shadow: var(--shadow-mobile);
+    box-shadow: var(--shadow-mobile-popup);
 }
 body.mobile div#context-menu-container .dropdown-item {
-    padding: 0 12px 18px 4px !important;
+    margin-left: -12px;
+    font-size: 1rem;
+}
+body.mobile div#context-menu-container li.dropdown-item + li.dropdown-item {
+    margin-top: 20px;
+}
+/* The expanded menu in the upper right corner of the notebook */
+body.mobile div.dropdown-menu.dropdown-menu-right.show {
+    font-size: inherit;
+    border: none;
+    box-shadow: var(--shadow-mobile-popup);
+    padding: 12px;
+}
+body.mobile div#global-buttons a.dropdown-item {
+    font-size: 1rem;
+    padding: 0;
+}
+body.mobile div#global-buttons a.dropdown-item + a.dropdown-item {
+    margin-top: 20px;
 }
 
 
@@ -2202,14 +2219,6 @@ body.mobile input.note-title {
     background: unset !important;
 }
 
-
-/* The expanded menu in the upper right corner of the notebook */
-body.mobile div.dropdown-menu.dropdown-menu-right.show {
-    font-size: inherit;
-    border: none;
-    border-radius: unset;
-    box-shadow: var(--shadow-mobile);
-}
 body.mobile div span.fancytree-active .fancytree-title {
     background: none !important;
     font-weight: inherit;
@@ -2263,8 +2272,7 @@ body.mobile span.bx-log-out:before {
     content: none;
 }
 body.mobile span.bx.bx-info-circle:before {
-    content: '\e711';
-    font-size: 1rem;
+    font-size: 0;
 }
 
 /* dialog */
@@ -2287,9 +2295,35 @@ body.mobile div.modal-footer button {
     outline: none;
     box-shadow: unset;
 }
-body.mobile div.tree-settings-popup {
+body.mobile .tree-settings-popup {
     border-radius: var(--border-radius);
     background: var(--color-background-white);
+    border: none;
+    box-shadow: var(--shadow-mobile-popup);
+    padding: 0;
+}
+body.mobile .tree-settings-popup .form-check {
+    padding-left: 0;
+}
+body.mobile .tree-settings-popup .form-check-label {
+    width: 100%;
+    padding: 14px 20px;
+}
+body.mobile .tree-settings-popup .form-check-label:active {
+    background: var(--color-background-gray);
+}
+body.mobile .tree-settings-popup .form-check-label .form-check-input {
+    position: relative;
+    float: right;
+}
+body.mobile .tree-settings-popup button.save-tree-settings-button {
+    width: calc(100% - 32px);
+    height: 44px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    margin: 10px 16px 16px;
+}
+body.mobile .tree-settings-popup > br {
+    display: none;
 }
 
 body.mobile a.external {
