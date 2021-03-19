@@ -634,9 +634,14 @@ body.mobile blockquote {
     font-style: normal;
     border-left: solid 3px hsl(0, 0%, 80%);
     color: var(--color-text-gray-light);
-    padding: 1.5em;
     border-radius: var(--border-radius);
     background: var(--color-background-gray);
+}
+body.theme-allure blockquote {
+    padding: 1.5em;
+}
+body.mobile blockquote {
+    padding: 1.5em 1.5em .5em 1.5em;
 }
 body.theme-allure blockquote p,
 body.mobilx blockquote p {
@@ -1672,6 +1677,12 @@ body.theme-allure p code {
     margin: 0 4px;
     border: var(--border-standard);
     font-family: var(--font-code);
+}
+body.theme-allure p br,
+body.mobile p br {
+    height: 10px;
+    display: block;
+    content: " ";
 }
 /* Insert math */
 body.theme-allure .ck-math-view input {
