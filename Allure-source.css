@@ -1572,7 +1572,7 @@ body.theme-allure .note-detail h5.note-book-title {
     font-size: 1rem;
     font-family: var(--font-headers);
     font-weight: bold;
-    padding: 8px 10px;
+    /*padding: 8px 10px;*/
     margin: 0;
     border-bottom: var(--border-standard);
     background: var(--color-background-gray);
@@ -1583,13 +1583,13 @@ body.theme-allure .note-book-card h5 a {
     display: inline-table;
     text-decoration: none;
     width: 100%;
-    padding: 5px 10px;
+    padding: 12px 20px;
     border: var(--border-transparent);
     /*border-bottom: var(--border-accent);*/
 }
 body.theme-allure .note-book-card h5 a:hover {
     text-decoration: none;
-    border: var(--border-standard);
+    /*border: var(--border-standard);*/
     /*border-bottom: var(--border-accent);*/
     background: var(--color-background-white);
 }
