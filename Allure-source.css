@@ -5,12 +5,12 @@
 /* Icons */
 @font-face {
   font-family: 'trilium-allure-icons';  /* project id 2347067 */
-  src: url('//at.alicdn.com/t/font_2347067_8t46x2o70e.eot');
-  src: url('//at.alicdn.com/t/font_2347067_8t46x2o70e.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2347067_8t46x2o70e.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_2347067_8t46x2o70e.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2347067_8t46x2o70e.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2347067_8t46x2o70e.svg#trilium-allure-icons') format('svg');
+  src: url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.eot');
+  src: url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.svg#trilium-allure-icons') format('svg');
 }
 
 /* Open Sans */
@@ -92,49 +92,56 @@ html {
 /* COLOR VARIABLES                                                               */
 /* ----------------------------------------------------------------------------- */
 
-    --color-gray-lighter    : #F6F7F8;
-    --color-gray-light      : #DADCDB;
-    --color-gray            : #8e8787;
-    --color-gray-dark       : #666;
-    --color-gray-darker     : #525051;
-    --color-dark            : #333;
-    --color-blue            : #277bf9;
-    --color-white           : #FFF;
+    --color-gray-lighter : #F6F7F8;
+    --color-gray-light   : #DADCDB;
+    --color-gray         : #8e8787;
+    --color-gray-dark    : #666;
+    --color-gray-darker  : #525051;
+    --color-dark         : #333;
+    --color-blue         : #277bf9;
+    --color-white        : #FFF;
+    --color-purple-light : #C1CBF5;
+    --color-purple-dark  : #2F48A2;
 
-    --color-line-gray       : var(--color-gray-darker);
-    --color-line-gray-light : var(--color-gray-lighter);
+    --color-line-gray        : var(--color-gray-darker);
+    --color-line-gray-light  : var(--color-gray-lighter);
 
-    --color-text-gray       : var(--color-gray-darker);
-    --color-text-gray-light : var(--color-gray);
-    --color-text-gray-dark  : var(--color-gray-dark);
-    --color-text-white      : var(--color-gray-lighter);
+    --color-text-gray        : var(--color-gray-darker);
+    --color-text-gray-light  : var(--color-gray);
+    --color-text-gray-dark   : var(--color-gray-dark);
+    --color-text-white       : var(--color-gray-lighter);
 
-    --color-background-white: var(--color-white);
-    --color-background-gray : var(--color-gray-lighter);
-    --color-background-blue : var(--color-blue);
+    --color-background-white : var(--color-white);
+    --color-background-gray  : var(--color-gray-lighter);
+    --color-background-blue  : var(--color-blue);
 
-    --color-button-white    : var(--color-white);
-    --color-button-gray     : var(--color-gray-darker);
-    --color-button-gray-dark: var(--color-gray-light);
-    --color-button-blue     : var(--color-blue);
+    --color-button-white             : var(--color-white);
+    --color-button-gray-light        : var(--color-gray-lighter);
+    --color-button-gray              : var(--color-gray-light);
+    --color-button-gray-dark         : var(--color-gray-darker);
+    --color-button-blue              : var(--color-blue);
+    --color-option-active-text       : var(--color-purple-dark);
+    --color-option-active-background : var(--color-purple-light);
 
 /* ----------------------------------------------------------------------------- */
 /* BORDER VARIABLES                                                              */
 /* ----------------------------------------------------------------------------- */
 
-    --border-radius         : 3px;
+    --border-radius-standard : 3px;
 
-    --border-standard       : 1px solid var(--color-gray-light);
-    --border-transparent    : 1px solid transparent;
-    --border-accent         : 2px solid var(--color-blue);
-    --border-accent-alt     : 2px solid var(--color-gray-lighter);
-    --border-accent-muted   : 2px solid var(--color-gray-dark);
+    --border-standard      : 1px solid var(--color-gray-light);
+    --border-transparent   : 1px solid transparent;
+    --border-accent        : 2px solid var(--color-blue);
+    --border-accent-alt    : 2px solid var(--color-gray-lighter);
+    --border-accent-muted  : 2px solid var(--color-gray-dark);
+    --border-option        : 2px solid var(--color-gray-light);
+    --border-option-active : 2px solid var(--color-purple-dark);
 
-    --shadow-standard       : 3px 4px 3px -3px var(--color-gray-light);
-    --shadow-card           : 0px 0px 18px -8px var(--color-gray-light);
-    --shadow-accented       : 2px 2px 5px -2px var(--color-gray-dark);
-    --shadow-mobile         : 0px 0px 12px 0px var(--color-gray-light);
-    --shadow-mobile-popup   : 0px 0px 16px 0px var(--color-gray-light);
+    --shadow-standard      : 3px 4px 3px -3px var(--color-gray-light);
+    --shadow-card          : 0px 0px 18px -8px var(--color-gray-light);
+    --shadow-accented      : 2px 2px 5px -2px var(--color-gray-dark);
+    --shadow-mobile        : 0px 0px 12px 0px var(--color-gray-light);
+    --shadow-mobile-popup  : 0px 0px 16px 0px var(--color-gray-light);
 
 
 /* ----------------------------------------------------------------------------- */
@@ -154,7 +161,8 @@ html {
 /* LAYOUT VARIABLES                                                                */
 /* ----------------------------------------------------------------------------- */
 
-    --spacing-content-normal: 1rem;
+    --spacing-content-normal: .6em;
+    --spacing-content-large : 1.4em;
 }
 
 /* VARS to test */
@@ -188,21 +196,23 @@ body.theme-allure .modal-dialog a {
 
 /* Hr line of the note details */
 body.theme-allure div.gutter.gutter-horizontal {
-    background: var(--color-background-gray);
+    background: transparent;
 }
 body.theme-allure div.component div:nth-of-type(2).gutter.gutter-horizontal {
     border-left: var(--border-standard);
+    z-index: 100;
 }
 body.theme-allure div.component div:nth-of-type(4).gutter.gutter-horizontal {
     border-right: var(--border-standard);
+    z-index: 100;
 }
 
 /* buttons */
 body.theme-allure .btn {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
 }
 body.theme-allure .btn:not(.btn-primary):not(.btn-secondary):not(.btn-danger) {
-     background-color: var(--color-button-light-gray);
+     background-color: inherit;
      color: var(--color-text-gray);
      border: var(--border-transparent);
      box-shadow: none;
@@ -210,7 +220,7 @@ body.theme-allure .btn:not(.btn-primary):not(.btn-secondary):not(.btn-danger) {
 }
 body.theme-allure .btn.btn-primary {
     border: var(--border-standard);
-    background-color: var(--color-button-gray-dark);
+    background-color: var(--color-button-gray);
     color: var(--color-text-gray);
 }
 
@@ -222,6 +232,7 @@ body.theme-allure div.global-menu-wrapper div.global-menu button {
     font-weight: bold;
     /*color: var(--color-background-gray);*/
     background-color: var(--color-text-gray);
+    margin: 4px 0;
 }
 
 /* Image */
@@ -235,8 +246,29 @@ body.theme-allure img {
 /* CONTEXT MENU & FLOATING ELEMENTS                                              */
 /* ----------------------------------------------------------------------------- */
 
+/* Title button */
+body.theme-allure .tab-row-filler {
+    min-width: 24px;
+}
+body.theme-allure .title-bar-buttons {
+    position: absolute;
+    right: 4px;
+    z-index: 999;
+    top: 2px;
+}
+body.theme-allure .history-navigation {
+    display: none;
+}
+body.theme-allure .title-bar-buttons button {
+    font-size: 1rem;
+    border: none !important;
+}
+body.theme-allure .title-bar-buttons button:hover {
+    border: none !important;
+}
+
 body.theme-allure #context-menu-container {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     box-shadow: var(--shadow-accented);
     border: var(--border-standard);
     /*border-top: var(--border-accent);*/
@@ -270,7 +302,7 @@ body.theme-allure #center-pane .dropdown-divider {
 body.theme-allure #center-pane .note-type-dropdown,
 body.theme-allure #center-pane .dropdown-menu,
 body.theme-allure .global-menu .dropdown-menu {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     box-shadow: var(--shadow-accented);
     border: var(--border-standard);
     /*border-top: var(--border-accent);*/
@@ -300,21 +332,7 @@ body.theme-allure #center-pane .dropdown-item .slider::before {
   border-radius: 8px;
 }
 
-body.theme-allure .dropdown-item.active {
-    border: none;
-    outline: none;
-    background: var(--color-button-blue) !important;
-    color: var(--color-text-white) !important;
-    margin: 0;
-    border-radius: unset;
-}
-
-body.theme-allure div#note-revision-list a.dropdown-item {
-    margin: 0;
-    border-radius: unset;
-}
-
-/* modals */
+/* MODALS */
 
 body.theme-allure div.modal {
     font-size: 1.05rem;
@@ -328,38 +346,21 @@ body.theme-allure div.modal-content > div.modal-header {
     color: var(--color-text-gray);
 }
 
-/* modal header */
+/* modal header title */
 body.theme-allure div.modal-content > div.modal-header h5 {
     font-family: var(--font-headers);
     font-weight: bold;
     margin-bottom: 0 !important;
 }
 
-/* modal header - revisions - delete all button */
-body.theme-allure div.modal-content > div.modal-header > button#note-revisions-erase-all-revisions-button {
-    color: var(--color-text-gray);
-    height: 30px;
-    margin: 0 10px 0 5px;
-}
-
-/* modal header - help button */
-body.theme-allure div.modal-content > div.modal-header button.help-button {
-    border-radius: var(--border-radius);
-    border: var(--border-standard);
-    color: var(--color-gray-lighter);
-    font-weight: bold;
-    font-family: var(--font-headers);
-    padding: .1rem .6rem;
-}
-
 /* modal recent changes */
-body.theme-allure.modal-open div#recent-changes-dialog div.modal-content div.modal-body div#recent-changes-content div b {
+body.theme-allure div#recent-changes-content div b {
     font-family: var(--font-headers);
     display:block;
     border-bottom: var(--border-accent-alt);
 }
 
-body.theme-allure.modal-open div#recent-changes-dialog div.modal-content div.modal-body div#recent-changes-content div ul {
+body.theme-allure div#recent-changes-content div ul {
     list-style-type: none;
     padding-left: 6rem;
     margin-top: 0.3rem;
@@ -368,12 +369,12 @@ body.theme-allure.modal-open div#recent-changes-dialog div.modal-content div.mod
 }
 
 /* modal body primary button */
-body.theme-allure div.modal-content button.btn-primary {
+/*body.theme-allure div.modal-content button.btn-primary {
     color: var(--color-text-gray);
-    background-color: var(--color-background-gray);
+    background-color: var(--color-button-gray);
     border: var(--border-standard);
     margin: 0;
-}
+}*/
 
 /* textareae in modals*/
 body.theme-allure div.modal-content .modal-body textarea {
@@ -389,27 +390,47 @@ body.theme-allure div.modal-content .modal-body {
     /*margin-top: -1px;*/
 }
 
-/* note revisions - three operation buttons */
-body.theme-allure div#note-revision-title-buttons {
-    background: var(--color-background-gray);
-    padding: 8px;
+
+/* Modals - Code notes */
+body.theme-allure ul#options-mime-types {
+    padding: 0 12px 12px 12px;
+    margin-bottom: 0;
+    margin-top: 16px;
 }
-body.theme-allure div#note-revision-title-buttons button.btn.btn-sm {
+body.theme-allure ul#options-mime-types li {
+    display: inline-block;
+    margin: 6px;
     font-size: 0;
 }
-body.theme-allure div#note-revision-title-buttons button:nth-of-type(1).btn.btn-sm:after {
-    content: '\2713';
-    font-size: initial;
+body.theme-allure ul#options-mime-types li label {
+    font-size: 1rem;
+    margin: 0;
+    padding: 8px 22px;
+    border-radius: 30px;
+    border: var(--border-option);
 }
-body.theme-allure div#note-revision-title-buttons button:nth-of-type(2).btn.btn-sm:after {
-    content: '\2715';
-    font-size: initial;
+/*body.theme-allure ul#options-mime-types li input[type="checkbox"]:checked+label:before {
+    content: '\e611';
+    font-family: 'trilium-allure-icons';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}*/
+/* input (checkbox) */
+body.theme-allure ul#options-mime-types li input {
+    display: none;
 }
-body.theme-allure div#note-revision-title-buttons button:nth-of-type(3).btn.btn-sm {
-    font-size: initial;
+body.theme-allure ul#options-mime-types li input[type="checkbox"]:checked+label {
+    background: var(--color-option-active-background);
+    color: var(--color-option-active-text);
+    border: var(--border-option-active);
+    /*padding: 8px 12px;*/
 }
 
-
+/* modal body - button */
+body.theme-allure div.modal-content .modal-body .tab-content button.btn {
+    border: var(--border-standard);
+}
 
 body.theme-allure form#clone-to-form  {
     padding: 20px;
@@ -419,27 +440,12 @@ body.theme-allure form#clone-to-form .modal-footer {
     padding: .75rem 0;
 }
 
-body.theme-allure div#left-pane .fancytree-active {
-    background: var(--color-blue);
-    color: var(--color-text-white);
-    width: 100%;
-    display: inherit;
-    border-radius: var(--border-radius) 0 0 var(--border-radius);
-    /*margin-left: 18px;*/
-}
-
-body.theme-allure div#left-pane .fancytree-node {
-    padding-left: 4px;
-    margin-left: 22px;
-}
-
-body.theme-allure span.fancytree-folder.fancytree-has-children,
-body.theme-allure span.fancytree-node.fancytree-has-children.fancytree-lastsib.fancytree-lazy.type-text.mime-text-html.fancytree-exp-cdl.fancytree-ico-c {
+body.theme-allure span.fancytree-folder,
+body.theme-allure span.fancytree-node {
     padding: 2px;
 }
 
 body.theme-allure span.fancytree-custom-icon {
-    /*color: var(--color-button-gray) !important;*/
     margin: 2px 3px;
     line-height: 28px;
     width: auto;
@@ -450,96 +456,34 @@ body.theme-allure .tree-settings-popup.show {
     background: var(--color-background-gray) !important;
 }
 
-body.theme-allure button.btn.btn-sm.icon-button.bx.bx-cog.tree-settings-button:hover {
-    color: var(--color-button-gray) !important;
-}
 
-
-/* Search button */
-body.theme-allure .search-box.component {
-    border-bottom: var(--border-standard);
-    display: block !important;
-}
-body.theme-allure button.save-search-button.btn.btn-sm,
-body.theme-allure button.close-search-button.btn.btn-sm {
-    font-size: 0;
-    padding: 6px;
-    margin: 4px 0;
-}
-body.theme-allure button.save-search-button.btn.btn-sm span,
-body.theme-allure button.close-search-button.btn.btn-sm span {
-    font-size: initial;
-}
-body.theme-allure button.do-search-button.btn.btn-sm.icon-button.bx.bx-search {
-    max-height: unset;
-    padding: 6px;
-    border-left: var(--border-transparent);
-    margin: 4px 0;
-    background: unset;
-    border-radius: var(--border-radius);
-}
-body.theme-allure div.search-box.component div.input-group-append {
-    width: 33px;
-}
-
-/* Search input box */
-body.theme-allure input.search-text.form-control {
-    border-radius: unset;
-    box-shadow: unset;
-    border: unset;
-    background: var(--color-background-gray) !important;
-}
-body.theme-allure div.search-box.component {
-    margin: 0;
-    padding: 0;
-}
-body.theme-allure div.search-box.component div {
-    flex-wrap: unset !important;
-    width: 66px;
-}
-body.theme-allure div.search-box.component div.form-group {
-    float: left;
-    width: calc( 100% - 66px);
-}
-body.theme-allure div.input-group-append,
-body.theme-allure div.search-box div.form-group,
-body.theme-allure div.attr-expander.attr-owned-and-inherited-expander {
-    margin: 0;
-}
-body.theme-allure div.search-box.component div.input-group {
-    width: auto;
-}
-
-
-/* Search results */
-body.theme-allure div.search-results.component {
-    background: var(--color-background-white);
-    margin: 0;
-    padding: 5px 5px 5px 15px;
-    border-bottom: var(--border-standard);
-    box-shadow: var(--shadow-standard);
-    flex-basis: 80%;
-}
-
-/* Four button above search box on left pane */
-body.theme-allure a.icon-action.bx.bx-layer-minus,
-body.theme-allure a.icon-action.bx.bx-crosshair,
-body.theme-allure a.icon-action.bx.bx-search,
-body.mobile a.icon-action.bx.bx-crosshair {
-    display: none;
-}
-
-
-body.theme-allure span.fancytree-node.fancytree-active.fancytree-has-children.fancytree-lazy.type-code.mime-text-css.fancytree-exp-cd.fancytree-ico-c span.fancytree-custom-icon {
+body.theme-allure span.fancytree-active span.fancytree-custom-icon {
     color: var(--color-button-white);
 }
 
 
-body.theme-allure .hide-right-pane-button,
-body.theme-allure .show-right-pane-button {
-    bottom: 3px !important;
-    right: 11px !important;
+/* BOTTOM BUTTON */
+body.theme-allure button.btn.btn-sm.icon-button.tree-settings-button {
+    bottom: 4px;
 }
+body.theme-allure button.scroll-to-active-note-button {
+    display: none;
+}
+body.theme-allure button.btn.btn-sm.icon-button.collapse-tree-button {
+    right: 40px;
+    bottom: 4px;
+}
+body.theme-allure button.btn.btn-sm.icon-button.hide-right-pane-button,
+body.theme-allure button.btn.btn-sm.icon-button.show-right-pane-button {
+    bottom: 3px;
+    right: 6px;
+}
+body.theme-allure button.btn.btn-sm.icon-button.hide-left-pane-button,
+body.theme-allure button.btn.btn-sm.icon-button.show-left-pane-button {
+    bottom: 3px;
+    left: 6px;
+}
+
 
 body.theme-allure button.icon-button {
     font-size: 1em;
@@ -547,13 +491,13 @@ body.theme-allure button.icon-button {
 }
 
 body.theme-allure .modal-header .close {
-    color: var(--color-button-gray);
+    color: var(--color-button-gray-dark);
     font-weight: normal;
     padding: 2px 5px 0;
     margin: 0 5px;
     outline: none;
     border: var(--border-transparent);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
 }
 
 body.theme-allure .modal-header .close:hover {
@@ -596,12 +540,8 @@ body.theme-allure .nav-tabs .nav-link.active {
 body.theme-allure .nav-tabs .nav-link {
     /*background: var(--color-background-gray);*/
     border-bottom: var(--border-standard);
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-}
-
-body.theme-allure div.modal-dialog.modal-lg.modal-dialog-scrollable div.modal-header {
-    border-bottom: none;
+    border-top-left-radius: var(--border-radius-standard);
+    border-top-right-radius: var(--border-radius-standard);
 }
 
 body.theme-allure .nav-tabs {
@@ -627,15 +567,16 @@ body.theme-allure p,
 body.mobile p {
     font-size: 1rem;
     margin: var(--spacing-content-normal) 0;
+    line-height: 2em;
 }
 
 body.theme-allure blockquote,
 body.mobile blockquote {
-    margin: var(--spacing-content-normal) 0;
+    margin: var(--spacing-content-large) 0;
     font-style: normal;
     border-left: solid 3px hsl(0, 0%, 80%);
     color: var(--color-text-gray-light);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     background: var(--color-background-gray);
 }
 body.theme-allure blockquote {
@@ -646,7 +587,10 @@ body.mobile blockquote {
 }
 body.theme-allure blockquote p,
 body.mobilx blockquote p {
-    margin: 0;
+    margin: var(--spacing-content-normal) 0;
+}
+body.theme-allure blockquote p:last-child, body.mobilx blockquote p {
+    margin-bottom: 0;
 }
 
 body.theme-allure .tab-content {
@@ -684,31 +628,82 @@ body.theme-allure .dropdown-menu {
     background: var(--color-background-white) !important;
 }
 
-/* note revisions */
+
+/* NOTE REVISIONS */
+
+/* Header - Delete all button */
+body.theme-allure button#note-revisions-erase-all-revisions-button {
+    color: var(--color-text-gray);
+    height: 30px;
+    margin: 0 10px 0 5px;
+}
+
+/* Left - Revision list*/
+body.theme-allure div#note-revision-list {
+    border: var(--border-standard);
+    padding: 0;
+    border-radius: unset;
+    border-right: none;
+}
+body.theme-allure div#note-revision-list a.dropdown-item {
+    margin: 0;
+    border-radius: unset;
+}
+body.theme-allure div#note-revision-list a.dropdown-item.active {
+    border: none;
+    outline: none;
+    background: var(--color-button-blue) !important;
+    color: var(--color-text-white) !important;
+    margin: 0;
+    border-radius: unset;
+}
+
+/* Right - All */
 body.theme-allure div#note-revision-content-wrapper {
-    /*background: var(--color-background-gray);*/
     margin-left: 0 !important;
     padding-left: 0;
     border: var(--border-standard);
-    /*border-left: none;*/
 }
+
+/* Right - Title */
+body.theme-allure h3#note-revision-title {
+    padding: 10px;
+    background-color: var(--color-background-gray);
+    margin: 0 !important;
+}
+
+/* Right - Title border */
 body.theme-allure div#note-revision-content-wrapper > div:nth-of-type(1) {
     border-bottom: var(--border-standard);
 }
+
+/* Right - Three operation buttons */
+body.theme-allure div#note-revision-title-buttons {
+    background: var(--color-background-gray);
+    padding: 8px;
+}
+body.theme-allure div#note-revision-title-buttons button {
+    font-size: 0;
+}
+body.theme-allure div#note-revision-title-buttons button:nth-of-type(1):after {
+    content: '\2713';
+    font-size: initial;
+}
+body.theme-allure div#note-revision-title-buttons button:nth-of-type(2):after {
+    content: '\2715';
+    font-size: initial;
+}
+body.theme-allure div#note-revision-title-buttons button:nth-of-type(3) {
+    font-size: initial;
+}
+
+/* Right - Note revision content */
 body.theme-allure div#note-revision-content {
     padding: 12px;
     background: var(--color-background-white);
     margin: 4px;
 }
 
-/*body.theme-allure div#note-revision-content-wrapper div {
-    display: block !important;
-}*/
-
-body.theme-allure .similar-notes-wrapper {
-    padding-top: 5px;
-    max-height: 20em;
-}
 
 body.theme-allure .note-detail-book {
     padding: 0;
@@ -726,6 +721,15 @@ body.theme-allure div#link-map-dialog div {
     top: 0 !important;
 }
 
+/* OPTIONS DIALOG */
+
+/* Options Dialog - hide the border bottom of the header*/
+body.theme-allure div#options-dialog .modal-body {
+    margin-top: -1px;
+    overflow: hidden;
+    position: static;
+}
+
 body.theme-allure div#options-keyboard-shortcuts div {
     margin-top: 12px;
 }
@@ -739,41 +743,38 @@ body.theme-allure div.note-detail-relation-map div.floating-button {
     top: auto !important;
 }
 
-body.theme-allure div.modal-content > div.modal-body div#note-revision-list {
-    border: var(--border-standard);
-    /*border-right: var(--border-standard);*/
-    /*border-top: var(--border-standard);*/
-    /*background: var(--color-background-gray);*/
-    padding: 0;
-    border-radius: unset;
-    border-right: none;
-}
-
 body.theme-allure .nav-tabs .nav-link:hover {
     /*background: var(--color-button-gray-dark) !important;*/
     border: var(--border-standard);
 }
 
-/* 定义滚动条高宽及背景高宽分别对应横竖滚动条的尺寸 */
+
+/* SCROLLBAR */
+
+/* 滚动条的尺寸 */
 body.theme-allure ::-webkit-scrollbar,
 body.mobile ::-webkit-scrollbar {
-    width: 4px !important;
-    height: 4px !important;
+    width: 12px;
+    height: 12px;
     background-color: transparent;
 }
-/* 定义滚动条轨道内阴影+圆角 */
+/* 滚动条轨道 */
 body.theme-allure ::-webkit-scrollbar-track,
 body.mobile ::-webkit-scrollbar-track {
-    /*border-radius: 10px;*/
     background-color: unset;
+    border: solid 4px transparent;
 }
-/* 定义滑块内阴影+圆角 */
+/* 滑块 */
 body.theme-allure ::-webkit-scrollbar-thumb,
 body.mobile ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: var(--color-button-gray-dark);
+    box-shadow: inset 0 0 10px 10px var(--color-button-gray);
+    border: solid 4px transparent;
 }
-
+body.theme-allure ::-webkit-scrollbar-thumb:hover,
+body.mobile ::-webkit-scrollbar-thumb:hover {
+    border: solid 2px transparent;
+}
 
 
 /* ----------------------------------------------------------------------------- */
@@ -784,7 +785,7 @@ body.mobile ::-webkit-scrollbar-thumb {
 /* which happens to be the tab-bar */
 body.theme-allure #root-widget > div.component:first-of-type,
 body.theme-allure .standard-top-widget {
-    align-items: center;
+    /*align-items: center;*/
     /*! border-bottom: 1px solid lightgray; */
     min-height: 40px;
 
@@ -796,17 +797,15 @@ body.theme-allure #root-widget > div.component:first-of-type .global-menu-wrappe
     padding: 0;
 }
 
-/* make top all blue */
+/* make top all gray */
 body.theme-allure #root-widget > div.component:first-of-type,
 body.theme-allure #root-widget > div.component:first-of-type .global-menu-wrapper,
-body.theme-allure div.tab-row-filler,
 body.theme-allure div.note-tab-row-container  {
     background: var(--color-gray-lighter);
 }
 
-/* hide tabbar bottom border thingie */
-body.theme-allure #root-widget > div.component:first-of-type .tab-row-filler .tab-row-border {
-    display: none;
+body.theme-allure .tab-row-filler .tab-row-border {
+    background: none;
 }
 
 /* TAB / BUTTON [CLOSE TAB] */
@@ -815,6 +814,9 @@ body.theme-allure #root-widget > div.component:first-of-type .note-tab-row .note
     border: var(--border-transparent);
     position: absolute;
     right: 5px;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
 }
 body.theme-allure #root-widget > div.component:first-of-type .note-tab-row .note-tab .note-tab-close:hover {
     background-color: var(--color-background-white);
@@ -827,18 +829,18 @@ body.theme-allure #root-widget > div.component:first-of-type .note-tab-row .note
 body.theme-allure .note-tab-row .note-tab .note-tab-close span {
     font-size: 0;
     position: unset;
-    font-weight: normal;
+    /*font-weight: normal;*/
 }
 
 body.theme-allure .note-tab-row .note-tab .note-tab-close span:before {
-    font-size: 1rem;
+    font-size: 14px;
     content: '\e602';
     font-family: 'trilium-allure-icons';
 }
 
 /* TAB ROW / BUTTON [NEW TAB] */
 body.theme-allure .note-new-tab {
-    color: var(--color-button-gray);
+    color: var(--color-button-gray-dark);
     border: var(--border-transparent);
     font-size: 1.3rem;
     font-family: var(--font-headers);
@@ -846,7 +848,7 @@ body.theme-allure .note-new-tab {
     height: 30px;
 }
 body.theme-allure .note-new-tab:hover {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     background-color: var(--color-background-white);
     color: var(--color-text-gray);
     border: var(--border-standard);
@@ -855,6 +857,7 @@ body.theme-allure .note-new-tab:hover {
 body.theme-allure .note-tab-row {
     border-radius: 0 !important;
     margin-top: 0px;
+    height: 100%;
 }
 
 
@@ -869,12 +872,15 @@ body.theme-allure .note-tab-row .note-tab .note-tab-drag-handle {
 }
 
 /* TAB [INACTIVE & ACTIVE] - TITLE */
-body.theme-allure .note-tab .note-tab-wrapper .note-tab-title {
+body.theme-allure .note-tab .note-tab-title {
     color: var(--color-text-gray);
     text-overflow: ellipsis;
     font-family: var(--main-font-family-sans);
 }
-body.theme-allure .note-tab[active] .note-tab-wrapper .note-tab-title {
+/*body.theme-allure .note-tab:hover .note-tab-title {
+    max-width: calc(100% - 18px);
+}*/
+body.theme-allure .note-tab[active] .note-tab-title {
     color: var(--color-blue);
     font-weight: normal;
 }
@@ -890,7 +896,7 @@ body.theme-allure #root-widget > div.component:first-of-type div.note-tab {
     font-family: var(--font-headers);
     /*padding: 5px;*/
     border: var(--border-transparent);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     color: transparent;
 }
 
@@ -900,7 +906,7 @@ body.theme-allure #root-widget > div.component:first-of-type div.note-tab[active
 }
 body.theme-allure #root-widget > div.component:first-of-type div.note-tab .note-tab-wrapper {
     border: none;
-    align-items: center;
+    /*align-items: center;*/
     display: flex;
     background: unset;
     padding: 5px;
@@ -914,7 +920,7 @@ body.theme-allure #root-widget > div.component:first-of-type div.note-tab:hover 
 }
 body.theme-allure #root-widget > div.component:first-of-type div.note-tab:hover div.note-tab-close {
     /*border: var(--border-standard);*/
-    background: var(--color-background-gray);
+    background: var(--color-background-white);
     color: var(--color-text-gray);
 }
 
@@ -929,19 +935,19 @@ body.theme-allure #root-widget > div.component:first-of-type div.note-tab[active
 /* SECONDARY MENU BAR */
 
 body.theme-allure #root-widget > div.component:first-of-type {
-    width: calc(100% - 178px);
+    width: calc(100% - 450px);
     float: left;
     border-bottom: var(--border-standard);
 }
 body.theme-allure div.standard-top-widget {
     position: absolute;
-    margin-left: calc(100% - 178px);
-    width: 178px;
+    margin-left: calc(100% - 450px);
+    width: 450px;
     background: var(--color-background-gray);
-    padding-left: 20px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-left: 8px;
+    padding-top: 0;
     border-bottom: var(--border-standard);
+    border-left: var(--border-standard);
 }
 
 body.theme-allure div#plugin-buttons {
@@ -949,7 +955,9 @@ body.theme-allure div#plugin-buttons {
 }
 
 body.theme-allure ul.fancytree-container {
-    padding: 3px 0;
+    height: 100%;
+    overflow: auto;
+    padding: 0;
 }
 
 
@@ -970,10 +978,22 @@ body.theme-allure div.standard-top-widget button span:before {
     font-family: 'trilium-allure-icons';
     font-size: 1.1em;
 }
-body.theme-allure button.jump-to-note-dialog-button span:before {
-    content: '\e601';
+body.theme-allure div.standard-top-widget .bx-file-blank:before {
+    content: '\eaec';
 }
-body.theme-allure button.recent-changes-button span:before {
+body.theme-allure div.standard-top-widget .bx-search:before {
+    content: '\eb54';
+}
+/* hide button because the function of it coincides with another button */
+/*    jump to note           =  quick search                            */
+/*    scroll to active note  =  [click tab action]                      */
+body.theme-allure button[data-trigger-command="jumpToNote"] {
+    display: none;
+}
+/*body.theme-allure div.standard-top-widget .bx-send:before {
+    content: '\e601';
+}*/
+body.theme-allure div.standard-top-widget .bx-history:before {
     content: '\e6da';
 }
 body.theme-allure button.enter-protected-session-button span:before {
@@ -982,7 +1002,51 @@ body.theme-allure button.enter-protected-session-button span:before {
 body.theme-allure button#toolbar-button-Today span:before {
     content: '\e745';
 }
+body.theme-allure .quick-search {
+    margin: 0;
+}
+body.theme-allure .btn-outline-secondary.search-button {
+    display: none;
+}
+body.theme-allure div.standard-top-widget input.search-string {
+    padding: 1.3em .5em;
+    box-shadow: none;
+    background-color: transparent !important;
+    border: none;
+    border-left: var(--border-standard);
+}
+body.theme-allure div.standard-top-widget input.search-string:hover,
+body.theme-allure div.standard-top-widget input.search-string:focus {
+    background: var(--color-background-white) !important;
+}
 
+/* Search Result - note list */
+body.theme-allure .input-group-append .dropdown-menu-right span.dropdown-item {
+    min-width: unset;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+body.theme-allure .input-group-append .dropdown-menu-right span.dropdown-item:before {
+    content: '\e659';
+    font-family: 'trilium-allure-icons';
+    margin-right: 12px;
+}
+
+/* Search Result - `Show in full search` button */
+body.theme-allure .input-group-append .dropdown-menu-right a.dropdown-item {
+    padding-left: 38px;
+}
+body.theme-allure .input-group-append .dropdown-menu-right button.btn.btn-sm {
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+}
+body.theme-allure .input-group-append .dropdown-menu-right button.btn.btn-sm:hover {
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
 
 /* ----------------------------------------------------------------------------- */
 /* LEFT PANE                                                                     */
@@ -1004,10 +1068,6 @@ body.theme-allure div#left-pane .global-buttons a {
 body.theme-allure div#left-pane .global-buttons a:hover {
     background: var(--color-background-white);
 }
-body.theme-allure div#left-pane .global-buttons a.icon-action.bx-folder-plus:before {
-    content: '\eaec';
-    font-family: 'trilium-allure-icons';
-}
 
 /* hide the breadcrumbs/path widget */
 body.theme-allure div.note-paths-widget {
@@ -1017,6 +1077,7 @@ body.theme-allure div.note-paths-widget {
 /* Setting button of the note list pop-up window */
 body.theme-allure div#left-pane button.tree-settings-button:before {
     content: '\1392';
+    line-height: 18px;
 }
 body.theme-allure div.tree-settings-popup button,
 body.mobile div.tree-settings-popup button {
@@ -1047,24 +1108,22 @@ body.theme-allure div#root-widget div#left-pane span > a.unhoist-button {
     text-decoration: none !important;
     background-color: var(--color-gray-lighter);
     padding: 2px 4px;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     margin: 0 3px;
 }
 
 /* SIDEBAR */
 body.theme-allure div#left-pane {
-    background-color: var(--color-background-gray);
+    background-color: var(--color-background-white);
     box-sizing: unset;
     box-shadow: unset;
-}
-body.theme-allure span.fancytree-node:hover {
-    background: var(--color-button-gray-dark);
+    /*padding: 4px 0;*/
 }
 body.theme-allure div.tree span.fancytree-expander {
     position: absolute;
     left: 0;
     top: 6px;
-    color: var(--color-button-gray);
+    color: var(--color-button-gray-dark);
 }
 
 
@@ -1085,8 +1144,13 @@ body.theme-allure div.tree-wrapper,
 body.theme-allure div.tree {
     font-family: var(--font-headers);
     font-weight: 400;
-    /*background: white;*/
-    padding-right: 3px;
+}
+body.theme-allure div.tree-wrapper {
+    padding-bottom: 38px;
+}
+body.theme-allure div.tree {
+    border-bottom: var(--border-standard);
+    padding: 0;
 }
 
 /* SIDEBAR MENU ITEM [SECONDARY SELECTED] */
@@ -1106,30 +1170,68 @@ body.theme-allure span.fancytree-focus .fancytree-selected .fancytree-title {
     line-height: 28px;
 }
 
-/* SIDEBAR MENU ITEM [SECONDARY SELECTED:HOVER] */
+/* Note list - normal */
 body.theme-allure span.fancytree-title {
     border: none;
     line-height: 28px;
     padding: 2px;
     font-family: var(--main-font-family-sans);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    max-width: calc(100% - 54px);
 }
-body.theme-allure span.fancytree-title:hover {
+body.theme-allure span.fancytree-node {
+    padding-left: 4px;
+    margin-left: 22px;
+    display: flex;
+}
+body.theme-allure span.fancytree-node:hover {
+    background: var(--color-gray-light);
+}
+body.theme-allure span.fancytree-node:hover span.fancytree-title {
     border: none;
-    background: var(--color-background-gray);
+    max-width: calc(100% - 86px);
 }
 
+/* Note list - add note button */
+body.theme-allure .add-note-button {
+    border: none;
+    right: 7px;
+    position: absolute;
+    margin: 6px 0;
+    color: var(--color-button-gray-dark);
+}
+
+/* Note list - Refresh search button */
+body.theme-allure .refresh-search-button {
+    border: none;
+    margin: auto 5px;
+    display: none;
+}
+body.theme-allure span.fancytree-node:hover .refresh-search-button {
+    display: inline-block;
+}
+
+/* Note list - active note */
+body.theme-allure span.fancytree-active span.add-note-button {
+    color: var(--color-button-white);
+}
 body.theme-allure span.fancytree-active:not(.fancytree-focused) .fancytree-title {
-    border: none !important;
     font-weight: normal;
 }
-
-/*body.theme-allure .fancytree-active {
-    background: var(--color-blue);
-    border-radius: var(--border-radius);
-    width: 95%;
+body.theme-allure span.fancytree-active {
+    background: var(--color-background-blue);
     color: var(--color-text-white);
-}*/
+    width: 100%;
+    border-radius: var(--border-radius-standard) 0 0 var(--border-radius-standard);
+}
+body.theme-allure span.fancytree-active:hover {
+    background: var(--color-background-blue);
+}
 
+/* Note list -focus note */
 body.theme-allure .fancytree-focused {
     font-weight: 400;
 }
@@ -1170,9 +1272,8 @@ body.theme-allure span.fancytree-active .fancytree-title {
 
 body.theme-allure div#center-pane {
     margin: 0;
-    padding: 10px 20px 5px;
-    background: var(--color-background-gray);
-    /*border: var(--border-standard);*/
+    /*padding: 10px 20px 5px;*/
+    background: var(--color-background-white);
 }
 
 body.theme-allure .attr-expander-text {
@@ -1183,49 +1284,58 @@ body.theme-allure .attr-expander-text {
 body.theme-allure div#center-pane div.attr-detail {
     font-family: var(--font-body);
 }
-
 body.theme-allure div#center-pane div.attr-detail h5 {
     font-family: var(--font-headers);
 }
 
-/*body.theme-allure div#center-pane div.attribute-list.component div.all-attr-wrapper,
-body.theme-allure div#center-pane div.similar-notes-widget {
-    border: var(--border-standard);
-    border-radius: var(--border-radius);
-    padding: 5px;
-    background-color: var(--color-background-gray);
-}*/
 
-body.theme-allure div#center-pane div.similar-notes-widget {
-    background: var(--color-background-gray);
-    /*padding: 3px;*/
+/* ATTRIBUTE */
+
+/* Attribute title*/
+body.theme-allure .section-body {
+    border-bottom: none;
+    border-top: var(--border-standard);
+    margin: 0;
+    padding: 0 10px;
+}
+body.theme-allure .section-title {
+    border: none;
+    font-size: 14px;
+    color: var(--color-text-gray-light);
+    padding: 0 16px;
+}
+body.theme-allure .section-title:hover {
+    color: var(--color-blue);
+}
+body.theme-allure .section-title-real.active {
+    color: var(--color-background-blue);
+    border-bottom: var(--border-accent);
+}
+body.theme-allure .section-title-empty {
+    display: none;
 }
 
-/*body.theme-allure div#center-pane div.attribute-list {
-    margin: 0.5rem 0;
-}*/
-
-
-/* Attribute button */
+/* Attribute content */
+body.theme-allure .attribute-list {
+    margin: 0;
+}
 body.theme-allure div.all-attr-wrapper div.component,
 body.theme-allure div.all-attr-wrapper div.inherited-attributes-wrapper {
     padding-left: 18px;
 }
-body.theme-allure div#center-pane div.attribute-list-editor {
-    overflow: unset;
-    min-height: 26px;
+body.theme-allure div.attribute-list-editor {
+    max-height: unset;
 }
-body.theme-allure div#center-pane div.add-new-attribute-button {
+body.theme-allure div.attribute-list-editor .ck-focused {
+    color: var(--color-text-gray);
+}
+body.theme-allure div.add-new-attribute-button {
     font-size: 1rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     padding: 3px;
 }
-body.theme-allure div#center-pane div.add-new-attribute-button:hover {
+body.theme-allure div.add-new-attribute-button:hover {
     background: var(--color-button-white);
-}
-
-body.theme-allure .similar-notes-expander-text {
-    padding: 5px 0 0 5px;
 }
 
 body.theme-allure input.attr-input-inheritable.form-control.form-control-sm,
@@ -1233,6 +1343,14 @@ body.theme-allure input#jump-to-note-autocomplete {
     box-shadow: none;
 }
 
+/* Attribute - Attr Detail */
+body.theme-allure .attr-detail a[data-action=note] {
+    display: block;
+    padding-top: 12px;
+}
+body.theme-allure .attr-detail small {
+    color: var(--color-text-gray-light);
+}
 
 /* similar notes and attributes - title */
 body.theme-allure div#center-pane div.attr-expander,
@@ -1267,18 +1385,29 @@ body.theme-allure div#center-pane div.similar-notes-widget a {
     font-size: .9rem;
     font-family: var(--font-headers);
     text-overflow: ellipsis;
-    max-width: 15rem;
+    max-width: 100%;
+    padding: 4px 15px;
+    background: var(--color-background-white);
+    line-height: 1.6em;
+}
+body.theme-allure div#center-pane div.similar-notes-widget a:before {
+    content: '\e659';
+    font-family: 'trilium-allure-icons';
+    margin-right: 10px;
+    color: var(--color-text-gray-light);
 }
 
 /* buttons in center pane */
-body.theme-allure div#center-pane div.component.title-row div.dropdown {
+body.theme-allure div#center-pane .title-row div.dropdown {
     margin: 0 4px;
 }
-body.theme-allure div#center-pane div.component.title-row button:not(.execute-script-button) {
+body.theme-allure div#center-pane .title-row button:not(.execute-script-button) {
     font-size: 0;
     padding: 2px 6px;
+    border-radius: var(--border-radius-standard);
+    background-color: unset;
 }
-body.theme-allure div#center-pane div.component.title-row button span {
+body.theme-allure div#center-pane .title-row button span {
     font-size: 0.9rem;
 }
 body.theme-allure div#center-pane button.note-type-button span.note-type-desc:after {
@@ -1286,21 +1415,46 @@ body.theme-allure div#center-pane button.note-type-button span.note-type-desc:af
     font-size: initial;
     content: "\e9ac";
 }
-body.theme-allure div.dropdown.note-actions button.dropdown-toggle:before {
+body.theme-allure .note-actions button.dropdown-toggle:before {
     font-size: initial;
     content: '\1392';
 }
 
-/* note buttons - type,actions (vertical alignment with the note title) */
-body.theme-allure div.component.title-row {
-    align-items: center;
-    /*background: var(--color-background-white);*/
-    /*border-bottom: var(--border-standard);*/
-    /*! flex-shrink: 0; */
-    /*! flex-grow: 1; */
-    padding-top: 6px;
-    margin-left: 38px;
+
+/* Center Panel - Title, Info, Attrs */
+body.theme-allure .note-icon-container {
+    padding: 0;
 }
+body.theme-allure .title-row {
+    padding: 12px;
+    background: var(--color-background-white);
+}
+body.theme-allure div#center-pane > .component {
+    margin-left: -5px;
+    width: calc(100% + 10px);
+    padding-right: 5px;
+}
+body.theme-allure .section-container {
+    border-bottom: var(--border-standard);
+    border-top: var(--border-standard);
+    padding: 4px 0;
+    background-color: var(--color-background-gray);
+}
+body.theme-allure .section-title-container {
+    margin-top: 0;
+    justify-content: unset;
+}
+body.theme-allure .similar-notes-widget {
+    border-top: var(--border-standard);
+    background: var(--color-background-gray);
+}
+
+body.theme-allure .note-properties-widget,
+body.theme-allure .attribute-list > div:nth-of-type(1),
+body.theme-allure .inherited-attributes-container {
+    padding: 6px !important;
+}
+
 
 body.theme-allure div.note-title-container {
     /*height: 2.5rem;*/
@@ -1358,13 +1512,14 @@ body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .no
 /* include notes */
 body.theme-allure section.include-note,
 body.mobile section.include-note {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     border: var(--border-standard);
     background: unset;
     box-shadow: var(--shadow-card);
     padding: 0;
     color: var(--color-text-gray);
     margin: 20px 0;
+    display: block;
 }
 body.theme-allure h4.include-note-title,
 body.mobile h4.include-note-title {
@@ -1374,13 +1529,14 @@ body.mobile h4.include-note-title {
     font-family: var(--font-headers);
     font-weight: bold;
 }
-body.theme-allure div.note-detail .ck-content a,
-body.mobile div.note-detail .ck-content a {
-    text-decoration: underline;
+body.theme-allure div.note-detail .ck-content p a,
+body.mobile div.note-detail .ck-content p a {
+    border-bottom: 1px dashed var(--color-gray);
 }
 body.theme-allure div.note-detail .ck-content a:hover,
 body.mobile div.note-detail .ck-content a:hover {
     color: var(--color-blue);
+    border-color: var(--color-blue);
 }
 body.theme-allure div.note-detail .ck-content a:after,
 body.mobile div.note-detail .ck-content a:after {
@@ -1389,7 +1545,7 @@ body.mobile div.note-detail .ck-content a:after {
     vertical-align: top;
 }
 body.theme-allure div.note-detail .ck-content .include-note-title a,
-body.mobile div.note-detail .ck-content .include-note-title a {
+body.mobile  .include-note-title a {
     text-decoration: none;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1460,20 +1616,12 @@ body.mobile section:not([data-box-size=full]).include-note div.ck-content *:not(
     color: var(--color-text-gray) !important;
     font-family: var(--detail-text-font-family) !important;
     white-space: initial !important;
+    line-height: 1.6rem;
 }
 body.theme-allure section.include-note div.include-note-content.type-text br,
 body.mobile section.include-note div.include-note-content.type-text br {
     display: none;
 }
-
-/*body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .note-book-card .note-book-card h5 {
-     padding: 5px 5px 10px;
-     font-size: 95%;
-}
-
-body.theme-allure .note-detail .note-detail-book .note-detail-book-content > .note-book-card .note-book-card .note-book-children {
-     border-top: none;
-}*/
 
 
 /* Table */
@@ -1487,7 +1635,7 @@ body.mobile .ck-content table td {
     border-left: none;
     border-right: none;
     color: var(--color-text-grey);
-    text-align: center;
+    /*text-align: center;*/
     position: relative;
     vertical-align: middle;
 }
@@ -1505,7 +1653,7 @@ body.theme-allure table li,
 body.mobile table li {
     text-align: left;
     line-height: 1.6rem;
-    padding-left: 10px;
+    padding-left: 8px;
 }
 body.theme-allure .ck-widget,
 body.theme-allure .ck-widget.ck-widget_with-selection-handle,
@@ -1518,6 +1666,10 @@ body.mobile .ck-widget.ck-widget_with-selection-handle {
 body.theme-allure .ck-content table tr:first-child,
 body.mobile .ck-content table tr:first-child {
     background: var(--color-gray-light);
+}
+body.theme-allure .ck-content table tr:first-child td,
+body.mobile .ck-content table tr:first-child td {
+    text-align: center;
 }
 /*body.theme-allure .ck-content table tr:first-child td {
     color: var(--color-text-grey);
@@ -1545,81 +1697,27 @@ body.mobile .ck-editor__nested-editable:focus
     box-shadow: none;
 }
 
-body.theme-allure .note-book-auto-message a {
-    color: var(--color-background-blue);
-}
-
-body.theme-allure .note-book-card {
-    background-color: var(--color-background-white);
-    border: var(--border-standard);
-    border-radius: unset;
-    /*box-shadow: var(--shadow-standard);*/
-    flex-grow: 1;
-    margin: 12px;
-    box-shadow: var(--shadow-card);
-    padding: 0;
-    border-radius: var(--border-radius);
-}
-
-body.theme-allure .note-detail-book-content {
-    padding: 0 10px 10px 10px;
-}
-
-body.theme-allure .note-book-children {
-    padding: 4px 15px 5px;
-    background: var(--color-background-white);
-}
-
-/* note title in book view */
-body.theme-allure .note-detail h5.note-book-title {
-    font-size: 1rem;
-    font-family: var(--font-headers);
-    font-weight: bold;
-    /*padding: 8px 10px;*/
-    margin: 0;
-    border-bottom: var(--border-standard);
-    background: var(--color-background-gray);
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-}
-body.theme-allure .note-book-card h5 a {
-    display: inline-table;
-    text-decoration: none;
-    width: 100%;
-    padding: 12px 20px;
-    border: var(--border-transparent);
-    /*border-bottom: var(--border-accent);*/
-}
-body.theme-allure .note-book-card h5 a:hover {
-    text-decoration: none;
-    /*border: var(--border-standard);*/
-    /*border-bottom: var(--border-accent);*/
-    background: var(--color-background-white);
-}
-
 /* note title */
 body.theme-allure input.note-title {
     /*border: var(--border-standard);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     border-bottom: var(--border-accent);
     box-shadow: var(--shadow-standard);*/
     font-size: 1.5em;
     /*font-family: var(--font-headers);*/
-    /*font-weight: 600;*/
+    font-weight: bold;
     padding: 0;
     outline: none;
     color: var(--color-text-gray) !important;
     background: unset !important;
+    border: 2px solid transparent;
 }
 body.theme-allure input.note-title:focus {
     border-bottom: var(--border-accent);
 }
-
-body.theme-allure .attribute-list.component {
-    /*background: var(--color-background-white);*/
-    margin: 0;
-    padding-bottom: 5px;
-    margin-left: 38px;
+body.theme-allure button.note-icon:before {
+    font-size: 1.6rem;
+    color: var(--color-text-gray);
 }
 
 /* note title - protected notes*/
@@ -1676,21 +1774,31 @@ body.theme-allure .dropdown-item[data-note-type=code] strong:before {
     margin-right: 10px;
 }
 
-/* note body */
+/* NOTE BODY */
+
+/* note details */
+/*body.theme-allure div#center-pane .component:nth-of-type(10) {
+    background: var(--color-background-white);
+    padding: 4px;
+    border: var(--border-standard);
+    box-shadow: var(--shadow-card);
+    border-radius: var(--border-radius-standard);
+}*/
+/*body.theme-allure div#center-pane div:nth-of-type(11) {
+    margin: 4px 0;
+}*/
 body.theme-allure div.note-detail {
     font-family: monospace;
-    border: var(--border-standard);
-    background: var(--color-background-white);
-    padding: 3px;
-    box-shadow: var(--shadow-card);
-    border-radius: var(--border-radius);
+    /*background: var(--color-background-white);*/
 }
 body.theme-allure #confirm-dialog-content,
 body.theme-allure .note-detail-readonly-text,
 body.theme-allure .note-detail-relation-map,
 body.theme-allure .note-detail-editable-text,
 body.theme-allure .note-detail-read-only-code-content {
-    padding: 24px;
+    padding: 12px 12px 16px 16px;
+    overflow: hidden;
+    margin-bottom: 0;
 }
 body.theme-allure p code {
     font-size: 0.7rem;
@@ -1699,9 +1807,9 @@ body.theme-allure p code {
     border: var(--border-standard);
     font-family: var(--font-code);
 }
-body.theme-allure p br,
-body.mobile p br {
-    height: 10px;
+body.theme-allure p br:not([data-cke-filler]),
+body.mobile p br:not([data-cke-filler]) {
+    height: var(--spacing-content-normal);
     display: block;
     content: " ";
 }
@@ -1741,25 +1849,25 @@ body.theme-allure div.edit-text-note-container a.edit-note:after {
 body.theme-allure div.alert.alert-warning.no-print {
     padding: 0;
 }
-body.theme-allure div#center-pane.component div.note-detail-read-only-code div.alert {
+/*body.theme-allure div#center-pane.component div.note-detail-read-only-code div.alert {
     padding: 0;
-}
-body.theme-allure div.note-detail-readonly-text div.edit-text-note-container {
+}*/
+/*body.theme-allure div.note-detail-readonly-text div.edit-text-note-container {
     top: 58px;
     right: unset;
     position: fixed;
     margin-left: -30px;
     background: none;
     border: var(--border-transparent) !important;
-}
-body.theme-allure div.note-detail-read-only-code div.edit-code-note-container {
+}*/
+/*body.theme-allure div.note-detail-read-only-code div.edit-code-note-container {
     top: 58px;
     right: unset;
     position: fixed;
     margin-left: -5px;
     background: none;
     border: var(--border-transparent) !important;
-}
+}*/
 body.theme-allure div.note-detail-readonly-text div.edit-text-note-container:hover,
 body.theme-allure div.note-detail-read-only-code div.edit-code-note-container:hover {
      background: var(--color-background-white) !important;
@@ -1806,6 +1914,14 @@ body.theme-allure .ck-content hr {
 body.theme-allure .ck-content i,
 body.mobile .ck-content i {
     color: var(--color-text-gray-light);
+}
+
+body.theme-allure .note-detail .ck-content h2::before,
+body.theme-allure .note-detail .ck-content h3::before,
+body.theme-allure .note-detail .ck-content h4::before,
+body.theme-allure .note-detail .ck-content h5::before,
+body.theme-allure .note-detail .ck-content h6::before {
+    content: '';
 }
 
 /* h1 */
@@ -1922,6 +2038,75 @@ body.mobile .todo-list input[type="checkbox"] {
 }
 
 
+/* NOTE LIST WIDGET */
+
+/* Note List - All */
+body.theme-allure .note-list-wrapper {
+    margin-top: 24px;
+}
+body.theme-allure .note-book-card {
+    background-color: var(--color-background-white);
+    border: var(--border-standard);
+    border-radius: unset;
+    /*box-shadow: var(--shadow-standard);*/
+    flex-grow: 1;
+    margin: 12px 0 12px 12px;
+    box-shadow: var(--shadow-card);
+    padding: 0;
+    border-radius: var(--border-radius-standard);
+}
+body.theme-allure .note-book-content {
+    padding: 0 20px;
+}
+body.theme-allure .note-book-auto-message a {
+    color: var(--color-background-blue);
+}
+
+/* Note List - Title */
+body.theme-allure .note-book-card .note-book-title {
+    font-size: 1.4em;
+    font-family: var(--font-headers);
+    font-weight: bold;
+    margin: 0;
+    border-top-left-radius: var(--border-radius-standard);
+    border-top-right-radius: var(--border-radius-standard);
+    display: block;
+    padding: 16px 16px 6px 16px;
+    background-color: var(--color-background-gray);
+    border-bottom: var(--border-standard);
+}
+body.theme-allure .note-book-card .note-book-title:hover {
+    background: var(--color-background-white);
+}
+
+/* Note List - Title - Attrs */
+body.theme-allure .note-book-title .rendered-note-attributes {
+    font-size: small;
+    font-weight: normal;
+    display: block;
+    margin: 0;
+    padding-top: 10px;
+    line-height: 1.4em;
+}
+body.theme-allure .note-book-title .rendered-note-attributes:before {
+    content: '';
+}
+
+
+/* SIMILAR NOTE */
+body.theme-allure .similar-notes-widget {
+    background: var(--color-background-gray);
+    padding: 8px 0;
+}
+body.theme-allure .similar-notes-widget .area-expander-text {
+    margin: auto;
+}
+body.theme-allure .similar-notes-widget .similar-notes-wrapper {
+    padding: 12px;
+    max-height: 30em;
+}
+
+
 /* ----------------------------------------------------------------------------- */
 /* RIGHT PANE                                                                    */
 /* ----------------------------------------------------------------------------- */
@@ -1941,23 +2126,24 @@ body.theme-allure div#right-pane li {
 body.theme-allure div#right-pane .card {
     border-bottom: var(--border-standard);
     border-radius: unset;
+    background-color: var(--color-background-white);
 }
 
 /* Widget Header */
 body.theme-allure div#right-pane .card-header {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    /*border: none;*/
-    border-bottom: var(--border-accent-alt);
+    /*border-bottom-left-radius: 0;*/
+    /*border-bottom-right-radius: 0;*/
+    /*border-bottom: var(--border-accent-alt);*/
+    border: none;
     width: 100%;
     height: 38px;
     justify-content: space-between;
     align-items: center;
     background: var(--color-background-gray);
-    padding: 3px 3px 3px 10px;
+    padding: 0;
 }
 body.theme-allure div.card-header div:nth-of-type(1) {
-	width: calc(100% - 32px);
+	width: 100%;
 	display: inherit;
 }
 /* Remove the space in front of the show/hide button */
@@ -1970,17 +2156,20 @@ body.theme-allure #right-pane .widget-title {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    margin: auto 0;
+    margin-right: 48px;
+    display: block;
 }
-body.theme-allure div#right-pane .card .card-header .widget-header-actions a.widget-header-action {
+body.theme-allure div#right-pane .card-header .widget-header-actions a.widget-header-action {
     color: var(--color-dark) !important;
     font-size: 0.8rem;
-    margin-left: 6px;
     padding: 6px;
     border: var(--border-transparent);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
+    position: absolute;
+    right: 28px;
+    margin: 4px 0;
 }
-body.theme-allure div#right-pane .card .card-header .widget-header-actions a.widget-header-action:hover {
+body.theme-allure div#right-pane .card-header .widget-header-actions a.widget-header-action:hover {
     background: var(--color-background-white);
     border: var(--border-standard);
 }
@@ -1991,21 +2180,33 @@ body.theme-allure div#right-pane .card-body {
     background: var(--color-background-white);
     border-top: var(--border-standard);
 }
+body.theme-allure div#right-pane .card-body ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+    margin-right: -8px;
+}
 body.theme-allure .link-map-widget {
     margin: -8px;
+}
+body.theme-allure .note-info-widget-table {
+    display: unset;
 }
 
 /* Widget button */
 body.theme-allure a.widget-toggle-button {
-    border: var(--border-transparent);
-    border-radius: var(--border-radius);
-    padding: 4px;
+    /*border: var(--border-transparent);*/
+    /*border-radius: var(--border-radius-standard);*/
+    padding: 8px;
+    width: 100%;
+}
+body.theme-allure #right-pane .widget-toggle-icon {
+    float: right;
 }
 body.theme-allure a.widget-toggle-button:hover {
-    border: var(--border-standard);
+    /*border: var(--border-standard);*/
     background: var(--color-background-white);
 }
-body.theme-allure a.widget-help.external.no-arrow.bx.bx-info-circle {
+body.theme-allure a.widget-help.external.no-arrow.bx-info-circle {
     display: none;
 }
 
@@ -2025,7 +2226,7 @@ body.theme-allure div.calendar-widget div.calendar-week span {
     height: 34px;
     padding: 5px;
 }
-body.theme-allure a.widget-toggle-button.no-arrow.bx.bx-window:before {
+body.theme-allure a.widget-toggle-button.no-arrow.bx-window:before {
     content: "\e9ac";
 }
 
@@ -2039,7 +2240,11 @@ body.theme-allure a.widget-toggle-button.no-arrow.bx.bx-window:before {
 /* MOBILE                                                                        */
 /* ----------------------------------------------------------------------------- */
 
-
+/* Global */
+body.mobile #root-widget > div.component:first-of-type {
+    border: none;
+    background: var(--color-background-white);
+}
 body.mobile .btn:focus {
   box-shadow: none;
 }
@@ -2047,12 +2252,13 @@ body.mobile :not(.fancytree-custom-icon):after,
 body.mobile :not(.fancytree-custom-icon):before {
     font-size: 1.3rem;
     font-family: 'trilium-allure-icons';
-    /*color: var(--color-button-gray);*/
+    /*color: var(--color-button-gray-dark);*/
 }
 body.mobile div#global-buttons {
+    top: 0;
     box-shadow: var(--shadow-mobile);
-    padding: 9px 0 !important;
-    margin: 0 !important;
+    padding: 9px 0;
+    margin: 0;
 }
 body.mobile .btn.btn-primary {
     border: none;
@@ -2068,7 +2274,7 @@ body.mobile div#context-menu-container {
     padding: 12px;
     top: 16px !important;
     left: 240px !important;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     border: none;
     box-shadow: var(--shadow-mobile-popup);
 }
@@ -2102,6 +2308,7 @@ body.mobile div.note-title-container input.note-title {
 
 body.mobile div.note-detail.type-text.mime-text-html {
     padding: 0 !important;
+    margin-top: 0 !important;
 }
 body.mobile div.note-detail-readonly-text-content,
 body.mobile div.note-detail-read-only-code-content,
@@ -2148,18 +2355,25 @@ body.mobile button.bx-menu:before {
 }
 body.mobile span.bx-plus,
 body.mobile span.bx-trash {
-    display: none;
+    display: none !important;
 }
 
 /* Note list */
 body.mobile div.component {
     padding: 0;
 }
-body.mobile .component > .component:nth-of-type(2) > .component {
+body.mobile #root-widget > .component:nth-of-type(2) > .component:nth-of-type(1) {
     box-shadow: var(--shadow-mobile);
+    width: 100%;
+}
+body.mobile #root-widget > .component:nth-of-type(2) > .component:nth-of-type(2) {
+    margin-top: 54px;
 }
 body.mobile div.component div.tree-wrapper {
     box-shadow: none;
+    width: 100%;
+    margin-top: 54px;
+    overflow: hidden;
 }
 body.mobile div.note-detail-printable.component {
     margin: 5px;
@@ -2167,7 +2381,7 @@ body.mobile div.note-detail-printable.component {
 }
 body.mobile span.fancytree-node {
     padding: 5px;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     /*margin-left: 26px;*/
 }
 body.mobile span.fancytree-node:active {
@@ -2177,6 +2391,11 @@ body.mobile span.fancytree-title {
     font-size: inherit;
     line-height: 28px;
     border: none;
+    max-width: calc(100% - 58px);
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 body.mobile span.fancytree-custom-icon {
     font-size: x-large;
@@ -2232,23 +2451,18 @@ body.mobile div span.fancytree-active .fancytree-title {
     /*border: none;
     color: var(--color-text-white) !important;*/
 }
-/*body.mobile span.fancytree-node.fancytree-active {
-    background: var(--color-background-blue);
-    border-radius: var(--border-radius);
-    color: var(--color-text-white);
-    display: flex;
-}*/
 
 
 body.mobile ul.ui-fancytree.fancytree-container {
     padding: 6px;
+    background: var(--color-background-white) !important;
 }
 
 /* Top button of note list */
 body.mobile a,
 body.theme-allure a:visited,
 body.theme-allure a:hover {
-    color: var(--color-button-gray);
+    color: var(--color-button-gray-dark);
 }
 body.mobile button.tree-settings-button {
     margin-right: 10px;
@@ -2268,7 +2482,7 @@ body.mobile a.bx-folder-plus:before {
 body.mobile a.bx-layer-minus:before {
     content: '\e620';
 }
-body.mobile a.dropdown-toggle:before {
+body.mobile a.bx-cog:before {
     content: '\e713';
 }
 body.mobile a.dropdown-toggle:after {
@@ -2278,8 +2492,14 @@ body.mobile span.bx-laptop:before,
 body.mobile span.bx-log-out:before {
     content: none;
 }
-body.mobile span.bx.bx-info-circle:before {
+body.mobile span.bx-info-circle:before {
     font-size: 0;
+}
+body.mobile a[data-trigger-command="scrollToActiveNote"] {
+    display: none;
+}
+body.mobile .bx-extension:before {
+    content: '\e626';
 }
 
 /* dialog */
@@ -2303,7 +2523,7 @@ body.mobile div.modal-footer button {
     box-shadow: unset;
 }
 body.mobile .tree-settings-popup {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-standard);
     background: var(--color-background-white);
     border: none;
     box-shadow: var(--shadow-mobile-popup);
@@ -2326,7 +2546,7 @@ body.mobile .tree-settings-popup .form-check-label .form-check-input {
 body.mobile .tree-settings-popup button.save-tree-settings-button {
     width: calc(100% - 32px);
     height: 44px;
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-radius: 0 0 var(--border-radius-standard) var(--border-radius-standard);
     margin: 10px 16px 16px;
 }
 body.mobile .tree-settings-popup > br {
