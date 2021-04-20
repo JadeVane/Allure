@@ -34,7 +34,7 @@ Install the theme by following these steps:
     - [Allure.css](./Allure.css)
     - [Allure-clear.css](./Allure-clear.css)
     - [Allure-night.css](./Allure-night.css)
-1. add `#appTheme` attribute to the note[Allure.css](./Allure.css)
+1. add `#appTheme` attribute to the note
 1. go to Menu > Options, and select `Allure` / `Allure-clear` / `Allure-night` as your new theme
 1. Press `F5` or `Ctrl` + `R` to reload the page
 
