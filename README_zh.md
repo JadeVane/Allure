@@ -30,7 +30,7 @@ trilium 作为一款笔记应用，功能已经足够强大，但是与强大功
 按照以下步骤安装：
 
 1. 创建一个新笔记，类型为 `CSS`，命名为 `Allure` / `Allure-clear` / `Allure-night` *(笔记叫什么名字取决于你要使用哪个主题)*
-1. 选择一个主题，然后复制 [Allure.css](./Allure.css) 的内容到刚才创建的笔记
+1. 选择一个主题，然后复制主题的内容到刚才创建的笔记
     - [Allure.css](./Allure.css)
     - [Allure-clear.css](./Allure-clear.css)
     - [Allure-night.css](./Allure-night.css)
