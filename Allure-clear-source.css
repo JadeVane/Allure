@@ -1667,7 +1667,7 @@ body.theme-allure-clear pre:not(.CodeMirror-line) {
 
 
 /* structure nested notes in book view */
-body.theme-allure-clear .note-detail .note-detail-book .note-detail-book-content > .note-book-card .note-book-card {
+body.theme-allure-clear .note-detail > .note-book-card .note-book-card {
     /*align-items: flex-start;*/
     /* border-left: var(--border-standard); */
     margin: 10px 0 35px;
@@ -1675,7 +1675,7 @@ body.theme-allure-clear .note-detail .note-detail-book .note-detail-book-content
 }
 
 /* include notes */
-body.theme-allure-clear section.include-note {
+body.theme-allure-clear .ck-content .include-note {
     border-radius: var(--border-radius-standard);
     border: var(--border-standard);
     background: unset;
@@ -1684,31 +1684,34 @@ body.theme-allure-clear section.include-note {
     margin: 20px 0;
     display: block;
 }
-body.theme-allure-clear h4.include-note-title {
+body.theme-allure-clear .ck-content .include-note-title {
     font-size: 1.1rem;
     margin-bottom: 0;
     padding: 16px;
     font-family: var(--font-headers);
     font-weight: bold;
 }
-body.theme-allure-clear div.note-detail .ck-content a,
-body.theme-allure-clear div.note-detail .ck-content a *,
+body.theme-allure-clear .ck-content .include-note-title a {
+    border-bottom: none;
+}
+body.theme-allure-clear .ck-content a,
+body.theme-allure-clear .ck-content a *,
 body.theme-allure-clear a.page-url {
     border-bottom: var(--border-link);
 }
-body.theme-allure-clear div.note-detail .ck-content a:hover,
-body.theme-allure-clear div.note-detail .ck-content a *:hover,
+body.theme-allure-clear .ck-content a:hover,
+body.theme-allure-clear .ck-content a *:hover,
 body.theme-allure-clear a.page-url {
     color: var(--color-text-highlight);
     border-color: var(--color-text-highlight);
 }
-body.theme-allure-clear div.note-detail .ck-content a:after,
-body.theme-allure-clear div.note-detail .ck-content a *:after {
+body.theme-allure-clear .ck-content a:after,
+body.theme-allure-clear .ck-content a *:after {
     font-size: smaller;
     content: none;
     vertical-align: top;
 }
-body.theme-allure-clear div.note-detail .ck-content .include-note-title a {
+body.theme-allure-clear .ck-content .include-note-title a {
     text-decoration: none;
     white-space: nowrap;
     text-overflow: ellipsis;
