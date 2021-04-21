@@ -40,6 +40,11 @@ Install the theme by following these steps:
 
 <img style="width: 60%;" src="./resources/steps.png">
 
+## Known bugs
+
+- [ ] The search bar cannot be collapsed following the left pane
+- [ ] The width of the search bar and tab bar cannot be changed with the page width
+
 ## Donation
 
 If Allure theme has helped you, considering buying me a cup of coffee
