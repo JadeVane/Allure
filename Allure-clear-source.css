@@ -288,6 +288,9 @@ body.theme-allure-clear .ck-content ul {
 body.theme-allure-clear .ck-content li {
     margin: var(--spacing-content-small) 0;
 }
+body.theme-allure-clear .ck-content li:last-child {
+    margin-bottom: 0;
+}
 
 /* Input */
 body.theme-allure-clear .input-group-text {
@@ -1595,10 +1598,10 @@ body.theme-allure-clear .section-body-container .note-properties-widget a.page-u
 }
 
 /* Attr */
-body.theme-allure-clear .section-container {
+/*body.theme-allure-clear .section-container {
     padding-bottom: 4px;
     margin-right: 12px;
-}
+}*/
 body.theme-allure-clear .section-title-container {
     padding: 0 var(--spacing-center-pane);
     justify-content: left;
@@ -1964,7 +1967,7 @@ body.theme-allure-clear .note-detail-read-only-code-content {
 body.theme-allure-clear .note-detail-code {
     padding-right: var(--spacing-center-pane);
 }
-body.theme-allure-clear .ck-content code {
+body.theme-allure-clear .ck-content :not(pre) code {
     font-size: 0.7rem;
     padding: 4px 8px;
     margin: 0 4px;
@@ -2211,16 +2214,20 @@ body.theme-allure-clear .todo-list input[type="checkbox"] {
 /* NOTE LIST WIDGET */
 
 /* Note List - All */
-body.theme-allure-clear .note-list-wrapper {
-    margin-top: 24px;
+body.theme-allure-clear .note-list-widget {
+    padding: 0 var(--spacing-center-pane);
+    margin: 0 auto;
+    max-width: var(--width-note-body);
+}
+body.theme-allure-clear .note-list-widget .note-list {
+    padding: 0;
 }
 body.theme-allure-clear .note-book-card {
     background-color: var(--color-background-secondary);
     border: var(--border-standard);
-    border-radius: unset;
     /*box-shadow: var(--shadow-standard);*/
     flex-grow: 1;
-    margin: 12px 0 12px 12px;
+    margin: 12px 12px 12px 0;
     box-shadow: var(--shadow-card);
     padding: 0;
     border-radius: var(--border-radius-standard);
@@ -2233,17 +2240,17 @@ body.theme-allure-clear .note-book-content {
 }*/
 
 /* Note List - Title */
-body.theme-allure-clear .note-book-card .note-book-title {
-    font-size: 1.4em;
+body.theme-allure-clear .note-book-card .note-book-title a {
+    /*font-size: 1.4em;*/
     font-family: var(--font-headers);
     font-weight: bold;
     margin: 0;
     border-top-left-radius: var(--border-radius-standard);
     border-top-right-radius: var(--border-radius-standard);
-    display: block;
-    padding: 16px 16px 6px 16px;
-    background-color: var(--color-background-primary);
-    border-bottom: var(--border-standard);
+    display: inline-block;
+    padding: 12px 16px 0 16px;
+    /*background-color: var(--color-background-primary);*/
+    /*border-bottom: var(--border-standard);*/
 }
 body.theme-allure-clear .note-book-card .note-book-title:hover {
     background: var(--color-background-secondary);
