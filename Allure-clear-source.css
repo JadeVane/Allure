@@ -2075,7 +2075,7 @@ body.theme-allure-clear .ck-content > *:not(figure):first-child {
 
 /* images */
 body.theme-allure-clear .ck-content .image {
-    margin: 2em;
+    margin: 2em auto;
     display: block;
 }
 
