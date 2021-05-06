@@ -345,6 +345,24 @@ body.theme-allure-clear .title-bar-buttons button.close-btn:before {
 }
 
 
+/* Ctrl + F search */
+body.theme-allure-clear .find-box {
+    box-shadow: none !important;
+    background: var(--color-background-accent) !important;
+    border-radius: 3px;
+}
+body.theme-allure-clear .find-box .find-input {
+    border: none !important;
+}
+body.theme-allure-clear .find-box .find-input,
+body.theme-allure-clear .find-box .find-case,
+body.theme-allure-clear .find-box .find-back,
+body.theme-allure-clear .find-box .find-forward,
+body.theme-allure-clear .find-box .find-close {
+    background: none !important;
+}
+
+
 body.theme-allure-clear #context-menu-container {
     border-radius: var(--border-radius-standard);
     box-shadow: var(--shadow-accented);
