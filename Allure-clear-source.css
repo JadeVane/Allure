@@ -1491,7 +1491,7 @@ body.theme-allure-clear .attribute-list .add-new-attribute-button:hover {
 }
 
 /* similar notes - content */
-body.theme-allure-clear div#center-pane hr {
+body.theme-allure-clear div#center-pane hr.w-100 {
     display: none !important;
 }
 body.theme-allure-clear div#center-pane div.similar-notes-widget a {
