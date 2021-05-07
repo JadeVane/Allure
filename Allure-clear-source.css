@@ -896,7 +896,7 @@ body.theme-allure-clear div#options-keyboard-shortcuts div {
 /* float button */
 body.theme-allure-clear .btn-group.floating-button {
     right: 8px !important;
-    top: 10px !important;
+    top: 0px !important;
 }
 body.theme-allure-clear div.note-detail-relation-map div.floating-button {
     top: auto !important;
@@ -1898,8 +1898,7 @@ body.theme-allure-clear input.note-title {
     line-height: 1.5em;
 }
 body.theme-allure-clear input.note-title:focus {
-    color: var(--color-text-accent) !important;
-    border-bottom: var(--border-accent);
+    color: var(--color-text-highlight) !important;
 }
 /*body.theme-allure-clear button.note-icon:before {
     font-size: 1.6rem;
@@ -2240,52 +2239,101 @@ body.theme-allure-clear .note-list-widget {
 body.theme-allure-clear .note-list-widget .note-list {
     padding: 0;
 }
-body.theme-allure-clear .note-book-card {
+body.theme-allure-clear .note-book-card.expanded .note-book-content {
+    padding: 0 16px;
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+
+/* Note List - Content - Grid view */
+body.theme-allure-clear .note-list.grid-view .note-book-card {
+    background-color: var(--color-background-secondary);
+    /*border: var(--border-standard);*/
+    flex-grow: 1;
+    margin: 12px 0;
+    /*box-shadow: var(--shadow-card);*/
+    padding: 0;
+    border-radius: var(--border-radius-standard);
+    max-height: 12em;
+}
+body.theme-allure-clear .grid-view .note-book-card.expanded .ck-content * {
+    color: var(--color-text-secondary);
+    font-weight: normal;
+    border: none;
+    margin: var(--spacing-content-small) 0;
+    line-height: 1em;
+    display: inline;
+    font-size: 1em;
+    padding: 0;
+    background: inherit;
+}
+body.theme-allure-clear .grid-view .note-book-card.expanded .ck-content br {
+    display: none;
+}
+body.theme-allure-clear .grid-view .note-book-card.expanded .ck-content img {
+    float: left;
+    max-width: 9em;
+    max-height: 9em;
+    margin: 9px 18px 0 0;
+    border-radius: 3px;
+}
+
+/* Note List - Content - List view */
+body.theme-allure-clear .note-list.list-view .note-list-container {
+    margin-top: 30px;
+}
+body.theme-allure-clear .note-list.list-view .note-book-card {
     background-color: var(--color-background-secondary);
     border: var(--border-standard);
-    /*box-shadow: var(--shadow-standard);*/
-    flex-grow: 1;
     margin: 12px 12px 12px 0;
     box-shadow: var(--shadow-card);
     padding: 0;
     border-radius: var(--border-radius-standard);
 }
-body.theme-allure-clear .note-book-content {
-    padding: 0 20px;
+
+/* Note List - Button */
+body.theme-allure-clear .note-list.grid-view .note-list-container {
+  margin-top: 20px;
 }
-/*body.theme-allure-clear .note-book-auto-message a {
-    color: var(--color-background-highlight);
-}*/
 
 /* Note List - Title */
 body.theme-allure-clear .note-book-card .note-book-title a {
     /*font-size: 1.4em;*/
     font-family: var(--font-headers);
-    font-weight: bold;
+    font-weight: normal;
     margin: 0;
     border-top-left-radius: var(--border-radius-standard);
     border-top-right-radius: var(--border-radius-standard);
     display: inline-block;
-    padding: 12px 16px 0 16px;
+    padding: 16px;
+    font-size: 1.2rem;
     /*background-color: var(--color-background-primary);*/
     /*border-bottom: var(--border-standard);*/
 }
-body.theme-allure-clear .note-book-card .note-book-title:hover {
-    background: var(--color-background-secondary);
+body.theme-allure-clear .list-view .note-book-card .note-book-title a {
+    padding-left: 0;
+}
+body.theme-allure-clear .note-book-card .note-book-title a:hover {
+    color: var(--color-text-highlight);
+}
+body.theme-allure-clear .note-book-card .note-book-title .note-expander {
+    padding: 14px;
 }
 
 /* Note List - Title - Attrs */
 body.theme-allure-clear .note-book-title .rendered-note-attributes {
-    font-size: small;
+    display: none;
+    /*font-size: 14px;
     font-weight: normal;
     display: block;
     margin: 0;
-    padding-top: 10px;
+    padding: 10px 16px 0;
     line-height: 1.4em;
+    color: var(--color-text-secondary);*/
 }
-body.theme-allure-clear .note-book-title .rendered-note-attributes:before {
+/*body.theme-allure-clear .note-book-title .rendered-note-attributes:before {
     content: '';
-}
+}*/
 
 
 /* SIMILAR NOTE */
