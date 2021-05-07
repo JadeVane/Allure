@@ -125,6 +125,7 @@ html {
 
     --color-button-primary       : var(--color-gray-lighter);
     --color-button-accent        : var(--color-gray-light);
+    --color-button-hover-center  : var(--color-gray-lighter);
     /* ------------------- Default mode end -------------- */
 
 
@@ -142,6 +143,7 @@ html {
 
     --color-button-primary       : var(--color-gray-darker);
     --color-button-accent        : var(--color-gray-dark);
+    --color-button-hover-center  : var(--color-black-light);
     /* ------------------- Night mode end ---------------- */
 
 
@@ -221,7 +223,7 @@ body.theme-allure-clear .modal-dialog a {
 
 /* Hide the help link and the icon after a link */
 body.theme-allure-clear a:after,
-body.theme-allure-clear a.external {
+body.theme-allure-clear a.external:not(.page-url) {
     display: none;
 }
 
@@ -387,10 +389,10 @@ body.theme-allure-clear #context-menu-container li.dropdown-item {
 body.theme-allure-clear #context-menu-container .dropdown-divider,
 body.theme-allure-clear #center-pane .dropdown-divider {
     border: none;
-    height: 2px;
-    margin: 0.3rem 0px;
+    /*height: 2px;*/
+    margin: 2px 0px;
     overflow: hidden;
-    background-color: var(--color-background-primary);
+    /*background-color: var(--color-background-primary);*/
 }
 
 
@@ -1172,11 +1174,12 @@ body.theme-allure-clear button.btn.btn-sm.icon-button.collapse-tree-button {
 }
 
 /* LEFT BUTTON - Buttons below - hide/show pane */
-body.theme-allure-clear button.btn.btn-sm.icon-button.hide-right-pane-button,
-body.theme-allure-clear button.btn.btn-sm.icon-button.show-right-pane-button {
+body.theme-allure-clear .hide-right-pane-button,
+body.theme-allure-clear .show-right-pane-button {
     /*bottom: 3px;*/
     right: 6px;
     font-size: var(--size-left-pane-button);
+    color: var(--color-text-secondary);
 }
 body.theme-allure-clear button.btn.btn-sm.icon-button.hide-left-pane-button,
 body.theme-allure-clear button.btn.btn-sm.icon-button.show-left-pane-button {
@@ -1448,6 +1451,12 @@ body.theme-allure-clear div#center-pane {
     /* margin: 62px 0 40px; */
 }
 
+/* BUTTON */
+body.theme-allure-clear #center-pane .btn:hover,
+body.theme-allure-clear .edit-text-note-container:hover,
+body.theme-allure-clear .edit-code-note-container:hover {
+    background: var(--color-button-hover-center) !important;
+}
 
 /* ATTRIBUTE */
 
@@ -1556,9 +1565,6 @@ body.theme-allure-clear div#center-pane .title-row button.btn:not(.execute-scrip
     position: absolute;
     top: -2px;
 }
-body.theme-allure-clear div#center-pane .title-row button.btn:not(.execute-script-button):hover {
-    background: var(--color-background-accent);
-}
 body.theme-allure-clear .title-row button span {
     font-size: 0.9rem;
     line-height: 1.4rem;
@@ -1599,20 +1605,22 @@ body.theme-allure-clear .section-body-container .note-properties-widget div {
 }
 body.theme-allure-clear .section-body-container .note-properties-widget div:before {
     font-size: initial;
-    content: 'source:\A';
+    content: 'source';
     color: var(--color-text-secondary);
     white-space: pre;
+    margin-right: 12px;
 }
 body.theme-allure-clear .section-body-container .note-properties-widget a.page-url {
     display: initial;
     white-space: break-spaces;
-    margin: 12px 0 0 18px;
-    border-bottom: var(--border-link);
+    /*margin: 12px 0 0 18px;*/
+    border-bottom: none;
     font-size: initial;
+    line-height: 1em;
 }
 body.theme-allure-clear .section-body-container .note-properties-widget a.page-url:hover {
     color: var(--color-text-highlight);
-    border-color: var(--color-text-highlight);
+    border-bottom: var(--border-link);
 }
 
 /* Attr */
@@ -1716,13 +1724,11 @@ body.theme-allure-clear .ck-content .include-note-title a {
     border-bottom: none;
 }
 body.theme-allure-clear .ck-content a,
-body.theme-allure-clear .ck-content a *,
-body.theme-allure-clear a.page-url {
+body.theme-allure-clear .ck-content a * {
     border-bottom: var(--border-link);
 }
 body.theme-allure-clear .ck-content a:hover,
-body.theme-allure-clear .ck-content a *:hover,
-body.theme-allure-clear a.page-url {
+body.theme-allure-clear .ck-content a *:hover {
     color: var(--color-text-highlight);
     border-color: var(--color-text-highlight);
 }
@@ -1910,6 +1916,7 @@ body.theme-allure-clear .dropdown-item strong {
 }
 body.theme-allure-clear .dropdown-item span.check {
     float: right;
+    margin-left: 14px;
 }
 body.theme-allure-clear .dropdown-item[data-mime-type] {
     padding: 0 1rem 0 2.6rem;
@@ -1990,7 +1997,7 @@ body.theme-allure-clear .ck-content :not(pre) code {
     margin: 0 4px;
     /*border: var(--border-standard);*/
     font-family: var(--font-code);
-    color: var(--color-text-primary) !important;
+    color: var(--color-text-primary);
     background: var(--color-background-accent);
     vertical-align: middle;
 }
@@ -2021,8 +2028,7 @@ body.theme-allure-clear button.ck-button-display-toggle {
 }
 
 /* Edit button */
-body.theme-allure-clear div.note-detail a.edit-note,
-body.theme-allure-clear div.edit-text-note-container a.edit-note {
+body.theme-allure-clear .edit-note {
     font-size: 0;
 }
 body.theme-allure-clear div.note-detail a.edit-note:before {
@@ -2031,7 +2037,8 @@ body.theme-allure-clear div.note-detail a.edit-note:before {
     padding: 6px;
     font-family: 'trilium-allure-icons';
 }
-body.theme-allure-clear div.alert.alert-warning.no-print {
+body.theme-allure-clear .edit-text-note-container,
+body.theme-allure-clear .edit-code-note-container {
     padding: 0;
     background: transparent !important;
     border: var(--border-transparent) !important;
@@ -2058,11 +2065,6 @@ body.theme-allure-clear div.alert.alert-warning.no-print {
     background: none;
     border: var(--border-transparent) !important;
 }*/
-body.theme-allure-clear div.note-detail-readonly-text div.edit-text-note-container:hover,
-body.theme-allure-clear div.note-detail-read-only-code div.edit-code-note-container:hover {
-     background: var(--color-background-secondary) !important;
-     border: var(--border-standard) !important;
-}
 
 body.theme-allure-clear .note-detail-text {
     line-height: 1.45;
@@ -2257,7 +2259,7 @@ body.theme-allure-clear .note-list.grid-view .note-book-card {
     max-height: 12em;
 }
 body.theme-allure-clear .grid-view .note-book-card.expanded .ck-content * {
-    color: var(--color-text-secondary);
+    color: var(--color-text-secondary) !important;
     font-weight: normal;
     border: none;
     margin: var(--spacing-content-small) 0;
@@ -2305,8 +2307,12 @@ body.theme-allure-clear .note-book-card .note-book-title a {
     border-top-left-radius: var(--border-radius-standard);
     border-top-right-radius: var(--border-radius-standard);
     display: inline-block;
-    padding: 16px;
+    padding: 12px 16px 6px 16px;
     font-size: 1.2rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     /*background-color: var(--color-background-primary);*/
     /*border-bottom: var(--border-standard);*/
 }
@@ -2345,7 +2351,7 @@ body.theme-allure-clear .note-book-title .rendered-note-attributes {
     max-width: calc(var(--width-note-body) + var(--spacing-center-pane) * 2);
 }*/
 body.theme-allure-clear .similar-notes-widget .area-expander-text {
-    padding: 0 0 8px 0;
+    padding: 4px 0;
     color: var(--color-text-secondary);
 }
 body.theme-allure-clear .similar-notes-widget .area-expander-text:hover {
