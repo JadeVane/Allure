@@ -21,15 +21,14 @@ for (( i = 0; i <= ${#theme[@]}; i++ )); do
         exit 0;
     fi
 
-    content=`echo "${content_raw}" \
+    min_file="Allure-"${theme[i]}".css"
+
+    echo "${content_raw}" \
     | sed "s/\/\*.*\*\///g;/\/\*/,/\*\// d" \
     | tr '\n' ' ' \
     | tr -s ' ' ' ' \
     | sed 's/^[ ][ ]*//g' \
-    | sed '/^$\|^\s*$/d'`
-
-    min_file="Allure-"${theme[i]}".css"
-    echo ${content} | dd status=none of=${min_file}
+    | sed '/^$\|^\s*$/d' > ${min_file}
 
     if [[ ${theme[i]} == ${clip} ]]; then
         xclip -sel clip ${min_file}
