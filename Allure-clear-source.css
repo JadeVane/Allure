@@ -1321,7 +1321,7 @@ body.theme-allure-clear div#left-pane {
 body.theme-allure-clear div.tree span.fancytree-expander {
     position: absolute;
     left: 0;
-    top: 6px;
+    top: 3px;
     color: var(--color-text-primary);
 }
 
@@ -1377,7 +1377,7 @@ body.theme-allure-clear span.fancytree-focus .fancytree-selected .fancytree-titl
 /* Note list - normal */
 body.theme-allure-clear span.fancytree-title {
     border: none;
-    line-height: 28px;
+    line-height: 24px;
     padding: 2px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1385,6 +1385,7 @@ body.theme-allure-clear span.fancytree-title {
     display: block;
     max-width: calc(100% - 18px);
     margin-left: 4px !important;
+    font-size: .9em;
 }
 body.theme-allure-clear span.fancytree-node {
     margin-left: 18px;
@@ -1409,7 +1410,7 @@ body.theme-allure-clear .add-note-button {
     border: none;
     right: 7px;
     position: absolute;
-    margin: 6px 0;
+    margin: 4px 0;
     color: var(--color-text-primary);
 }
 
@@ -1436,6 +1437,9 @@ body.theme-allure-clear span.fancytree-active span.add-note-button {
 
 body.theme-allure-clear div.tree-wrapper.component .fancytree-container li[role=treeitem] {
     padding: 0;
+}
+body.theme-allure-clear ul.fancytree-container ul ul {
+    padding-left: 12px;
 }
 
 /* protected nodes */
@@ -2097,7 +2101,13 @@ body.theme-allure-clear .note-detail {
 
 /* ------------------ No tabs version start ------------- */
 body.theme-allure-clear .ck-content,
-body.theme-allure-clear .note-detail-code-editor {
+body.theme-allure-clear .note-detail-code-editor,
+body.theme-allure-clear #confirm-dialog-content,
+body.theme-allure-clear .note-detail-readonly-text,
+body.theme-allure-clear .note-detail-relation-map,
+body.theme-allure-clear .note-detail-editable-text,
+body.theme-allure-clear .note-detail-read-only-code-content,
+body.theme-allure-clear .note-detail-read-only-code {
     padding: 12px var(--spacing-center-pane) 0;
 /* ------------------  No tabs version end  ------------- */
     font-family: monospace;
@@ -2110,10 +2120,12 @@ body.theme-allure-clear #confirm-dialog-content,
 body.theme-allure-clear .note-detail-readonly-text,
 body.theme-allure-clear .note-detail-relation-map,
 body.theme-allure-clear .note-detail-editable-text,
-body.theme-allure-clear .note-detail-read-only-code-content {
+body.theme-allure-clear .note-detail-read-only-code-content,
+body.theme-allure-clear .note-detail-read-only-code {
     overflow: hidden;
     margin-bottom: 0;
     color: var(--color-text-primary) !important;
+    min-height: 28px;
 
     /* ------------------ With tabs version start ------------- */
     padding: 24px var(--spacing-center-pane);
@@ -2197,7 +2209,7 @@ body.theme-allure-clear .edit-code-note-container {
 
     /* ------------------ No tabs version start ------------- */
     top: 4px;
-    right: -2px;
+    right: 8px;
     /* ------------------  No tabs version end  ------------- */
 }
 /*body.theme-allure-clear div#center-pane.component div.note-detail-read-only-code div.alert {
@@ -2397,8 +2409,12 @@ body.theme-allure-clear .note-list-widget .note-list {
 }
 body.theme-allure-clear .note-book-card.expanded .note-book-content {
     padding: 0 16px;
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
     overflow: hidden;
+}
+body.theme-allure-clear .note-book-card.expanded .note-book-content .ck-content {
+    padding: 0;
+    max-height: 6em;
 }
 
 /* Note List - Content - Grid view */
@@ -2406,7 +2422,7 @@ body.theme-allure-clear .note-list.grid-view .note-book-card {
     background-color: var(--color-background-secondary);
     /*border: var(--border-standard);*/
     flex-grow: 1;
-    margin: 12px 0;
+    margin: 6px 0;
     /*box-shadow: var(--shadow-card);*/
     padding: 0;
     border-radius: var(--border-radius-standard);
@@ -2432,6 +2448,9 @@ body.theme-allure-clear .grid-view .note-book-card.expanded .ck-content img {
     max-height: 9em;
     margin: 9px 18px 0 0;
     border-radius: 3px;
+}
+body.theme-allure-clear .grid-view .note-book-card .note-book-title a {
+    display: block;
 }
 
 /* Note List - Content - List view */
@@ -2460,7 +2479,6 @@ body.theme-allure-clear .note-book-card .note-book-title a {
     margin: 0;
     border-top-left-radius: var(--border-radius-standard);
     border-top-right-radius: var(--border-radius-standard);
-    display: inline-block;
     padding: 12px 16px 6px 16px;
     font-size: 1.2rem;
     width: 100%;
