@@ -178,8 +178,8 @@ html {
 /* FONT VARIABLES                                                                */
 /* ----------------------------------------------------------------------------- */
 
-    --font-headers : Noto Sans CJK SC, 'Open Sans', 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
-    --font-body    : Noto Sans CJK SC, 'Open Sans', 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
+    --font-headers : 'Open Sans', Noto Sans CJK SC, 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
+    --font-body    : 'Open Sans', Noto Sans CJK SC, 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
     --font-code    : 'Fira Code', 'Source Code Pro', Courier, Monospace;
 
 /* ----------------------------------------------------------------------------- */
@@ -890,9 +890,43 @@ body.theme-allure-clear .btn:hover {
     /*border: transparent;*/
 }
 
-body.theme-allure-clear div#link-map-dialog div {
+
+/* LINK MAP DIALOG*/
+
+/* Link Map Dialog - title */
+body.theme-allure-clear div#link-map-dialog > div {
     top: 0 !important;
 }
+
+/* Link Map Dialog - note */
+body.theme-allure-clear .link-map-container .note-box {
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
+}
+body.theme-allure-clear .link-map-active-note {
+    background: var(--color-background-accent) !important;
+}
+
+/* Link Map Dialog - note preview */
+body.theme-allure-clear .tooltip-inner {
+    background: var(--color-background-secondary) !important;
+    color: var(--color-text-secondary) !important;
+    box-shadow: none;
+    border: var(--border-standard);
+}
+body.theme-allure-clear .note-tooltip-title {
+    color: var(--color-text-primary) !important;
+}
+body.theme-allure-clear .rendered-note-attributes {
+    color: var(--color-text-inconspicuous);
+}
+
+/* Link Map Dialog - link */
+body.theme-allure-clear .link-map-container .jsplumb-connection-hover path {
+    stroke: var(--color-text-primary);
+}
+
+
 
 /* OPTIONS DIALOG */
 
@@ -2100,7 +2134,7 @@ body.theme-allure-clear .note-detail {
 /* ------------------  With tabs version end  ------------- */
 
 /* ------------------ No tabs version start ------------- */
-body.theme-allure-clear .ck-content,
+body.theme-allure-clear :not(.rendered-note-content) > .ck-content,
 body.theme-allure-clear .note-detail-code-editor,
 body.theme-allure-clear #confirm-dialog-content,
 body.theme-allure-clear .note-detail-readonly-text,
