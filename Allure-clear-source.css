@@ -4,13 +4,10 @@
 
 /* Icons */
 @font-face {
-  font-family: 'trilium-allure-icons';  /* project id 2347067 */
-  src: url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.eot');
-  src: url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2347067_inu6k6cjpm.svg#trilium-allure-icons') format('svg');
+  font-family: 'trilium-allure-icons';
+  src: url('/custom/fonts/Allure-Icons.woff2') format('woff2');
+  src: url('/custom/fonts/Allure-Icons.woff') format('woff');
+  src: url('/custom/fonts/Allure-Icons.ttf') format('truetype');
 }
 
 /* Open Sans */
@@ -205,6 +202,14 @@ html {
 body.theme-allure-clear {
     color: var(--color-text-primary);
     line-height: 1.6em;
+}
+
+body.theme-allure-clear .trilium-allure-icons {
+  font-family: "trilium-allure-icons" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ----------------------------------------------------------------------------- */

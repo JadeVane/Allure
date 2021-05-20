@@ -35,6 +35,8 @@ trilium 作为一款笔记应用，功能已经足够强大，但是与强大功
     - [Allure-clear.css](./Allure-clear.css)
     - [Allure-night.css](./Allure-night.css)
 1. 添加 `#appTheme` 属性
+1. 下载 [fonts](./fonts/) 里面的全部字体，然后在主题笔记右键，选择 `Import to note` 导入全部字体
+1. 为每个字体添加 `#customResourceProvider="字体名称.ttf"` 属性
 1. 在 Menu > Options 里面选择 `Allure` / `Allure-clear` / `Allure-night` 主题
 1. 按下 `F5` 或 `Ctrl` + `R` 重载页面
 
