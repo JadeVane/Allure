@@ -1142,6 +1142,20 @@ body.theme-allure-clear div.global-menu button.dropdown-toggle span {
     display: flex;
 }
 
+/* LEFT BUTTON - Sync button */
+body.theme-allure-clear .sync-status-widget {
+    position: absolute;
+    top: 36px;
+    border: none;
+}
+body.theme-allure-clear .sync-status .sync-status-icon {
+    margin: 8px;
+    padding: 6px;
+}
+body.theme-allure-clear .sync-status .sync-status-icon span {
+    font-size: 1.2rem;
+}
+
 /* LEFT BUTTON - Button above */
 body.theme-allure-clear .standard-top-widget {
     position: absolute;
@@ -1149,7 +1163,7 @@ body.theme-allure-clear .standard-top-widget {
     width: var(--width-left-button-pane);
     display: inline-block;
     margin-left: 0;
-    margin-top: var(--spacing-center-pane);
+    margin-top: 78px;
 }
 body.theme-allure-clear .standard-top-widget > div:not(.component) {
     flex-flow: column;
@@ -1193,7 +1207,7 @@ body.theme-allure-clear button#toolbar-button-Today span:before {
 body.theme-allure-clear .standard-top-widget .quick-search {
     margin: 0 10px;
     position: absolute;
-    top: -30px;
+    top: -68px;
     left: var(--width-left-button-pane);
     width: 170px !important;
     /*display: flex !important;*/
