@@ -1621,6 +1621,13 @@ body.theme-allure-clear div#center-pane div.similar-notes-widget a:before {
     /*margin: 2px 4px;*/
 }
 
+/* ------------------ No tabs version start ------------- */
+/* Similar notes */
+body.theme-allure-clear .similar-notes-widget {
+    display: none;
+}
+/* ------------------  No tabs version end  ------------- */
+
 /* Attr details */
 body.theme-allure-clear .attr-detail {
     background: var(--color-background-primary);
