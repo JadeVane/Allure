@@ -6,8 +6,11 @@
 clip=clear
 # clip=night
 
-# notab=true
-notab=false
+# Choose whether to use the radical version by default
+# Only valid in linux, and you should install xclip by hand
+# Value: true, false
+radical=true
+# radical=false
 
 # ----------------------------------
 # do NOT edit below
@@ -16,38 +19,38 @@ notab=false
 theme=(clear night)
 
 cd `dirname "$0"`
-source_file="Allure-clear-source.css"
+source_file="source-code.css"
 
 for (( i = 0; i <= ${#theme[@]}; i++ )); do
     min_file="Allure-"${theme[i]}".css"
-    min_file_notab="Allure-"${theme[i]}"-notab.css"
+    min_file_radical="Allure-"${theme[i]}"_radical.css"
 
     if [[ ${theme[i]} == "clear" ]]; then
 
         content_raw=`sed -e '/Night mode start/,/Night mode end/d' \
-                         -e '/No tabs version start/,/No tabs version end/d' \
+                         -e '/Radical version start/,/Radical version end/d' \
                          ${source_file}`
 
-        content_raw_notab=`sed -e '/Night mode start/,/Night mode end/d' \
-                               -e '/With tabs version start/,/With tabs version end/d' \
+        content_raw_radical=`sed -e '/Night mode start/,/Night mode end/d' \
+                               -e '/Stable version start/,/Stable version end/d' \
                                ${source_file}`
 
     elif [[ ${theme[i]} == "night" ]]; then
 
         # content_raw=`sed -r -e '/Default mode start/,/Default mode end/d' \
-        #                     -e '/No tabs version start/,/No tabs version end/d' \
+        #                     -e '/Radical version start/,/Radical version end/d' \
         #                     ${source_file}`
-        # content_raw_notab=`sed -r -e '/Default mode start/,/Default mode end/d' \
-        #                           -e '/With tabs version start/,/With tabs version end/d' \
+        # content_raw_radical=`sed -r -e '/Default mode start/,/Default mode end/d' \
+        #                           -e '/Stable version start/,/Stable version end/d' \
         #                           ${source_file}`
 
         content_raw=`sed -r -e '/Default mode start/,/Default mode end/d' \
                             -e 's/(theme-allure-)clear/\1night/g' \
-                            -e '/No tabs version start/,/No tabs version end/d' \
+                            -e '/Radical version start/,/Radical version end/d' \
                             ${source_file}`
-        content_raw_notab=`sed -r -e '/Default mode start/,/Default mode end/d' \
+        content_raw_radical=`sed -r -e '/Default mode start/,/Default mode end/d' \
                                   -e 's/(theme-allure-)clear/\1night/g' \
-                                  -e '/With tabs version start/,/With tabs version end/d' \
+                                  -e '/Stable version start/,/Stable version end/d' \
                                   ${source_file}`
 
     else
@@ -61,16 +64,16 @@ for (( i = 0; i <= ${#theme[@]}; i++ )); do
     | sed 's/^[ ][ ]*//g' \
     | sed '/^$\|^\s*$/d' > ${min_file}
 
-    echo "${content_raw_notab}" \
+    echo "${content_raw_radical}" \
     | sed "s/\/\*.*\*\///g;/\/\*/,/\*\// d" \
     | tr '\n' ' ' \
     | tr -s ' ' ' ' \
     | sed 's/^[ ][ ]*//g' \
-    | sed '/^$\|^\s*$/d' > ${min_file_notab}
+    | sed '/^$\|^\s*$/d' > ${min_file_radical}
 
     if [[ ${clip} == ${theme[i]} ]]; then
-        if [[ ${notab} == "true" ]]; then
-            xclip -sel clip ${min_file_notab}
+        if [[ ${radical} == "true" ]]; then
+            xclip -sel clip ${min_file_radical}
         else
             xclip -sel clip ${min_file}
         fi

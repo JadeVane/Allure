@@ -239,25 +239,25 @@ body.theme-allure-clear a.external:not(.page-url) {
 
 /* Hr line of the note details */
 body.theme-allure-clear .gutter.gutter-horizontal {
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     background: var(--color-background-secondary);
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     background: var(--color-background-primary);
     z-index: 1;
     width: 2px !important;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 
-/* ------------------ No tabs version start ------------- */
+/* ------------------ Radical version start ------------- */
 /*body.theme-allure-clear .gutter.gutter-horizontal:nth-of-type(2) {
     background: var(--color-background-secondary);
 }
 body.theme-allure-clear .gutter.gutter-horizontal:nth-of-type(4) {
     background: var(--color-background-primary);
 }*/
-/* ------------------  No tabs version end  ------------- */
+/* ------------------  Radical version end  ------------- */
 
 /*body.theme-allure-clear .gutter.gutter-horizontal:hover {
     background: var(--color-background-accent);
@@ -995,14 +995,14 @@ body.theme-allure-clear .standard-top-widget {
 
 body.theme-allure-clear .note-tab-row-container .note-tab,
 body.theme-allure-clear .note-tab-row-container .note-new-tab {
+    margin-top: 8px;
 
-/* ------------------ With tabs version start ------------- */
-    margin-top: 12px;
-/* ------------------  With tabs version end  ------------- */
+/* ------------------ Stable version start ------------- */
+/* ------------------  Stable version end  ------------- */
 
-/* ------------------ No tabs version start ------------- */
-    display: none;
-/* ------------------  No tabs version end  ------------- */
+/* ------------------ Radical version start ------------- */
+    /*display: none;*/
+/* ------------------  Radical version end  ------------- */
 
 }
 
@@ -1013,10 +1013,15 @@ body.theme-allure-clear .note-new-tab {
     font-size: 0;
 }
 body.theme-allure-clear .note-new-tab:before {
-    font-size: 1rem;
+    font-size: .9rem;
     content: '\e622';
     font-family: 'trilium-allure-icons';
-    line-height: 33px;
+    line-height: 22px;
+}
+body.theme-allure-clear .note-tab-row-container .note-new-tab {
+    padding: 4px;
+    height: 29px;
+    border-radius: var(--border-radius-standard);
 }
 body.theme-allure-clear .note-new-tab:hover {
     background: var(--color-background-accent);
@@ -1027,14 +1032,15 @@ body.theme-allure-clear .note-tab-row {
     right: 72px;
     position: absolute;
     width: calc(100% - 354px);
+    height: 42px;
 
-    /* ------------------ With tabs version start ------------- */
-    height: 48px;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------ Stable version start ------------- */
+    /*height: 48px;*/
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
-    height: 28px;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------ Radical version start ------------- */
+    /*height: 28px;*/
+    /* ------------------  Radical version end  ------------- */
 }
 body.theme-allure-clear .tab-row-filler .tab-row-border {
     background: unset;
@@ -1048,14 +1054,14 @@ body.theme-allure-clear .tab-row-filler .tab-row-border {
     display: none !important;
 }*/
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper {
-    background: var(--color-background-item);
+    background: none;
     margin: 0 4px;
     color: var(--color-text-secondary);
     border: none;
-    border-radius: 20px;
+    border-radius: var(--border-radius-standard);
     position: unset;
-    padding: 5px 12px;
-    height: calc(1.6em + 8px);
+    padding: 3px 12px;
+    /*height: calc(1.6em + 8px);*/
     text-align: center;
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper:hover {
@@ -1064,6 +1070,7 @@ body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper:hover {
     /*border: var(--border-standard);*/
 }
 body.theme-allure-clear .note-tab-row .note-tab[active] .note-tab-wrapper {
+    background: var(--color-background-item);
     color: var(--color-text-highlight);
     font-weight: normal;
 }
@@ -1075,30 +1082,39 @@ body.theme-allure-clear .note-tab-row .note-tab .note-tab-title {
     text-overflow: ellipsis;
     color: inherit;
     min-height: 1.6em;
+    font-size: .9em;
 }
 
 /* TAB - Button */
 body.theme-allure-clear div.tab-row-filler {
-    /* display: none; */
-    height: 28px;
+    height: inherit;
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-close {
     display: none;
     position: absolute;
-    right: 14px;
+    right: 4px;
     padding: 1px 4px;
+    border-radius: 0;
+    border-top-right-radius: var(--border-radius-standard);
+    border-bottom-right-radius: var(--border-radius-standard);
+    top: 0;
+    height: 29px;
+    color: var(--color-text-primary);
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper:hover .note-tab-close {
     display: block;
-    background: var(--color-background-accent);
+    background: unset;
 }
-body.theme-allure-clear .note-tab-row .note-tab .note-tab-close:hover {
-    background-color: unset;
+body.theme-allure-clear .note-tab-row .note-tab .note-tab-close:hover, {
+    background-color: var(--color-background-accent);
     /*border: var(--border-standard);*/
     color: var(--color-text-accent);
 }
+body.theme-allure-clear .note-tab-row .note-tab[active] .note-tab-wrapper:hover {
+    background-color: var(--color-background-accent);
+}
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-close span {
-    top: unset;
+    top: 0;
 }
 
 
@@ -1536,14 +1552,7 @@ body.theme-allure-clear span.fancytree-active .fancytree-title {
 body.theme-allure-clear div#center-pane {
     background: var(--color-background-secondary);
     overflow: auto;
-
-    /* ------------------ With tabs version start ------------- */
-    padding: 62px 0 0 12px;
-    /* ------------------  With tabs version end  ------------- */
-
-    /* ------------------ No tabs version start ------------- */
-    padding: 4px 0 0 12px;
-    /* ------------------  No tabs version end  ------------- */
+    padding: 42px 0 0 12px;
 }
 
 /* BUTTON */
@@ -1589,9 +1598,9 @@ body.theme-allure-clear .attribute-list .add-new-attribute-button {
     padding: 3px;
     bottom: 0;
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     margin-right: 28px;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 body.theme-allure-clear .attribute-list .save-attributes-button:hover,
 body.theme-allure-clear .attribute-list .add-new-attribute-button:hover {
@@ -1621,12 +1630,12 @@ body.theme-allure-clear div#center-pane div.similar-notes-widget a:before {
     /*margin: 2px 4px;*/
 }
 
-/* ------------------ No tabs version start ------------- */
+/* ------------------ Radical version start ------------- */
 /* Similar notes */
 body.theme-allure-clear .similar-notes-widget {
     display: none;
 }
-/* ------------------  No tabs version end  ------------- */
+/* ------------------  Radical version end  ------------- */
 
 /* Attr details */
 body.theme-allure-clear .attr-detail {
@@ -1650,15 +1659,15 @@ body.theme-allure-clear .note-icon-container {
 
 /* Title - Title content*/
 body.theme-allure-clear .title-row {
-    width: 100%;
     display: block !important;
-    flex-direction: unset !important;
 
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
+    width: 100%;
+    flex-direction: unset !important;
     max-width: var(--width-note-body);
     padding: 0 var(--spacing-center-pane);
     margin: 0 auto;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 }
 body.theme-allure-clear .title-row > * {
     margin: 0 5px;
@@ -1672,36 +1681,36 @@ body.theme-allure-clear div#center-pane .title-row button.btn:not(.execute-scrip
     color: var(--color-text-secondary);
     position: absolute;
 
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     padding: 4px 10px;
     top: -2px;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     padding: 0 4px;
     right: 8px;
     z-index: 1;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 
-/* ------------------ With tabs version start ------------- */
+/* ------------------ Stable version start ------------- */
 body.theme-allure-clear .title-row button span {
     line-height: 1.4rem;
     font-size: 0.9rem;
 }
-/* ------------------  With tabs version end  ------------- */
+/* ------------------  Stable version end  ------------- */
 
 body.theme-allure-clear button.note-type-button span.note-type-desc:before {
     font-family: 'trilium-allure-icons';
     content: "\e659";
 
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     margin-right: 4px;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     font-size: 1rem;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 body.theme-allure-clear .note-actions button.dropdown-toggle:before {
     font-size: initial;
@@ -1710,24 +1719,24 @@ body.theme-allure-clear .note-actions button.dropdown-toggle:before {
 }
 /* Title - Note type button */
 body.theme-allure-clear .note-type button.btn.btn-sm.note-type-button {
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     right: 36px;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     top: 72px;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 /* Title - More menu button */
 body.theme-allure-clear .note-actions button.btn.btn-sm.dropdown-toggle {
 
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     right: 0;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     top: 38px;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 
 
@@ -1735,24 +1744,24 @@ body.theme-allure-clear .note-actions button.btn.btn-sm.dropdown-toggle {
 
 body.theme-allure-clear .section-body-container {
 
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     max-width: var(--width-note-body);
     padding: 0 var(--spacing-center-pane);
     margin: 0 auto;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     padding-right: 17px;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 
 /* Info */
 body.theme-allure-clear .section-body-container .note-properties-widget div {
     font-size: 0;
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     display: flex;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 body.theme-allure-clear .section-body-container .note-properties-widget div:before {
     font-size: initial;
@@ -1768,9 +1777,9 @@ body.theme-allure-clear .section-body-container .note-properties-widget a.page-u
     border-bottom: var(--border-transparent);
     font-size: initial;
 
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     line-height: 1em;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 }
 body.theme-allure-clear .section-body-container .note-properties-widget a.page-url:hover {
     color: var(--color-text-highlight);
@@ -1779,7 +1788,7 @@ body.theme-allure-clear .section-body-container .note-properties-widget a.page-u
 
 /* Attr */
 
-/* ------------------ No tabs version start ------------- */
+/* ------------------ Radical version start ------------- */
 body.theme-allure-clear .section-container {
     position: absolute;
     bottom: -5px;
@@ -1788,21 +1797,21 @@ body.theme-allure-clear .section-container {
     width: inherit;
     margin-left: -12px;
 }
-/* ------------------  No tabs version end  ------------- */
+/* ------------------  Radical version end  ------------- */
 
 body.theme-allure-clear .section-title-container {
     justify-content: left;
     max-width: var(--width-note-body);
 
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     padding: 0 var(--spacing-center-pane);
     margin: 0 auto;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     margin: 0;
     padding-left: 12px;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 body.theme-allure-clear .note-properties-widget,
 body.theme-allure-clear .attribute-list > div:nth-of-type(1),
@@ -1811,22 +1820,16 @@ body.theme-allure-clear .inherited-attributes-container {
     color: var(--color-text-secondary);
 }
 body.theme-allure-clear .attribute-list p {
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     margin-right: 50px !important;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     margin-right: 78px !important;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 body.theme-allure-clear div.note-title-container {
-    /* ------------------ With tabs version start ------------- */
-    margin: 0;
-    /* ------------------  With tabs version end  ------------- */
-
-    /* ------------------ No tabs version start ------------- */
-    margin: 0 0 4px;
-    /* ------------------  No tabs version end  ------------- */
+    margin: 5px;
 }
 body.theme-allure-clear .attribute-list-editor {
     padding-left: 0 !important;
@@ -2074,16 +2077,8 @@ body.theme-allure-clear input.note-title {
     line-height: 1.5em;
     border: 2px solid transparent;
     color: var(--color-text-primary) !important;
-
-    /* ------------------ With tabs version start ------------- */
     font-size: 1.5em;
     text-align: center;
-    /* ------------------  With tabs version end  ------------- */
-
-    /* ------------------ No tabs version start ------------- */
-    font-size: .8em;
-    text-align: left;
-    /* ------------------  No tabs version end  ------------- */
 }
 
 body.theme-allure-clear input.note-title:focus {
@@ -2155,11 +2150,17 @@ body.theme-allure-clear .dropdown-item[data-note-type=code] strong:before {
     margin: 4px 0;
 }*/
 
-/* ------------------ With tabs version start ------------- */
+/* ------------------ Stable version start ------------- */
 body.theme-allure-clear .note-detail {
-/* ------------------  With tabs version end  ------------- */
+    font-family: monospace;
+    margin: 0 auto;
+    max-width: var(--width-note-body);
+    font-size: 16px;
+    /*background: var(--color-background-secondary);*/
+}
+/* ------------------  Stable version end  ------------- */
 
-/* ------------------ No tabs version start ------------- */
+/* ------------------ Radical version start ------------- */
 body.theme-allure-clear :not(.rendered-note-content) > .ck-content,
 body.theme-allure-clear .note-detail-code-editor,
 body.theme-allure-clear #confirm-dialog-content,
@@ -2168,14 +2169,14 @@ body.theme-allure-clear .note-detail-relation-map,
 body.theme-allure-clear .note-detail-editable-text,
 body.theme-allure-clear .note-detail-read-only-code-content,
 body.theme-allure-clear .note-detail-read-only-code {
-    padding: 12px var(--spacing-center-pane) 0;
-/* ------------------  No tabs version end  ------------- */
+    padding: 0 var(--spacing-center-pane) 0;
     font-family: monospace;
     margin: 0 auto;
     max-width: var(--width-note-body);
     font-size: 16px;
     /*background: var(--color-background-secondary);*/
 }
+/* ------------------  Radical version end  ------------- */
 body.theme-allure-clear #confirm-dialog-content,
 body.theme-allure-clear .note-detail-readonly-text,
 body.theme-allure-clear .note-detail-relation-map,
@@ -2187,20 +2188,20 @@ body.theme-allure-clear .note-detail-read-only-code {
     color: var(--color-text-primary) !important;
     min-height: 28px;
 
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     padding: 24px var(--spacing-center-pane);
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     padding: 0 var(--spacing-center-pane) 33px;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 
-/* ------------------ With tabs version start ------------- */
+/* ------------------ Stable version start ------------- */
 body.theme-allure-clear .note-detail-code {
     padding-right: var(--spacing-center-pane);
 }
-/* ------------------  With tabs version end  ------------- */
+/* ------------------  Stable version end  ------------- */
 
 body.theme-allure-clear .ck-content :not(pre) code {
     font-size: 0.7rem;
@@ -2239,38 +2240,40 @@ body.theme-allure-clear button.ck-button-display-toggle {
 }
 
 /* Edit button */
-body.theme-allure-clear .edit-note {
-    font-size: 0;
+body.theme-allure-clear .bx-edit-alt {
+    padding: 0 !important;
+    /*background: transparent !important;*/
+    line-height: 1.4;
+    font-size: inherit;
+
+    /* ------------------ Stable version start ------------- */
+    border: var(--border-transparent);
+    top: 0;
+    right: 28px;
+    /* ------------------  Stable version end  ------------- */
+
+    /* ------------------ Radical version start ------------- */
+    border: none;
+    top: 4px;
+    right: -2px;
+    /* ------------------  Radical version end  ------------- */
 }
-body.theme-allure-clear div.note-detail a.edit-note:before {
+body.theme-allure-clear .bx-edit-alt:hover {
+    background: var(--color-button-hover-center) !important;
+}
+body.theme-allure-clear div.note-detail .bx-edit-alt:before {
     content: '\e6e5';
     padding: 6px;
     font-family: 'trilium-allure-icons';
 
-    /* ------------------ With tabs version start ------------- */
+    /* ------------------ Stable version start ------------- */
     font-size: 1.3rem;
-    /* ------------------  With tabs version end  ------------- */
+    /* ------------------  Stable version end  ------------- */
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     font-size: 1rem;
-    /* ------------------  No tabs version end  ------------- */
-}
-body.theme-allure-clear .edit-text-note-container,
-body.theme-allure-clear .edit-code-note-container {
-    padding: 0;
-    background: transparent !important;
-    border: var(--border-transparent) !important;
-    line-height: 1.4;
-
-    /* ------------------ With tabs version start ------------- */
-    top: 0;
-    right: 28px;
-    /* ------------------  With tabs version end  ------------- */
-
-    /* ------------------ No tabs version start ------------- */
-    top: 4px;
-    right: 8px;
-    /* ------------------  No tabs version end  ------------- */
+    color: var(--color-text-secondary);
+    /* ------------------  Radical version end  ------------- */
 }
 /*body.theme-allure-clear div#center-pane.component div.note-detail-read-only-code div.alert {
     padding: 0;
@@ -2575,7 +2578,7 @@ body.theme-allure-clear .note-book-title .rendered-note-attributes {
 
 
 /* SIMILAR NOTE */
-/* ------------------ With tabs version start ------------- */
+/* ------------------ Stable version start ------------- */
 body.theme-allure-clear .similar-notes-widget .area-expander-text {
     padding: 4px 0;
     color: var(--color-text-secondary);
@@ -2586,13 +2589,13 @@ body.theme-allure-clear .similar-notes-widget .area-expander-text:hover {
 body.theme-allure-clear .similar-notes-widget .similar-notes-wrapper {
     max-height: 30em;
 }
-/* ------------------  With tabs version end  ------------- */
+/* ------------------  Stable version end  ------------- */
 
-/* ------------------ No tabs version start ------------- */
+/* ------------------ Radical version start ------------- */
 body.theme-allure-clear .similar-notes-widget {
     display: none;
 }
-/* ------------------  No tabs version end  ------------- */
+/* ------------------  Radical version end  ------------- */
 
 
 /* ----------------------------------------------------------------------------- */
@@ -2603,9 +2606,9 @@ body.theme-allure-clear div#right-pane {
     background: var(--color-background-primary);
     margin-top: 12px;
 
-    /* ------------------ No tabs version start ------------- */
+    /* ------------------ Radical version start ------------- */
     z-index: 1;
-    /* ------------------  No tabs version end  ------------- */
+    /* ------------------  Radical version end  ------------- */
 }
 
 /* List Items */
