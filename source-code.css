@@ -323,6 +323,20 @@ body.theme-allure-clear strong {
     color: var(--color-text-accent);
 }
 
+/* Toast */
+body.theme-allure-clear .toast {
+    background: var(--color-background-accent) !important;
+    color: var(--color-text-primary) !important;
+}
+body.theme-allure-clear .toast-header {
+    background: var(--color-background-primary) !important;
+}
+body.theme-allure-clear button.close {
+    color: var(--color-text-primary);
+    opacity: unset;
+    text-shadow: none;
+}
+
 
 /* ----------------------------------------------------------------------------- */
 /* CONTEXT MENU & FLOATING ELEMENTS                                              */
@@ -1168,8 +1182,14 @@ body.theme-allure-clear .sync-status .sync-status-icon {
     margin: 8px;
     padding: 6px;
 }
+body.theme-allure-clear .sync-status-icon:not(.sync-status-in-progress):hover {
+    background: var(--color-background-accent);
+}
 body.theme-allure-clear .sync-status .sync-status-icon span {
     font-size: 1.2rem;
+}
+body.theme-allure-clear .tooltip p {
+    margin-top: 0;
 }
 
 /* LEFT BUTTON - Button above */
@@ -2161,7 +2181,7 @@ body.theme-allure-clear .note-detail {
 /* ------------------  Stable version end  ------------- */
 
 /* ------------------ Radical version start ------------- */
-body.theme-allure-clear :not(.rendered-note-content) > .ck-content,
+body.theme-allure-clear:not(.mobile) :not(.rendered-note-content) > .ck-content,
 body.theme-allure-clear .note-detail-code-editor,
 body.theme-allure-clear #confirm-dialog-content,
 body.theme-allure-clear .note-detail-readonly-text,
@@ -3118,12 +3138,14 @@ body.mobile .note-detail .ck-content h6::before {
 
 /* Edit button */
 body.mobile div.alert.alert-warning.no-print {
-    position: absolute;
-    right: 0px;
-    top: 0;
+    /*position: absolute;*/
+    /*right: 0px;*/
+    /*top: 0;*/
     font-size: 0;
     border: none;
     padding: 6px 10px;
+    line-height: normal;
+    background: var(--color-background-secondary) !important;
 }
 body.mobile div.edit-text-note-container a.edit-note:before,
 body.mobile div.edit-code-note-container a.edit-note:before {
