@@ -21,6 +21,16 @@ Allure theme has made some interface element changes to provide a better-looking
 
 ![screenshot](./resources/screenshot.png)
 
+## What's different between stable version and radical version
+
+The radical version has made some radical changes than the stable version to simplify the interface as much as possible, so some changes may not be suitable for everyone.
+
+The additional changes in the current radical version:
+
+1. Remove similar notes
+1. Move attrs to the bottom of the note content
+1. Move the note type button and menu button to the right side of the note content
+
 ## :warning: ATTENTION :warning:
 
 **Do NOT keep more than one version of css style to trilium, or the styles of several css style will affect each other and cause unexpected errors**

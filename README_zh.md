@@ -21,6 +21,16 @@ trilium 作为一款笔记应用，功能已经足够强大，但是与强大功
 
 ![screenshot](./resources/screenshot.png)
 
+## stable（稳定版）和 radical（激进版）有什么区别
+
+radical 版比 stable 版对界面做了更大的改动，目的是尽最大可能精简界面，部分改动可能不适用于所有人。
+
+当前 radical 版的额外改动如下：
+
+1. 去除 similar notes
+1. 将 attrs 移至笔记内容的底部
+1. 将笔记类型和操作菜单按钮移至笔记内容的右侧
+
 ## :warning: 注意 :warning:
 
 **不要同时保存超过一个主题样式，否则多个主题的样式将相互影响，会产生不可预料的错误**
