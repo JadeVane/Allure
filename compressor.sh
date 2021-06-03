@@ -37,21 +37,21 @@ for (( i = 0; i <= ${#theme[@]}; i++ )); do
 
     elif [[ ${theme[i]} == "night" ]]; then
 
-        content_raw=`sed -r -e '/Default mode start/,/Default mode end/d' \
-                            -e '/Radical version start/,/Radical version end/d' \
-                            ${source_file}`
-        content_raw_radical=`sed -r -e '/Default mode start/,/Default mode end/d' \
-                                  -e '/Stable version start/,/Stable version end/d' \
-                                  ${source_file}`
-
         # content_raw=`sed -r -e '/Default mode start/,/Default mode end/d' \
-        #                     -e 's/(theme-allure-)clear/\1night/g' \
         #                     -e '/Radical version start/,/Radical version end/d' \
         #                     ${source_file}`
         # content_raw_radical=`sed -r -e '/Default mode start/,/Default mode end/d' \
-        #                           -e 's/(theme-allure-)clear/\1night/g' \
         #                           -e '/Stable version start/,/Stable version end/d' \
         #                           ${source_file}`
+
+        content_raw=`sed -r -e '/Default mode start/,/Default mode end/d' \
+                            -e 's/(theme-allure-)clear/\1night/g' \
+                            -e '/Radical version start/,/Radical version end/d' \
+                            ${source_file}`
+        content_raw_radical=`sed -r -e '/Default mode start/,/Default mode end/d' \
+                                  -e 's/(theme-allure-)clear/\1night/g' \
+                                  -e '/Stable version start/,/Stable version end/d' \
+                                  ${source_file}`
 
     else
         exit 0;
