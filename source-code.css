@@ -157,6 +157,7 @@ html {
     --border-radius-large    : 12px;
 
     --border-standard      : 1px solid var(--color-button-accent);
+    --border-light         : 1px solid var(--color-background-accent);
     --border-transparent   : 1px solid transparent;
     --border-accent        : 2px solid var(--color-button-accent);
     --border-accent-alt    : 2px solid var(--color-background-primary);
@@ -194,8 +195,6 @@ html {
 
     /* Use a larger size for the frequently used buttons on the left */
     --size-left-pane-button  : 1.2em;
-
-    --height-quick-search    : 52px;
 }
 
 
@@ -325,11 +324,11 @@ body.theme-allure-clear strong {
 
 /* Toast */
 body.theme-allure-clear .toast {
-    background: var(--color-background-accent) !important;
+    background: var(--color-background-primary) !important;
     color: var(--color-text-primary) !important;
 }
 body.theme-allure-clear .toast-header {
-    background: var(--color-background-primary) !important;
+    background: var(--color-background-accent) !important;
 }
 body.theme-allure-clear button.close {
     color: var(--color-text-primary);
@@ -1091,11 +1090,9 @@ body.theme-allure-clear .note-tab-row .note-tab[active] .note-tab-wrapper {
 
 /* TAB - Title */
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-title {
-    line-height: 1.6em;
     width: calc(100% - 14px);
     text-overflow: ellipsis;
     color: inherit;
-    min-height: 1.6em;
     font-size: .9em;
 }
 
@@ -1104,20 +1101,16 @@ body.theme-allure-clear div.tab-row-filler {
     height: inherit;
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-close {
-    display: none;
-    position: absolute;
-    right: 4px;
-    padding: 1px 4px;
     border-radius: 0;
     border-top-right-radius: var(--border-radius-standard);
     border-bottom-right-radius: var(--border-radius-standard);
-    top: 0;
-    height: 29px;
-    color: var(--color-text-primary);
+    color: transparent;
+    position: absolute;
+    right: 6px;
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper:hover .note-tab-close {
-    display: block;
     background: unset;
+    color: var(--color-text-primary);
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-close:hover, {
     background-color: var(--color-background-accent);
@@ -1128,7 +1121,8 @@ body.theme-allure-clear .note-tab-row .note-tab[active] .note-tab-wrapper:hover 
     background-color: var(--color-background-accent);
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-close span {
-    top: 0;
+    position: unset;
+    font-size: 22px;
 }
 
 
@@ -1275,7 +1269,7 @@ body.theme-allure-clear div.standard-top-widget input.search-string:focus {
 
 /* LEFT BUTTON - Buttons below - collapse tree, tree settings */
 body.theme-allure-clear button.btn.btn-sm.icon-button.tree-settings-button {
-    bottom: calc(var(--height-quick-search) + 8px);
+    bottom: 50px;
     left: -40px;
     font-size: var(--size-left-pane-button);
 }
@@ -1283,7 +1277,7 @@ body.theme-allure-clear button.scroll-to-active-note-button {
     display: none;
 }
 body.theme-allure-clear button.btn.btn-sm.icon-button.collapse-tree-button {
-    bottom: calc(var(--height-quick-search) + 50px);
+    bottom: 92px;
     left: -40px;
     font-size: var(--size-left-pane-button);
 }
@@ -1403,7 +1397,7 @@ body.theme-allure-clear div#left-pane {
     background-color: var(--color-background-primary);
     /*box-sizing: unset;*/
     /*box-shadow: unset;*/
-    margin-top: 52px;
+    margin-top: 44px;
     /*padding: 4px 0;*/
     padding-bottom: 44px;
 }
@@ -1443,7 +1437,7 @@ body.theme-allure-clear div.tree {
 }*/
 body.theme-allure-clear div.tree {
     padding: 0;
-    padding-bottom: 12px;
+    /*padding-bottom: 12px;*/
 }
 
 /* SIDEBAR MENU ITEM [SECONDARY SELECTED] */
@@ -1673,7 +1667,8 @@ body.theme-allure-clear .attr-detail input[readonly] {
 /* TITLE */
 
 /* Title - Note icon button */
-body.theme-allure-clear .note-icon-container {
+body.theme-allure-clear .note-icon-container,
+body.theme-allure-clear .note-icon {
     display: none;
 }
 
@@ -2491,25 +2486,38 @@ body.theme-allure-clear .note-list-widget .note-list {
     padding: 0;
 }
 body.theme-allure-clear .note-book-card.expanded .note-book-content {
-    padding: 0 16px;
+    padding: 0;
     /*margin-bottom: 1em;*/
     overflow: hidden;
 }
 body.theme-allure-clear .note-book-card.expanded .note-book-content .ck-content {
     padding: 0;
     max-height: 6em;
+    overflow: hidden;
+    padding-top: 8px;
 }
 
 /* Note List - Content - Grid view */
+body.theme-allure-clear .note-list.grid-view .note-book-card:first-of-type,
+body.theme-allure-clear .note-list.grid-view .note-book-card:first-of-type:hover {
+    border-top: var(--border-light);
+}
 body.theme-allure-clear .note-list.grid-view .note-book-card {
     background-color: var(--color-background-secondary);
     /*border: var(--border-standard);*/
     flex-grow: 1;
-    margin: 6px 0;
+    margin: 0;
     /*box-shadow: var(--shadow-card);*/
-    padding: 0;
+    padding: 20px;
     border-radius: var(--border-radius-standard);
     max-height: 12em;
+    border: none;
+    border-bottom: var(--border-light);
+}
+body.theme-allure-clear .note-list.grid-view .note-book-card:hover {
+    border: none;
+    border-bottom: var(--border-light);
+    background: var(--color-button-hover-center);
 }
 body.theme-allure-clear .grid-view .note-book-card.expanded .ck-content * {
     color: var(--color-text-secondary) !important;
@@ -2521,6 +2529,8 @@ body.theme-allure-clear .grid-view .note-book-card.expanded .ck-content * {
     font-size: 1em;
     padding: 0;
     background: inherit;
+    word-break: break-all;
+    white-space: normal;
 }
 body.theme-allure-clear .grid-view .note-book-card.expanded .ck-content br {
     display: none;
@@ -2532,7 +2542,7 @@ body.theme-allure-clear .grid-view .note-book-card.expanded .ck-content img {
     margin: 9px 18px 0 0;
     border-radius: 3px;
 }
-body.theme-allure-clear .grid-view .note-book-card .note-book-title a {
+body.theme-allure-clear .grid-view .note-book-card .note-book-title {
     display: block;
 }
 
@@ -2551,18 +2561,15 @@ body.theme-allure-clear .note-list.list-view .note-book-card {
 
 /* Note List - Button */
 body.theme-allure-clear .note-list.grid-view .note-list-container {
-  margin-top: 20px;
+    margin: 32px 0;
+    display: block;
 }
 
 /* Note List - Title */
-body.theme-allure-clear .note-book-card .note-book-title a {
+body.theme-allure-clear .note-book-card .note-book-title {
     /*font-size: 1.4em;*/
     font-family: var(--font-headers);
-    font-weight: normal;
     margin: 0;
-    border-top-left-radius: var(--border-radius-standard);
-    border-top-right-radius: var(--border-radius-standard);
-    padding: 12px 16px 6px 16px;
     font-size: 1.2rem;
     width: 100%;
     text-overflow: ellipsis;
@@ -2571,12 +2578,12 @@ body.theme-allure-clear .note-book-card .note-book-title a {
     /*background-color: var(--color-background-primary);*/
     /*border-bottom: var(--border-standard);*/
 }
-body.theme-allure-clear .list-view .note-book-card .note-book-title a {
+body.theme-allure-clear .list-view .note-book-card .note-book-title {
     padding-left: 0;
 }
-body.theme-allure-clear .note-book-card .note-book-title a:hover {
+/*body.theme-allure-clear .note-book-card .note-book-title:hover {
     color: var(--color-text-highlight);
-}
+}*/
 body.theme-allure-clear .note-book-card .note-book-title .note-expander {
     padding: 14px;
 }
