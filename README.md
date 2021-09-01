@@ -46,7 +46,7 @@ Install the theme by following these steps:
     - [Allure-night.css](./Allure-night.css)
 1. add `#appTheme` attribute to the note
 1. download all the fonts in [fonts](./fonts/), then right-click on the note and select `Import to note` to import all fonts
-1. add attribute `#customResourceProvider="font-name.ttf"` to each fonts
+1. add attribute `#customResourceProvider="font-name.suffix"` to each fonts
 1. go to Menu > Options, and select `Allure` / `Allure-clear` / `Allure-night` as your new theme
 1. Press `F5` or `Ctrl` + `R` to reload the page
 

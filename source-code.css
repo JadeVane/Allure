@@ -95,7 +95,7 @@ html {
     --color-gray-dark    : #666;
     --color-gray-darker  : #525051;
     --color-gray-darkest : #393939;
-    --color-blue         : #526DE9;
+    --color-blue         : #315BEF;
     --color-white        : #FFF;
     --color-red          : #FF5252;
     --color-black-light  : #282828;
@@ -133,8 +133,8 @@ html {
     --color-text-secondary       : var(--color-gray);
     --color-text-inconspicuous   : var(--color-gray-dark);
 
-    --color-background-primary   : var(--color-black);
-    --color-background-secondary : var(--color-black-light);
+    --color-background-primary   : var(--color-black-light);
+    --color-background-secondary : var(--color-black);
     --color-background-accent    : var(--color-gray-darkest);
     --color-background-item      : var(--color-gray-darkest);
 
@@ -153,11 +153,11 @@ html {
 /* BORDER VARIABLES                                                              */
 /* ----------------------------------------------------------------------------- */
 
-    --border-radius-standard : 3px;
+    --border-radius-standard : 4px;
     --border-radius-large    : 12px;
 
     --border-standard      : 1px solid var(--color-button-accent);
-    --border-light         : 1px solid var(--color-background-accent);
+    --border-light         : 1px solid var(--color-background-primary);
     --border-transparent   : 1px solid transparent;
     --border-accent        : 2px solid var(--color-button-accent);
     --border-accent-alt    : 2px solid var(--color-background-primary);
@@ -238,12 +238,11 @@ body.theme-allure-clear a.external:not(.page-url) {
 
 /* Hr line of the note details */
 body.theme-allure-clear .gutter.gutter-horizontal {
-    /* ------------------ Stable version start ------------- */
     background: var(--color-background-secondary);
+    /* ------------------ Stable version start ------------- */
     /* ------------------  Stable version end  ------------- */
 
     /* ------------------ Radical version start ------------- */
-    background: var(--color-background-primary);
     z-index: 1;
     width: 2px !important;
     /* ------------------  Radical version end  ------------- */
@@ -293,7 +292,7 @@ body.theme-allure-clear div#root-widget {
 }
 body.theme-allure-clear div#root-widget > div:nth-of-type(3) {
     margin-left: var(--width-left-button-pane);
-    /*background: var(--color-background-secondary);*/
+    background: var(--color-background-secondary);
 }
 
 /* List */
@@ -635,17 +634,20 @@ body.theme-allure-clear form#clone-to-form .modal-footer {
     padding: .75rem 0;
 }
 
-body.theme-allure-clear span.fancytree-folder,
-body.theme-allure-clear span.fancytree-node {
-    padding: 4px;
+body.theme-allure-clear .fancytree-folder,
+body.theme-allure-clear .fancytree-node {
+    padding: 4px 0 4px 8px;
 }
 
-body.theme-allure-clear span.fancytree-custom-icon {
-    /*margin: 2px 3px;
-    line-height: 28px;
-    width: auto;
-    height: auto;*/
-    display: none;
+body.theme-allure-clear .fancytree-custom-icon {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    margin: auto 0;
+    /*display: none;*/
+}
+
+body.theme-allure-clear .fancytree-active .fancytree-custom-icon {
+    color: var(--color-text-primary);
 }
 
 body.theme-allure-clear .tree-settings-popup.show {
@@ -794,7 +796,7 @@ body.theme-allure-clear .dropdown-menu {
     margin: 0;
     background: var(--color-background-secondary) !important;
     left: 0;
-    right: unset;
+    /*right: unset;*/
 }
 
 
@@ -1008,7 +1010,7 @@ body.theme-allure-clear .standard-top-widget {
 
 body.theme-allure-clear .note-tab-row-container .note-tab,
 body.theme-allure-clear .note-tab-row-container .note-new-tab {
-    margin-top: 8px;
+    margin-top: 10px;
 
 /* ------------------ Stable version start ------------- */
 /* ------------------  Stable version end  ------------- */
@@ -1029,12 +1031,13 @@ body.theme-allure-clear .note-new-tab:before {
     font-size: .9rem;
     content: '\e622';
     font-family: 'trilium-allure-icons';
-    line-height: 22px;
+    /*line-height: 22px;*/
 }
 body.theme-allure-clear .note-tab-row-container .note-new-tab {
     padding: 4px;
-    height: 29px;
+    /*height: 29px;*/
     border-radius: var(--border-radius-standard);
+    background: var(--color-background-primary);
 }
 body.theme-allure-clear .note-new-tab:hover {
     background: var(--color-background-accent);
@@ -1045,10 +1048,9 @@ body.theme-allure-clear .note-tab-row {
     right: 72px;
     position: absolute;
     width: calc(100% - 354px);
-    height: 42px;
+    height: 48px;
 
     /* ------------------ Stable version start ------------- */
-    /*height: 48px;*/
     /* ------------------  Stable version end  ------------- */
 
     /* ------------------ Radical version start ------------- */
@@ -1067,12 +1069,12 @@ body.theme-allure-clear .tab-row-filler .tab-row-border {
     display: none !important;
 }*/
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper {
-    background: none;
-    margin: 0 4px;
+    background: var(--color-background-primary);
+    margin-right: 4px;
     color: var(--color-text-secondary);
     border: none;
     border-radius: var(--border-radius-standard);
-    position: unset;
+    /*position: unset;*/
     padding: 3px 12px;
     /*height: calc(1.6em + 8px);*/
     text-align: center;
@@ -1083,7 +1085,7 @@ body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper:hover {
     /*border: var(--border-standard);*/
 }
 body.theme-allure-clear .note-tab-row .note-tab[active] .note-tab-wrapper {
-    background: var(--color-background-item);
+    background: var(--color-background-accent);
     color: var(--color-text-highlight);
     font-weight: normal;
 }
@@ -1235,12 +1237,15 @@ body.theme-allure-clear button#toolbar-button-Today span:before {
     content: '\e745';
 }
 body.theme-allure-clear .standard-top-widget .quick-search {
-    margin: 0 10px;
+    margin-left: 12px;
     position: absolute;
     top: -68px;
     left: var(--width-left-button-pane);
-    width: 170px !important;
+    width: 188px !important;
     /*display: flex !important;*/
+    background: var(--color-background-primary);
+    border-radius: var(--border-radius-standard);
+    padding: 0 12px;
 }
 body.theme-allure-clear .btn-outline-secondary.search-button {
     display: none;
@@ -1270,7 +1275,7 @@ body.theme-allure-clear div.standard-top-widget input.search-string:focus {
 /* LEFT BUTTON - Buttons below - collapse tree, tree settings */
 body.theme-allure-clear button.btn.btn-sm.icon-button.tree-settings-button {
     bottom: 50px;
-    left: -40px;
+    left: -52px;
     font-size: var(--size-left-pane-button);
 }
 body.theme-allure-clear button.scroll-to-active-note-button {
@@ -1278,7 +1283,7 @@ body.theme-allure-clear button.scroll-to-active-note-button {
 }
 body.theme-allure-clear button.btn.btn-sm.icon-button.collapse-tree-button {
     bottom: 92px;
-    left: -40px;
+    left: -52px;
     font-size: var(--size-left-pane-button);
 }
 
@@ -1394,18 +1399,21 @@ body.theme-allure-clear div#left-pane button.tree-settings-button:before {
 
 /* SIDEBAR */
 body.theme-allure-clear div#left-pane {
-    background-color: var(--color-background-primary);
+    background-color: var(--color-background-secondary);
     /*box-sizing: unset;*/
     /*box-shadow: unset;*/
-    margin-top: 44px;
+    margin: 44px 0 0 12px;
     /*padding: 4px 0;*/
     padding-bottom: 44px;
 }
-body.theme-allure-clear div.tree span.fancytree-expander {
-    position: absolute;
-    left: 0;
-    top: 3px;
-    color: var(--color-text-primary);
+body.theme-allure-clear .fancytree-expander {
+    /*position: absolute;*/
+    /*right: 28px;*/
+    color: var(--color-text-secondary);
+    /*display: none;*/
+}
+body.theme-allure-clear span.fancytree-node:hover .fancytree-expander {
+    display: inline-block;
 }
 
 
@@ -1418,13 +1426,19 @@ body.theme-allure-clear .fancytree-node:not(.fancytree-folder) .fancytree-expand
 
 /* style the caret icon on expandable nodes*/
 body.theme-allure-clear .fancytree-node .fancytree-expander::before {
-    font-size: 1rem;
-    margin-right: 0;
-    line-height: 28px;
+    font-size: 1.3em;
+    /*margin-right: 0;*/
+    line-height: unset;
+    position: unset;
 }
-body.theme-allure-clear .fancytree-active .fancytree-expander::before {
-    color: var(--color-text-highlight);
-    font-weight: bold;
+/*body.theme-allure-clear .fancytree-active .fancytree-expander {
+    color: inherit;
+}*/
+
+/* active note */
+body.theme-allure-clear .fancytree-active {
+    background: var(--color-background-primary);
+    color:  var(--color-text-primary);
 }
 
 body.theme-allure-clear div.tree-wrapper,
@@ -1460,38 +1474,38 @@ body.theme-allure-clear span.fancytree-focus .fancytree-selected .fancytree-titl
 /* Note list - normal */
 body.theme-allure-clear span.fancytree-title {
     border: none;
-    line-height: 24px;
+    /*line-height: 24px;*/
     padding: 2px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    display: block;
+    /*display: block;*/
     max-width: calc(100% - 18px);
-    margin-left: 4px !important;
     font-size: .9em;
+    margin: auto 0;
 }
 body.theme-allure-clear span.fancytree-node {
-    margin-left: 18px;
+    /*margin-left: 18px;*/
     display: flex;
-    border-radius: var(--border-radius-standard) 0 0 var(--border-radius-standard);
+    border-radius: var(--border-radius-standard);
     width: 100%;
 }
 /* remove the margin-left of the "root" note */
 body.theme-allure-clear div.tree > ul > li > span {
     margin-left: 0;
 }
-body.theme-allure-clear span.fancytree-node:hover {
-    background: var(--color-background-accent);
+body.theme-allure-clear span.fancytree-node:not(.fancytree-active):hover {
+    background: var(--color-background-primary);
 }
 body.theme-allure-clear span.fancytree-node:hover span.fancytree-title {
     border: none;
-    max-width: calc(100% - 46px);
+    max-width: calc(100% - 64px);
 }
 
 /* Note list - add note button */
 body.theme-allure-clear .add-note-button {
     border: none;
-    right: 7px;
+    right: 8px;
     position: absolute;
     margin: 4px 0;
     color: var(--color-text-primary);
@@ -1509,7 +1523,7 @@ body.theme-allure-clear span.fancytree-node:hover .refresh-search-button {
 
 /* Note list - active note */
 body.theme-allure-clear span.fancytree-active span.add-note-button {
-    color: var(--color-text-highlight);
+    color: inherit;
 }
 /*body.theme-allure-clear span.fancytree-active:not(.fancytree-focused) .fancytree-title {
     font-weight: normal;
@@ -1522,7 +1536,11 @@ body.theme-allure-clear div.tree-wrapper.component .fancytree-container li[role=
     padding: 0;
 }
 body.theme-allure-clear ul.fancytree-container ul ul {
-    padding-left: 12px;
+    padding-left: 20px;
+}
+
+body.theme-allure-clear .ui-fancytree > li > ul {
+    padding-left: 0;
 }
 
 /* protected nodes */
@@ -1555,7 +1573,7 @@ body.theme-allure-clear .fancytree-node .fancytree-title:active {
 body.theme-allure-clear span.fancytree-active .fancytree-title {
     background: transparent !important;
     /*border-radius: 3px;*/
-    color: var(--color-text-highlight) !important;
+    color: inherit !important;
 }
 
 
@@ -1669,12 +1687,17 @@ body.theme-allure-clear .attr-detail input[readonly] {
 /* Title - Note icon button */
 body.theme-allure-clear .note-icon-container,
 body.theme-allure-clear .note-icon {
-    display: none;
+    /*display: none;*/
+    font-size: .8em;
 }
 
 /* Title - Title content*/
 body.theme-allure-clear .title-row {
-    display: block !important;
+    /*display: block !important;*/
+    margin: 0 auto;
+    max-width: var(--width-note-body);
+    padding: 0 var(--spacing-center-pane) 0;
+    width: -webkit-fill-available;
 
     /* ------------------ Stable version start ------------- */
     width: 100%;
@@ -1692,19 +1715,19 @@ body.theme-allure-clear .title-row > * {
 body.theme-allure-clear div#center-pane .title-row button.btn:not(.execute-script-button) {
     font-size: 0;
     border-radius: var(--border-radius-standard);
-    background-color: unset;
+    /*background-color: unset;*/
     color: var(--color-text-secondary);
-    position: absolute;
+    /*position: absolute;*/
 
     /* ------------------ Stable version start ------------- */
     padding: 4px 10px;
-    top: -2px;
+    /*top: -2px;*/
     /* ------------------  Stable version end  ------------- */
 
     /* ------------------ Radical version start ------------- */
     padding: 0 4px;
-    right: 8px;
-    z-index: 1;
+    /*right: 8px;*/
+    /*z-index: 1;*/
     /* ------------------  Radical version end  ------------- */
 }
 
@@ -1733,15 +1756,15 @@ body.theme-allure-clear .note-actions button.dropdown-toggle:before {
     font-family: 'trilium-allure-icons';
 }
 /* Title - Note type button */
-body.theme-allure-clear .note-type button.btn.btn-sm.note-type-button {
+/*body.theme-allure-clear .note-type button.btn.btn-sm.note-type-button {*/
     /* ------------------ Stable version start ------------- */
-    right: 36px;
+    /*right: 36px;*/
     /* ------------------  Stable version end  ------------- */
 
     /* ------------------ Radical version start ------------- */
-    top: 72px;
+    /*top: 72px;*/
     /* ------------------  Radical version end  ------------- */
-}
+/*}*/
 /* Title - More menu button */
 body.theme-allure-clear .note-actions button.btn.btn-sm.dropdown-toggle {
 
@@ -2093,7 +2116,7 @@ body.theme-allure-clear input.note-title {
     border: 2px solid transparent;
     color: var(--color-text-primary) !important;
     font-size: 1.5em;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 body.theme-allure-clear input.note-title:focus {
@@ -2439,10 +2462,15 @@ body.theme-allure-clear .ck-content h6:first-child {
 /* code */
 
 body.theme-allure-clear .ck-content pre {
-    background: var(--color-background-primary);
+    /*background: var(--color-background-primary);*/
     border: none;
-    margin: var(--spacing-content-normal) 0;
-    color: var(--color-text-primary) !important;
+    /*margin: var(--spacing-content-normal) 0;*/
+    /*color: var(--color-text-primary) !important;*/
+    margin: 1.2em 0;
+    box-shadow: 0 0 16px #aaa;
+    background-color: #292D3E;
+    color: #ddd !important;
+    border-radius: 4px;
 }
 
 body.theme-allure-clear .ck-content pre code {
@@ -2629,9 +2657,9 @@ body.theme-allure-clear .similar-notes-widget {
 /* RIGHT PANE                                                                    */
 /* ----------------------------------------------------------------------------- */
 body.theme-allure-clear div#right-pane {
-    padding: 16px 22px 16px 17px;
+    padding: 36px 22px 16px 17px;
     background: var(--color-background-primary);
-    margin-top: 12px;
+    /*margin-top: 12px;*/
 
     /* ------------------ Radical version start ------------- */
     z-index: 1;
@@ -2737,7 +2765,7 @@ body.theme-allure-clear div#right-pane .card-header .widget-header-actions a.wid
 /* Widget Body */
 body.theme-allure-clear div#right-pane .card-body {
     font-family: var(--font-body);
-    margin-left: 36px;
+    margin-left: 8px;
     padding-left: 0;
     padding-right: 34px;
     /*background: var(--color-background-secondary);*/
