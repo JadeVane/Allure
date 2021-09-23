@@ -89,12 +89,12 @@ html {
 /* COLOR VARIABLES                                                               */
 /* ----------------------------------------------------------------------------- */
 
-    --color-gray-lighter : #F3F3F3;
+    --color-gray-lighter : #EDF2F7;
     --color-gray-light   : #DADCDB;
-    --color-gray         : #8e8787;
+    --color-gray         : #9DA6B1;
     --color-gray-dark    : #666;
     --color-gray-darker  : #525051;
-    --color-gray-darkest : #393939;
+    --color-gray-darkest : #121419;
     --color-blue         : #315BEF;
     --color-white        : #FFF;
     --color-red          : #FF5252;
@@ -111,7 +111,7 @@ html {
 
     /* ------------------ Default mode start ------------- */
     --color-text-accent          : var(--color-gray-darkest);
-    --color-text-primary         : var(--color-gray-darker);
+    --color-text-primary         : var(--color-gray-darkest);
     --color-text-secondary       : var(--color-gray);
     --color-text-inconspicuous   : var(--color-gray-light);
 
@@ -170,6 +170,7 @@ html {
     --shadow-standard      : 3px 4px  3px -3px var(--color-background-accent);
     --shadow-accented      : 2px 2px  5px -2px var(--color-gray-dark);
     --shadow-mobile-popup  : 0px 0px 16px  0px var(--color-background-accent);
+    --shadow-center-pane   : 1px 0 8px #d8dee2;
 
 
 /* ----------------------------------------------------------------------------- */
@@ -238,7 +239,7 @@ body.theme-allure-clear a.external:not(.page-url) {
 
 /* Hr line of the note details */
 body.theme-allure-clear .gutter.gutter-horizontal {
-    background: var(--color-background-secondary);
+    background: var(--color-background-primary);
     /* ------------------ Stable version start ------------- */
     /* ------------------  Stable version end  ------------- */
 
@@ -292,7 +293,7 @@ body.theme-allure-clear div#root-widget {
 }
 body.theme-allure-clear div#root-widget > div:nth-of-type(3) {
     margin-left: var(--width-left-button-pane);
-    background: var(--color-background-secondary);
+    /*background: var(--color-background-secondary);*/
 }
 
 /* List */
@@ -640,10 +641,10 @@ body.theme-allure-clear .fancytree-node {
 }
 
 body.theme-allure-clear .fancytree-custom-icon {
-    color: var(--color-text-secondary);
+    /*color: var(--color-text-secondary);
     font-size: 1.1rem;
-    margin: auto 0;
-    /*display: none;*/
+    margin: auto 0;*/
+    display: none;
 }
 
 body.theme-allure-clear .fancytree-active .fancytree-custom-icon {
@@ -1010,7 +1011,8 @@ body.theme-allure-clear .standard-top-widget {
 
 body.theme-allure-clear .note-tab-row-container .note-tab,
 body.theme-allure-clear .note-tab-row-container .note-new-tab {
-    margin-top: 10px;
+    margin-top: 3px;
+    height: 30px;
 
 /* ------------------ Stable version start ------------- */
 /* ------------------  Stable version end  ------------- */
@@ -1019,6 +1021,10 @@ body.theme-allure-clear .note-tab-row-container .note-new-tab {
     /*display: none;*/
 /* ------------------  Radical version end  ------------- */
 
+}
+
+body.theme-allure-clear .note-tab-row-container .note-tab {
+    height: 30px;
 }
 
 /* Note tabs - New tab button */
@@ -1034,7 +1040,7 @@ body.theme-allure-clear .note-new-tab:before {
     /*line-height: 22px;*/
 }
 body.theme-allure-clear .note-tab-row-container .note-new-tab {
-    padding: 4px;
+    padding: 2px;
     /*height: 29px;*/
     border-radius: var(--border-radius-standard);
     background: var(--color-background-primary);
@@ -1049,6 +1055,7 @@ body.theme-allure-clear .note-tab-row {
     position: absolute;
     width: calc(100% - 354px);
     height: 48px;
+    z-index: 2;
 
     /* ------------------ Stable version start ------------- */
     /* ------------------  Stable version end  ------------- */
@@ -1085,9 +1092,11 @@ body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper:hover {
     /*border: var(--border-standard);*/
 }
 body.theme-allure-clear .note-tab-row .note-tab[active] .note-tab-wrapper {
-    background: var(--color-background-accent);
+    background: var(--color-background-secondary);
     color: var(--color-text-highlight);
     font-weight: normal;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 /* TAB - Title */
@@ -1399,7 +1408,7 @@ body.theme-allure-clear div#left-pane button.tree-settings-button:before {
 
 /* SIDEBAR */
 body.theme-allure-clear div#left-pane {
-    background-color: var(--color-background-secondary);
+    /*background-color: var(--color-background-primary);*/
     /*box-sizing: unset;*/
     /*box-shadow: unset;*/
     margin: 44px 0 0 12px;
@@ -1585,6 +1594,13 @@ body.theme-allure-clear div#center-pane {
     background: var(--color-background-secondary);
     overflow: auto;
     padding: 42px 0 0 12px;
+    margin-top: 33px;
+    border-radius: var(--border-radius-standard);
+    box-shadow: var(--shadow-center-pane);
+}
+
+body.theme-allure-clear div#center-pane > .component {
+    overflow: unset !important;
 }
 
 /* BUTTON */
@@ -1608,7 +1624,7 @@ body.theme-allure-clear .section-title-real {
     border: none;
     font-size: 14px;
     color: var(--color-text-secondary);
-    padding: 4px 10px;
+    padding: 4px 6px;
     border-radius: var(--border-radius-standard);
 }
 body.theme-allure-clear .section-title:hover,
@@ -1662,11 +1678,11 @@ body.theme-allure-clear div#center-pane div.similar-notes-widget a:before {
     /*margin: 2px 4px;*/
 }
 
-/* ------------------ Radical version start ------------- */
-/* Similar notes */
 body.theme-allure-clear .similar-notes-widget {
     display: none;
 }
+/* ------------------ Radical version start ------------- */
+/* Similar notes */
 /* ------------------  Radical version end  ------------- */
 
 /* Attr details */
@@ -1685,11 +1701,12 @@ body.theme-allure-clear .attr-detail input[readonly] {
 /* TITLE */
 
 /* Title - Note icon button */
-body.theme-allure-clear .note-icon-container,
-body.theme-allure-clear .note-icon {
-    /*display: none;*/
-    font-size: .8em;
+body.theme-allure-clear .note-icon-container {
+    display: none;
 }
+/*body.theme-allure-clear .note-icon {
+    font-size: .8em;
+}*/
 
 /* Title - Title content*/
 body.theme-allure-clear .title-row {
@@ -1718,6 +1735,7 @@ body.theme-allure-clear div#center-pane .title-row button.btn:not(.execute-scrip
     /*background-color: unset;*/
     color: var(--color-text-secondary);
     /*position: absolute;*/
+    border: var(--border-standard);
 
     /* ------------------ Stable version start ------------- */
     padding: 4px 10px;
@@ -1751,7 +1769,7 @@ body.theme-allure-clear button.note-type-button span.note-type-desc:before {
     /* ------------------  Radical version end  ------------- */
 }
 body.theme-allure-clear .note-actions button.dropdown-toggle:before {
-    font-size: initial;
+    font-size: .9rem;
     content: '\e60c';
     font-family: 'trilium-allure-icons';
 }
@@ -1843,7 +1861,7 @@ body.theme-allure-clear .section-title-container {
 
     /* ------------------ Stable version start ------------- */
     padding: 0 var(--spacing-center-pane);
-    margin: 0 auto;
+    margin: -8px auto 0;
     /* ------------------  Stable version end  ------------- */
 
     /* ------------------ Radical version start ------------- */
@@ -2115,8 +2133,9 @@ body.theme-allure-clear input.note-title {
     line-height: 1.5em;
     border: 2px solid transparent;
     color: var(--color-text-primary) !important;
-    font-size: 1.5em;
+    font-size: 2em;
     /*text-align: center;*/
+    font-weight: bold;
 }
 
 body.theme-allure-clear input.note-title:focus {

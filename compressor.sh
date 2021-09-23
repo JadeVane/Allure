@@ -9,8 +9,8 @@ clip=clear
 # Choose whether to use the radical version by default
 # Only valid in linux, and you should install xclip by hand
 # Value: true, false
-radical=true
-# radical=false
+# radical=true
+radical=false
 
 # ----------------------------------
 # do NOT edit below
