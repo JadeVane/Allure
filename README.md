@@ -66,7 +66,7 @@ If Allure theme has helped you, considering buying me a cup of coffee
 ![donation](./resources/donation.png)
 
 Donation list：
-- Jonathon Fuller
 - Chee Rabbits
+- Jonathon Fuller
 
 Thank you for your donation which really inspired me!

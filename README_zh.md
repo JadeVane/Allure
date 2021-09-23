@@ -66,6 +66,7 @@ radical 版比 stable 版对界面做了更大的改动，目的是尽最大可�
 ![donation](./resources/donation_zh.png)
 
 捐赠列表：
-- chee
+- Chee Rabbits
+- Jonathon Fuller
 
 感谢你们的捐赠，这确实激励到我了！
