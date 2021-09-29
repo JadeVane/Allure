@@ -89,17 +89,18 @@ html {
 /* COLOR VARIABLES                                                               */
 /* ----------------------------------------------------------------------------- */
 
-    --color-gray-lighter : #EDF2F7;
-    --color-gray-light   : #DADCDB;
-    --color-gray         : #9DA6B1;
-    --color-gray-dark    : #666;
-    --color-gray-darker  : #525051;
-    --color-gray-darkest : #121419;
-    --color-blue         : #315BEF;
-    --color-white        : #FFF;
-    --color-red          : #FF5252;
-    --color-black-light  : #282828;
-    --color-black        : #1E1E1E;
+    --color-gray-lightest : #F6F6F6;
+    --color-gray-lighter  : #DADCDB;
+    --color-gray-light    : #C3C3C3;
+    --color-gray          : #9DA6B1;
+    --color-gray-dark     : #666;
+    --color-gray-darker   : #525051;
+    --color-gray-darkest  : #121419;
+    --color-blue          : #315BEF;
+    --color-white         : #FFF;
+    --color-red           : #FF5252;
+    --color-black-light   : #282828;
+    --color-black         : #1E1E1E;
 
     --color-dialog-translucent     : rgb(126,126,126, 0.5);
     --color-background-translucent : rgb(126,126,126, 0.1);
@@ -108,39 +109,57 @@ html {
     /* ------------------- Fixed variable ------------------ */
     --color-text-danger          : var(--color-red);
     --color-text-highlight       : var(--color-blue);
+    --color-text-white           : var(--color-white);
 
     /* ------------------ Default mode start ------------- */
     --color-text-accent          : var(--color-gray-darkest);
     --color-text-primary         : var(--color-gray-darkest);
     --color-text-secondary       : var(--color-gray);
-    --color-text-inconspicuous   : var(--color-gray-light);
+    --color-text-inconspicuous   : var(--color-gray-lighter);
 
-    --color-background-primary   : var(--color-gray-lighter);
+    --color-background-primary   : var(--color-gray-lightest);
     --color-background-secondary : var(--color-white);
-    --color-background-accent    : var(--color-gray-light);
-    --color-background-item      : var(--color-gray-lighter);
+    --color-background-accent    : var(--color-gray-lighter);
+    --color-background-item      : var(--color-gray-lightest);
 
-    --color-button-primary       : var(--color-gray-lighter);
+    --color-background-titlebar  : linear-gradient(#EEEEEE, #CDCDCD);
+
+    --color-background-button    : linear-gradient(#FEFEFE, #F1F1F1);
+    --color-border-button        : linear-gradient(#C5C5C5, #B7B7B7);
     --color-button-accent        : var(--color-gray-light);
-    --color-button-hover-center  : var(--color-gray-lighter);
+    --color-button-accent-border : var(--color-gray);
+    --color-button-hover-center  : var(--color-gray-lightest);
+
+    --color-line                 : var(--color-gray-lighter);
+    --color-line-accent          : var(--color-gray-light);
+
+    --color-button               : var(--color-background-button),
+                                   var(--color-border-button);
     /* ------------------- Default mode end -------------- */
 
 
-
     /* ------------------ Night mode start --------------- */
-    --color-text-accent          : var(--color-gray-lighter);
-    --color-text-primary         : var(--color-gray-light);
+    --color-text-accent          : var(--color-gray-lightest);
+    --color-text-primary         : var(--color-gray-lighter);
     --color-text-secondary       : var(--color-gray);
     --color-text-inconspicuous   : var(--color-gray-dark);
+
+    --color-background-titlebar  : ;
 
     --color-background-primary   : var(--color-black-light);
     --color-background-secondary : var(--color-black);
     --color-background-accent    : var(--color-gray-darkest);
     --color-background-item      : var(--color-gray-darkest);
 
-    --color-button-primary       : var(--color-gray-darker);
+    --color-background-button       : var(--color-gray-darker);
     --color-button-accent        : var(--color-gray-dark);
+    --color-button-accent-border : var(--color-gray);
     --color-button-hover-center  : var(--color-black-light);
+
+    --color-line                 : var(--color-gray-darker);
+    --color-line-accent          : var(--color-gray-dark);
+
+    --color-border-button              : ;
     /* ------------------- Night mode end ---------------- */
 
 
@@ -156,7 +175,8 @@ html {
     --border-radius-standard : 4px;
     --border-radius-large    : 12px;
 
-    --border-standard      : 1px solid var(--color-button-accent);
+    --border-thin          : 1px solid var(--color-line);
+    --border-thin-accent   : 1px solid var(--color-line-accent);
     --border-light         : 1px solid var(--color-background-primary);
     --border-transparent   : 1px solid transparent;
     --border-accent        : 2px solid var(--color-button-accent);
@@ -177,8 +197,8 @@ html {
 /* FONT VARIABLES                                                                */
 /* ----------------------------------------------------------------------------- */
 
-    --font-headers : 'Open Sans', Noto Sans CJK SC, 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
-    --font-body    : 'Open Sans', Noto Sans CJK SC, 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
+    --font-headers : "阿里巴巴普惠体 2.0", 'Open Sans', Noto Sans CJK SC, 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
+    --font-body    : "阿里巴巴普惠体 2.0", 'Open Sans', Noto Sans CJK SC, 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
     --font-code    : 'Fira Code', 'Source Code Pro', Courier, Monospace;
 
 /* ----------------------------------------------------------------------------- */
@@ -202,6 +222,7 @@ html {
 body.theme-allure-clear {
     color: var(--color-text-primary);
     line-height: 1.6em;
+    font-family: var(--font-body);
 }
 
 body.theme-allure-clear .trilium-allure-icons {
@@ -249,14 +270,13 @@ body.theme-allure-clear .gutter.gutter-horizontal {
     /* ------------------  Radical version end  ------------- */
 }
 
-/* ------------------ Radical version start ------------- */
-/*body.theme-allure-clear .gutter.gutter-horizontal:nth-of-type(2) {
+body.theme-allure-clear .gutter.gutter-horizontal:nth-of-type(2) {
+    border-left: var(--border-thin);
     background: var(--color-background-secondary);
 }
-body.theme-allure-clear .gutter.gutter-horizontal:nth-of-type(4) {
-    background: var(--color-background-primary);
+/*body.theme-allure-clear .gutter.gutter-horizontal:nth-of-type(4) {
+    border-right: var(--border-thin);
 }*/
-/* ------------------  Radical version end  ------------- */
 
 /*body.theme-allure-clear .gutter.gutter-horizontal:hover {
     background: var(--color-background-accent);
@@ -266,16 +286,20 @@ body.theme-allure-clear .gutter.gutter-horizontal:nth-of-type(4) {
 body.theme-allure-clear .btn {
     border-radius: var(--border-radius-standard);
     color: var(--color-text-primary);
+    background-image: var(--color-border-button);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
 }
 body.theme-allure-clear .btn:not(.btn-primary):not(.btn-secondary):not(.btn-danger) {
-     background: inherit;
-     border: none;
+     background: var(--color-background-secondary);
+     border: var(--border-thin) !important;
      box-shadow: none;
      padding: 6px;
+     border-radius: unset;
 }
 body.theme-allure-clear .btn.btn-primary {
-    border: var(--border-standard);
-    background-color: var(--color-button-primary);
+    border: var(--border-thin);
+    background-color: var(--color-background-button);
 }
 /*body.theme-allure-clear *, ::after, ::before {
     font-family: 'trilium-allure-icons';
@@ -345,11 +369,11 @@ body.theme-allure-clear button.close {
 body.theme-allure-clear .title-bar-buttons {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 2px;
     margin-right: 8px;
     z-index: 999;
 }
-body.theme-allure-clear .title-bar-buttons button {
+body.theme-allure-clear .title-bar-buttons button.btn.icon-action.bx {
     /*border: none !important;*/
     font-size: .9rem;
     background: var(--color-button-accent) !important;
@@ -357,13 +381,13 @@ body.theme-allure-clear .title-bar-buttons button {
     border-radius: 12px;
     margin: 2px;
     color: var(--color-button-accent) !important;
+    border: 1px solid var(--color-gray) !important;
 }
-body.theme-allure-clear .title-bar-buttons button:hover {
-    border: none !important;
+body.theme-allure-clear .title-bar-buttons button.btn.icon-action.bx:hover {
     color: var(--color-text-primary) !important;
     background: var(--color-button-accent) !important;
 }
-body.theme-allure-clear .title-bar-buttons button:before {
+body.theme-allure-clear .title-bar-buttons button.btn.icon-action.bx:before {
     font-family: 'trilium-allure-icons';
 }
 body.theme-allure-clear .title-bar-buttons button.minimize-btn:before {
@@ -398,7 +422,7 @@ body.theme-allure-clear .find-box .find-close {
 body.theme-allure-clear #context-menu-container {
     border-radius: var(--border-radius-standard);
     box-shadow: var(--shadow-accented);
-    border: var(--border-standard);
+    border: var(--border-thin);
     /*border-top: var(--border-accent);*/
     /*border-bottom: var(--border-accent);*/
     padding: 8px 0;
@@ -432,12 +456,13 @@ body.theme-allure-clear #center-pane .dropdown-menu,
 body.theme-allure-clear .global-menu .dropdown-menu {
     border-radius: var(--border-radius-standard);
     box-shadow: var(--shadow-accented);
-    border: var(--border-standard);
+    border: var(--border-thin);
     /*border-top: var(--border-accent);*/
     /*border-bottom: var(--border-accent);*/
     font-family: var(--font-family-monospace);
     font-size: 1rem;
     width: auto;
+    top: 6px !important;
 }
 
 body.theme-allure-clear #center-pane .dropdown-menu, {  /* add by wenjinyu */
@@ -518,14 +543,14 @@ body.theme-allure-clear div#recent-changes-content div ul {
 /*body.theme-allure-clear div.modal-content button.btn-primary {
     color: var(--color-text-primary);
     background-color: var(--color-button-accent);
-    border: var(--border-standard);
+    border: var(--border-thin);
     margin: 0;
 }*/
 
 /* textareae in modals*/
 body.theme-allure-clear .modal-content .modal-body textarea {
     font-family: var(--font-code);
-    border: var(--border-standard);
+    border: var(--border-thin);
     padding: 5px 5px 5px 15px;
 }
 
@@ -620,7 +645,7 @@ body.theme-allure-clear ul#options-mime-types li input[type="checkbox"]:checked+
 
 /* modal body - button */
 body.theme-allure-clear div.modal-content .modal-body .tab-content button.btn {
-    background: var(--color-button-primary);
+    background: var(--color-background-button);
     padding: 6px 12px;
 }
 body.theme-allure-clear div.modal-content .modal-body .tab-content button.btn:hover {
@@ -635,10 +660,10 @@ body.theme-allure-clear form#clone-to-form .modal-footer {
     padding: .75rem 0;
 }
 
-body.theme-allure-clear .fancytree-folder,
+/*body.theme-allure-clear .fancytree-folder,
 body.theme-allure-clear .fancytree-node {
     padding: 4px 0 4px 8px;
-}
+}*/
 
 body.theme-allure-clear .fancytree-custom-icon {
     /*color: var(--color-text-secondary);
@@ -672,7 +697,7 @@ body.theme-allure-clear .modal-header .close {
 }
 
 body.theme-allure-clear .modal-header .close:hover {
-    /*border: var(--border-standard);*/
+    /*border: var(--border-thin);*/
     background: var(--color-button-accent);
 }
 
@@ -710,7 +735,7 @@ body.theme-allure-clear .nav-tabs .nav-link.active {
     border: var(--border-transparent);
 }
 body.theme-allure-clear .nav-tabs .nav-link {
-    /*border-bottom: var(--border-standard);*/
+    /*border-bottom: var(--border-thin);*/
     border-top-left-radius: var(--border-radius-standard);
     border-top-right-radius: var(--border-radius-standard);
 }
@@ -721,7 +746,7 @@ body.theme-allure-clear .nav-tabs {
     border: none;
 }
 /*body.theme-allure-clear .modal-header {
-    border-bottom: var(--border-standard);
+    border-bottom: var(--border-thin);
 }*/
 body.theme-allure-clear div#options-dialog .modal-body > div > br {
     display: none;
@@ -808,7 +833,7 @@ body.theme-allure-clear #note-revisions-dialog {
     background: var(--color-dialog-translucent);
 }
 body.theme-allure-clear #note-revision-list {
-    /*border: var(--border-standard);*/
+    /*border: var(--border-thin);*/
     background: var(--color-background-primary) !important;
     width: 295px;
 }
@@ -817,10 +842,10 @@ body.theme-allure-clear #note-revisions-dialog .modal-body {
 }
 body.theme-allure-clear #note-revisions-dialog .modal-content > .modal-header {
     padding: 0 !important;
-    background: var(--color-background-secondary);
+    background: var(--color-background-titlebar);
 }
 body.theme-allure-clear #note-revisions-dialog .modal-content > .modal-header h5 {
-    background: var(--color-background-primary);
+    /*background: var(--color-background-primary);*/
     padding: 10px 20px;
     width: 295px;
 }
@@ -839,7 +864,7 @@ body.theme-allure-clear div#note-revision-list {
     border: none;
     padding: 0;
     border-radius: unset;
-    border-right: none;
+    border-right: var(--border-thin);
 }
 body.theme-allure-clear div#note-revision-list a.dropdown-item {
     margin: 0;
@@ -866,16 +891,21 @@ body.theme-allure-clear h3#note-revision-title {
 
 /* Right - Title border */
 /*body.theme-allure-clear div#note-revision-content-wrapper > div:nth-of-type(1) {
-    border-bottom: var(--border-standard);
+    border-bottom: var(--border-thin);
 }*/
 
 /* Right - Three operation buttons */
 body.theme-allure-clear div#note-revision-title-buttons {
-    /*background: var(--color-background-primary);*/
-    padding: 8px;
+    position: absolute;
+    top: -39px;
+    left: 292px;
 }
 body.theme-allure-clear div#note-revision-title-buttons button {
     font-size: 0;
+    padding: 0px 8px;
+    border-radius: 4px;
+    background: var(--color-background-button);
+    border: var(--border-thin-accent) !important;
 }
 body.theme-allure-clear div#note-revision-title-buttons button:nth-of-type(1):after {
     content: '\2713';
@@ -893,10 +923,15 @@ body.theme-allure-clear div#note-revision-title-buttons button:hover {
 }
 
 /* Right - Note revision content */
-body.theme-allure-clear div#note-revision-content {
+body.theme-allure-clear #note-revision-content-wrapper {
+    overflow: auto;
+    display: block !important;
+}
+body.theme-allure-clear #note-revision-content {
     padding: 12px;
     background: var(--color-background-secondary);
     margin: 4px;
+    overflow: hidden !important;
 }
 
 
@@ -933,7 +968,7 @@ body.theme-allure-clear .tooltip-inner {
     background: var(--color-background-secondary) !important;
     color: var(--color-text-secondary) !important;
     box-shadow: none;
-    border: var(--border-standard);
+    border: var(--border-thin);
 }
 body.theme-allure-clear .note-tooltip-title {
     color: var(--color-text-primary) !important;
@@ -1001,18 +1036,32 @@ body.theme-allure-clear ::-webkit-scrollbar-thumb:hover {
 /* TOP PANE                                                                      */
 /* ----------------------------------------------------------------------------- */
 
-/* NOTE TABS */
+/* ALL BUTTONS AND TABS */
+body.theme-allure-clear .standard-top-widget .quick-search,
+body.theme-allure-clear .global-menu-wrapper .global-menu button.btn.btn-sm {
+    background-image: var(--color-button);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: var(--border-transparent) !important;
+}
 
+/* NOTE TABS */
+body.theme-allure-clear #root-widget > div.component:first-of-type {
+    border-bottom: var(--border-thin-accent);
+    padding-bottom: 38px;
+    background: var(--color-background-titlebar);
+}
 body.theme-allure-clear #root-widget > div.component:first-of-type,
 body.theme-allure-clear .standard-top-widget {
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
 }
 
 body.theme-allure-clear .note-tab-row-container .note-tab,
 body.theme-allure-clear .note-tab-row-container .note-new-tab {
-    margin-top: 3px;
-    height: 30px;
+    /*margin-top: 3px;*/
+    height: 26px;
+    border-radius: unset;
 
 /* ------------------ Stable version start ------------- */
 /* ------------------  Stable version end  ------------- */
@@ -1023,27 +1072,27 @@ body.theme-allure-clear .note-tab-row-container .note-new-tab {
 
 }
 
-body.theme-allure-clear .note-tab-row-container .note-tab {
-    height: 30px;
+body.theme-allure-clear .note-tab-row .note-tab:first-of-type .note-tab-wrapper {
+    border-top-left-radius: var(--border-radius-standard);
+    border-bottom-left-radius: var(--border-radius-standard);
+    /*border-left: var(--border-thin);*/
 }
 
 /* Note tabs - New tab button */
-body.theme-allure-clear .note-new-tab {
-    border: none;
-    /*line-height: 1.6em;*/
+body.theme-allure-clear .note-tab-row-container .note-new-tab {
+    /*padding: 2px;*/
+    /*height: 29px;*/
+    border-top-right-radius: var(--border-radius-standard);
+    border-bottom-right-radius: var(--border-radius-standard);
+    background: var(--color-background-button);
+    border: var(--border-thin-accent);
     font-size: 0;
 }
-body.theme-allure-clear .note-new-tab:before {
+body.theme-allure-clear .note-tab-row-container .note-new-tab:before {
     font-size: .9rem;
     content: '\e622';
     font-family: 'trilium-allure-icons';
     /*line-height: 22px;*/
-}
-body.theme-allure-clear .note-tab-row-container .note-new-tab {
-    padding: 2px;
-    /*height: 29px;*/
-    border-radius: var(--border-radius-standard);
-    background: var(--color-background-primary);
 }
 body.theme-allure-clear .note-new-tab:hover {
     background: var(--color-background-accent);
@@ -1051,11 +1100,12 @@ body.theme-allure-clear .note-new-tab:hover {
 body.theme-allure-clear .note-tab-row {
     background: unset;
     margin: 0;
-    right: 72px;
+    left: 250px;
     position: absolute;
     width: calc(100% - 354px);
     height: 48px;
     z-index: 2;
+    padding-top: 7px;
 
     /* ------------------ Stable version start ------------- */
     /* ------------------  Stable version end  ------------- */
@@ -1076,27 +1126,28 @@ body.theme-allure-clear .tab-row-filler .tab-row-border {
     display: none !important;
 }*/
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper {
-    background: var(--color-background-primary);
-    margin-right: 4px;
-    color: var(--color-text-secondary);
-    border: none;
-    border-radius: var(--border-radius-standard);
+    background: var(--color-background-button);
+    /*margin-right: 4px;*/
+    color: var(--color-text-primary);
+    border: var(--border-thin-accent);
+    border-right: unset;
+    border-radius: unset;
     /*position: unset;*/
     padding: 3px 12px;
     /*height: calc(1.6em + 8px);*/
     text-align: center;
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper:hover {
-    background: var(--color-background-accent);
+    background: var(--color-background-secondary);
     /*text-align: left;*/
-    /*border: var(--border-standard);*/
+    /*border: var(--border-thin);*/
 }
 body.theme-allure-clear .note-tab-row .note-tab[active] .note-tab-wrapper {
-    background: var(--color-background-secondary);
-    color: var(--color-text-highlight);
+    background: var(--color-background-highlight);
+    color: var(--color-text-white);
     font-weight: normal;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    /*border-bottom-left-radius: 0;*/
+    /*border-bottom-right-radius: 0;*/
 }
 
 /* TAB - Title */
@@ -1104,7 +1155,7 @@ body.theme-allure-clear .note-tab-row .note-tab .note-tab-title {
     width: calc(100% - 14px);
     text-overflow: ellipsis;
     color: inherit;
-    font-size: .9em;
+    align-self: center;
 }
 
 /* TAB - Button */
@@ -1115,25 +1166,28 @@ body.theme-allure-clear .note-tab-row .note-tab .note-tab-close {
     border-radius: 0;
     border-top-right-radius: var(--border-radius-standard);
     border-bottom-right-radius: var(--border-radius-standard);
-    color: transparent;
     position: absolute;
-    right: 6px;
+    right: 2px;
+    top: 0;
+    display: none;
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper:hover .note-tab-close {
     background: unset;
-    color: var(--color-text-primary);
+    color: inherit;
+    display: block;
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-close:hover, {
     background-color: var(--color-background-accent);
-    /*border: var(--border-standard);*/
+    /*border: var(--border-thin);*/
     color: var(--color-text-accent);
 }
-body.theme-allure-clear .note-tab-row .note-tab[active] .note-tab-wrapper:hover {
+/*body.theme-allure-clear .note-tab-row .note-tab[active] .note-tab-wrapper:hover {
     background-color: var(--color-background-accent);
-}
+}*/
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-close span {
     position: unset;
-    font-size: 22px;
+    font-size: 18px;
+    color: inherit;
 }
 
 
@@ -1150,7 +1204,10 @@ body.theme-allure-clear ul.fancytree-container {
 body.theme-allure-clear div.global-menu button,
 body.theme-allure-clear div.standard-top-widget button {
     font-size: 0;
-    margin: 8px;
+    margin: 0 8px;
+}
+body.theme-allure-clear div.standard-top-widget button.btn.btn-sm.noborder {
+    border-bottom: none !important;
 }
 body.theme-allure-clear div.global-menu button.btn.btn-sm:hover,
 body.theme-allure-clear div.standard-top-widget button.btn.btn-sm:hover,
@@ -1168,9 +1225,14 @@ body.theme-allure-clear .global-menu-wrapper {
     border: none;
     padding: 0;
 }
-body.theme-allure-clear .global-menu-wrapper .global-menu button {
+body.theme-allure-clear .global-menu-wrapper .global-menu button.btn.btn-sm {
     font-family: var(--font-headers);
     font-size: var(--size-left-pane-button);
+    border-radius: var(--border-radius-standard);
+    margin-top: 9px;
+    height: 26px;
+    display: flex;
+    padding: 3px;
 }
 body.theme-allure-clear div.global-menu button.dropdown-toggle span {
     font-size: initial;
@@ -1182,10 +1244,18 @@ body.theme-allure-clear .sync-status-widget {
     position: absolute;
     top: 36px;
     border: none;
+    margin: 20px 8px 0;
+}
+body.theme-allure-clear .sync-status {
+    height: unset;
 }
 body.theme-allure-clear .sync-status .sync-status-icon {
-    margin: 8px;
+    border: var(--border-thin);
+    height: unset;
     padding: 6px;
+    background: var(--color-background-secondary);
+    line-height: 1rem;
+    border-radius: var(--border-radius-standard);
 }
 body.theme-allure-clear .sync-status-icon:not(.sync-status-in-progress):hover {
     background: var(--color-background-accent);
@@ -1196,6 +1266,9 @@ body.theme-allure-clear .sync-status .sync-status-icon span {
 body.theme-allure-clear .tooltip p {
     margin-top: 0;
 }
+body.theme-allure-clear .bxs-star:before {
+    display: none;
+}
 
 /* LEFT BUTTON - Button above */
 body.theme-allure-clear .standard-top-widget {
@@ -1204,7 +1277,8 @@ body.theme-allure-clear .standard-top-widget {
     width: var(--width-left-button-pane);
     display: inline-block;
     margin-left: 0;
-    margin-top: 78px;
+    margin-top: 102px;
+    padding: 0;
 }
 body.theme-allure-clear .standard-top-widget > div:not(.component) {
     flex-flow: column;
@@ -1224,8 +1298,10 @@ body.theme-allure-clear .standard-top-widget .bx-search:before {
     content: '\eb54';
 }
 /* hide button because the function of it coincides with another button */
-/*    jump to note           =  quick search                            */
-body.theme-allure-clear .standard-top-widget button[data-trigger-command="jumpToNote"] {
+/*    jump to note / search note           =  quick search              */
+body.theme-allure-clear .standard-top-widget button[data-trigger-command="jumpToNote"],
+body.theme-allure-clear .standard-top-widget button[data-trigger-command="createNoteIntoInbox"],
+body.theme-allure-clear .standard-top-widget button[data-trigger-command="searchNotes"] {
     display: none;
 }
 /*body.theme-allure-clear div.standard-top-widget .bx-send:before {
@@ -1246,34 +1322,54 @@ body.theme-allure-clear button#toolbar-button-Today span:before {
     content: '\e745';
 }
 body.theme-allure-clear .standard-top-widget .quick-search {
-    margin-left: 12px;
+    margin: 0;
     position: absolute;
-    top: -68px;
+    top: -95px;
     left: var(--width-left-button-pane);
-    width: 188px !important;
+    width: 144px !important;
     /*display: flex !important;*/
-    background: var(--color-background-primary);
     border-radius: var(--border-radius-standard);
-    padding: 0 12px;
 }
 body.theme-allure-clear .btn-outline-secondary.search-button {
     display: none;
 }
+body.theme-allure-clear div.standard-top-widget .btn.btn-sm.enter-protected-session-button.noborder {
+    border-bottom-left-radius: var(--border-radius-standard);
+    border-bottom-right-radius: var(--border-radius-standard);
+    border-bottom: var(--border-thin) !important;
+}
+/* plugin buttons */
+body.theme-allure-clear #plugin-buttons button.noborder.btn.btn-sm:first-of-type {
+    margin-top: 12px;
+    border-top-left-radius: var(--border-radius-standard);
+    border-top-right-radius: var(--border-radius-standard);
+}
+body.theme-allure-clear #plugin-buttons button.noborder.btn.btn-sm:last-of-type {
+    border-bottom-left-radius: var(--border-radius-standard);
+    border-bottom-right-radius: var(--border-radius-standard);
+    border: var(--border-thin) !important;
+}
 
 /* Quick search */
-body.theme-allure-clear .standard-top-widget .quick-search:before {
+/*body.theme-allure-clear .standard-top-widget .quick-search:before {
     content: '\eb54';
     font-family: 'trilium-allure-icons';
     display: table-caption;
     line-height: calc(1.5em + .5rem + 4px);
     font-size: 14px;
-}
+}*/
 body.theme-allure-clear div.standard-top-widget input.search-string {
-    padding: 1em;
+    /*padding: 1em;*/
     box-shadow: none;
     border: none;
     background: transparent !important;
-    /*border-left: var(--border-standard);*/
+    /*border-left: var(--border-thin);*/
+    height: 24px;
+    text-align: center;
+}
+body.theme-allure-clear div.standard-top-widget input.search-string::placeholder {
+    color: var(--color-text-secondary);
+    font-family: inherit;
 }
 /*body.theme-allure-clear div.standard-top-widget input.search-string:hover,
 body.theme-allure-clear div.standard-top-widget input.search-string:focus {
@@ -1283,17 +1379,22 @@ body.theme-allure-clear div.standard-top-widget input.search-string:focus {
 
 /* LEFT BUTTON - Buttons below - collapse tree, tree settings */
 body.theme-allure-clear button.btn.btn-sm.icon-button.tree-settings-button {
-    bottom: 50px;
+    /*bottom: 42px;
     left: -52px;
     font-size: var(--size-left-pane-button);
+    border-radius: unset;*/
+    display: none;
 }
 body.theme-allure-clear button.scroll-to-active-note-button {
     display: none;
 }
 body.theme-allure-clear button.btn.btn-sm.icon-button.collapse-tree-button {
-    bottom: 92px;
+    /*bottom: 75px;
     left: -52px;
     font-size: var(--size-left-pane-button);
+    border-top-left-radius: var(--border-radius-standard);
+    border-top-right-radius: var(--border-radius-standard);*/
+    display: none;
 }
 
 /* LEFT BUTTON - Buttons below - hide/show pane */
@@ -1315,7 +1416,12 @@ body.theme-allure-clear button.btn.btn-sm.icon-button.show-left-pane-button {
     /*bottom: 3px;*/
     left: 10px;
     font-size: var(--size-left-pane-button);
+    border-radius: var(--border-radius-standard);
 }
+/*body.theme-allure-clear button.btn.btn-sm.icon-button.hide-left-pane-button {
+    border-bottom-right-radius: var(--border-radius-standard);
+    border-bottom-left-radius: var(--border-radius-standard);
+}*/
 
 /* LEFT BUTTON - Buttons below - tree settings popup */
 body.theme-allure-clear div#left-pane div.tree-settings-popup {
@@ -1326,7 +1432,7 @@ body.theme-allure-clear div#left-pane div.tree-settings-popup {
 }
 body.theme-allure-clear div#left-pane div.tree-settings-popup button {
     background: var(--color-background-primary);
-    border: var(--border-standard);
+    border: var(--border-thin);
     font-size: 0;
 }
 body.theme-allure-clear div#left-pane button.save-tree-settings-button:after {
@@ -1411,14 +1517,14 @@ body.theme-allure-clear div#left-pane {
     /*background-color: var(--color-background-primary);*/
     /*box-sizing: unset;*/
     /*box-shadow: unset;*/
-    margin: 44px 0 0 12px;
+    margin: 6px 0 0 12px;
     /*padding: 4px 0;*/
     padding-bottom: 44px;
 }
 body.theme-allure-clear .fancytree-expander {
     /*position: absolute;*/
     /*right: 28px;*/
-    color: var(--color-text-secondary);
+    color: inherit;
     /*display: none;*/
 }
 body.theme-allure-clear span.fancytree-node:hover .fancytree-expander {
@@ -1446,7 +1552,7 @@ body.theme-allure-clear .fancytree-node .fancytree-expander::before {
 
 /* active note */
 body.theme-allure-clear .fancytree-active {
-    background: var(--color-background-primary);
+    background: var(--color-background-accent);
     color:  var(--color-text-primary);
 }
 
@@ -1491,20 +1597,22 @@ body.theme-allure-clear span.fancytree-title {
     /*display: block;*/
     max-width: calc(100% - 18px);
     font-size: .9em;
-    margin: auto 0;
+    /*margin: auto 0;*/
+    margin: 0 !important;
 }
 body.theme-allure-clear span.fancytree-node {
     /*margin-left: 18px;*/
     display: flex;
-    border-radius: var(--border-radius-standard);
+    /*border-radius: var(--border-radius-standard);*/
     width: 100%;
+    padding-left: 4px;
 }
 /* remove the margin-left of the "root" note */
 body.theme-allure-clear div.tree > ul > li > span {
     margin-left: 0;
 }
 body.theme-allure-clear span.fancytree-node:not(.fancytree-active):hover {
-    background: var(--color-background-primary);
+    background: var(--color-background-accent);
 }
 body.theme-allure-clear span.fancytree-node:hover span.fancytree-title {
     border: none;
@@ -1545,7 +1653,7 @@ body.theme-allure-clear div.tree-wrapper.component .fancytree-container li[role=
     padding: 0;
 }
 body.theme-allure-clear ul.fancytree-container ul ul {
-    padding-left: 20px;
+    padding-left: 16px;
 }
 
 body.theme-allure-clear .ui-fancytree > li > ul {
@@ -1593,10 +1701,11 @@ body.theme-allure-clear span.fancytree-active .fancytree-title {
 body.theme-allure-clear div#center-pane {
     background: var(--color-background-secondary);
     overflow: auto;
-    padding: 42px 0 0 12px;
-    margin-top: 33px;
-    border-radius: var(--border-radius-standard);
-    box-shadow: var(--shadow-center-pane);
+    padding: 16px 0 0 12px;
+    /*border-left: var(--border-thin);*/
+    border-right: var(--border-thin);
+    /*border-radius: var(--border-radius-standard);*/
+    /*box-shadow: var(--shadow-center-pane);*/
 }
 
 body.theme-allure-clear div#center-pane > .component {
@@ -1689,7 +1798,7 @@ body.theme-allure-clear .similar-notes-widget {
 body.theme-allure-clear .attr-detail {
     background: var(--color-background-primary);
     color: var(--color-text-primary);
-    border: var(--border-standard);
+    border: var(--border-thin);
     box-shadow: var(--shadow-accented);
 }
 body.theme-allure-clear .attr-detail input[readonly] {
@@ -1733,9 +1842,9 @@ body.theme-allure-clear div#center-pane .title-row button.btn:not(.execute-scrip
     font-size: 0;
     border-radius: var(--border-radius-standard);
     /*background-color: unset;*/
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     /*position: absolute;*/
-    border: var(--border-standard);
+    border: var(--border-thin);
 
     /* ------------------ Stable version start ------------- */
     padding: 4px 10px;
@@ -1885,7 +1994,7 @@ body.theme-allure-clear .attribute-list p {
     /* ------------------  Radical version end  ------------- */
 }
 body.theme-allure-clear div.note-title-container {
-    margin: 5px;
+    margin: 0 5px;
 }
 body.theme-allure-clear .attribute-list-editor {
     padding-left: 0 !important;
@@ -1937,7 +2046,7 @@ body.theme-allure-clear pre:not(.CodeMirror-line) {
 /* structure nested notes in book view */
 body.theme-allure-clear .note-detail > .note-book-card .note-book-card {
     /*align-items: flex-start;*/
-    /* border-left: var(--border-standard); */
+    /* border-left: var(--border-thin); */
     margin: 10px 0 35px;
     background: var(--color-background-primary);
 }
@@ -1945,7 +2054,7 @@ body.theme-allure-clear .note-detail > .note-book-card .note-book-card {
 /* include notes */
 body.theme-allure-clear .ck-content .include-note {
     border-radius: var(--border-radius-standard);
-    border: var(--border-standard);
+    border: var(--border-thin);
     background: unset;
     box-shadow: var(--shadow-card);
     padding: 0;
@@ -2049,7 +2158,7 @@ body.theme-allure-clear section.include-note div.include-note-content.type-text 
 /* Table */
 body.theme-allure-clear .ck-content .table {
     width: auto;
-    /*border: var(--border-standard);*/
+    /*border: var(--border-thin);*/
     margin: 1em;
 }
 body.theme-allure-clear .ck-content .table td {
@@ -2059,16 +2168,16 @@ body.theme-allure-clear .ck-content .table td {
     color: var(--color-text-primary);
     position: relative;
     vertical-align: middle;
-    border: var(--border-standard);
+    border: var(--border-thin);
 }
 body.theme-allure-clear .ck-content .table td:focus {
     background: var(--color-background-primary);
-    border: var(--border-standard);
+    border: var(--border-thin);
 }
 body.theme-allure-clear .ck-content .table th {
     background: var(--color-button-accent);
     color: var(--color-text-primary);
-    border: var(--border-standard);
+    border: var(--border-thin);
 }
 body.theme-allure-clear .ck-content ol,
 body.theme-allure-clear .ck-content ul,
@@ -2196,13 +2305,9 @@ body.theme-allure-clear .dropdown-item[data-note-type=code] strong:before {
 /* NOTE BODY */
 
 /* note details */
-/*body.theme-allure-clear div#center-pane .component:nth-of-type(10) {
-    background: var(--color-background-secondary);
-    padding: 4px;
-    border: var(--border-standard);
-    box-shadow: var(--shadow-card);
-    border-radius: var(--border-radius-standard);
-}*/
+body.theme-allure-clear div#center-pane .component:nth-of-type(8) {
+    margin-top: 12px;
+}
 /*body.theme-allure-clear div#center-pane div:nth-of-type(11) {
     margin: 4px 0;
 }*/
@@ -2264,7 +2369,7 @@ body.theme-allure-clear .ck-content :not(pre) code {
     font-size: 0.7rem;
     padding: 4px 8px;
     margin: 0 4px;
-    /*border: var(--border-standard);*/
+    /*border: var(--border-thin);*/
     font-family: var(--font-code);
     color: var(--color-text-primary);
     background: var(--color-background-accent);
@@ -2292,7 +2397,7 @@ body.theme-allure-clear .ck-math-view .ck-label {
     font-weight: normal;
 }
 body.theme-allure-clear button.ck-button-display-toggle {
-    border: var(--border-standard);
+    border: var(--border-thin);
     margin: 6px;
 }
 
@@ -2551,7 +2656,7 @@ body.theme-allure-clear .note-list.grid-view .note-book-card:first-of-type:hover
 }
 body.theme-allure-clear .note-list.grid-view .note-book-card {
     background-color: var(--color-background-secondary);
-    /*border: var(--border-standard);*/
+    /*border: var(--border-thin);*/
     flex-grow: 1;
     margin: 0;
     /*box-shadow: var(--shadow-card);*/
@@ -2599,7 +2704,7 @@ body.theme-allure-clear .note-list.list-view .note-list-container {
 }
 body.theme-allure-clear .note-list.list-view .note-book-card {
     background-color: var(--color-background-secondary);
-    border: var(--border-standard);
+    border: var(--border-thin);
     margin: 12px 12px 12px 0;
     box-shadow: var(--shadow-card);
     padding: 0;
@@ -2623,7 +2728,7 @@ body.theme-allure-clear .note-book-card .note-book-title {
     white-space: nowrap;
     overflow: hidden;
     /*background-color: var(--color-background-primary);*/
-    /*border-bottom: var(--border-standard);*/
+    /*border-bottom: var(--border-thin);*/
 }
 body.theme-allure-clear .list-view .note-book-card .note-book-title {
     padding-left: 0;
@@ -2676,9 +2781,8 @@ body.theme-allure-clear .similar-notes-widget {
 /* RIGHT PANE                                                                    */
 /* ----------------------------------------------------------------------------- */
 body.theme-allure-clear div#right-pane {
-    padding: 36px 22px 16px 17px;
+    padding: 0px 22px 16px 17px;
     background: var(--color-background-primary);
-    /*margin-top: 12px;*/
 
     /* ------------------ Radical version start ------------- */
     z-index: 1;
@@ -2701,7 +2805,7 @@ body.theme-allure-clear div#right-pane li a {
 /* WIDGET */
 
 body.theme-allure-clear div#right-pane .card {
-    /*border-bottom: var(--border-standard);*/
+    /*border-bottom: var(--border-thin);*/
     /*border-radius: unset;*/
     /*background-color: var(--color-background-secondary);*/
     margin: 2px 0;
@@ -2778,7 +2882,7 @@ body.theme-allure-clear div#right-pane .card-header .widget-header-actions a.wid
 }
 body.theme-allure-clear div#right-pane .card-header .widget-header-actions a.widget-header-action:hover {
     background: var(--color-button-accent);
-    /*border: var(--border-standard);*/
+    /*border: var(--border-thin);*/
 }
 
 /* Widget Body */
@@ -2788,7 +2892,7 @@ body.theme-allure-clear div#right-pane .card-body {
     padding-left: 0;
     padding-right: 34px;
     /*background: var(--color-background-secondary);*/
-    /*border-top: var(--border-standard);*/
+    /*border-top: var(--border-thin);*/
 }
 body.theme-allure-clear div#right-pane .card-body ul {
     padding-left: 0;
@@ -2823,7 +2927,7 @@ body.theme-allure-clear #right-pane .widget-toggle-icon {
     color: var(--color-text-primary);
 }
 body.theme-allure-clear a.widget-toggle-button:hover {
-    /*border: var(--border-standard);*/
+    /*border: var(--border-thin);*/
     background: var(--color-background-accent);
 }
 body.theme-allure-clear a.widget-help.external.no-arrow.bx-info-circle {
