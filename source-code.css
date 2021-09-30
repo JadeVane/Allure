@@ -214,6 +214,8 @@ html {
     --width-note-body        : 680px;
     --width-left-button-pane : 50px;
 
+    --height-tabsbar         : 26px;
+
     /* Use a larger size for the frequently used buttons on the left */
     --size-left-pane-button  : 1.2em;
 }
@@ -316,8 +318,10 @@ body.theme-allure-clear div#root-widget {
     background: var(--color-background-primary);
 }
 body.theme-allure-clear div#root-widget > div:nth-of-type(3) {
-    margin-left: var(--width-left-button-pane);
+    /*margin-left: var(--width-left-button-pane);*/
     /*background: var(--color-background-secondary);*/
+    margin-top: var(--height-tabsbar);
+    border-top: var(--border-thin);
 }
 
 /* List */
@@ -1037,12 +1041,17 @@ body.theme-allure-clear ::-webkit-scrollbar-thumb:hover {
 /* ----------------------------------------------------------------------------- */
 
 /* ALL BUTTONS AND TABS */
-body.theme-allure-clear .standard-top-widget .quick-search,
-body.theme-allure-clear .global-menu-wrapper .global-menu button.btn.btn-sm {
+body.theme-allure-clear .global-menu-wrapper .global-menu .btn.btn-sm,
+body.theme-allure-clear .sync-status .sync-status-icon,
+body.theme-allure-clear .standard-top-widget .btn.btn-sm.noborder,
+body.theme-allure-clear .standard-top-widget .btn.btn-sm.enter-protected-session-button.noborder,
+body.theme-allure-clear #plugin-buttons .noborder.btn.btn-sm:last-of-type,
+body.theme-allure-clear .standard-top-widget .quick-search {
     background-image: var(--color-button);
     background-clip: padding-box, border-box;
     background-origin: border-box;
     border: var(--border-transparent) !important;
+    border-radius: var(--border-radius-standard);
 }
 
 /* NOTE TABS */
@@ -1051,17 +1060,15 @@ body.theme-allure-clear #root-widget > div.component:first-of-type {
     padding-bottom: 38px;
     background: var(--color-background-titlebar);
 }
-body.theme-allure-clear #root-widget > div.component:first-of-type,
-body.theme-allure-clear .standard-top-widget {
-    /*position: absolute;*/
-    width: 100%;
-}
 
 body.theme-allure-clear .note-tab-row-container .note-tab,
 body.theme-allure-clear .note-tab-row-container .note-new-tab {
     /*margin-top: 3px;*/
-    height: 26px;
+    height: var(--height-tabsbar);
     border-radius: unset;
+    top: 39px;
+    border: unset;
+    border-right: var(--border-thin);
 
 /* ------------------ Stable version start ------------- */
 /* ------------------  Stable version end  ------------- */
@@ -1072,20 +1079,19 @@ body.theme-allure-clear .note-tab-row-container .note-new-tab {
 
 }
 
-body.theme-allure-clear .note-tab-row .note-tab:first-of-type .note-tab-wrapper {
+/*body.theme-allure-clear .note-tab-row .note-tab:first-of-type .note-tab-wrapper {
     border-top-left-radius: var(--border-radius-standard);
     border-bottom-left-radius: var(--border-radius-standard);
-    /*border-left: var(--border-thin);*/
-}
+}*/
 
 /* Note tabs - New tab button */
 body.theme-allure-clear .note-tab-row-container .note-new-tab {
     /*padding: 2px;*/
     /*height: 29px;*/
-    border-top-right-radius: var(--border-radius-standard);
-    border-bottom-right-radius: var(--border-radius-standard);
+    /*border-top-right-radius: var(--border-radius-standard);*/
+    /*border-bottom-right-radius: var(--border-radius-standard);*/
     background: var(--color-background-button);
-    border: var(--border-thin-accent);
+    /*border: var(--border-thin-accent);*/
     font-size: 0;
 }
 body.theme-allure-clear .note-tab-row-container .note-new-tab:before {
@@ -1100,12 +1106,12 @@ body.theme-allure-clear .note-new-tab:hover {
 body.theme-allure-clear .note-tab-row {
     background: unset;
     margin: 0;
-    left: 250px;
+    /*left: 250px;*/
     position: absolute;
-    width: calc(100% - 354px);
-    height: 48px;
-    z-index: 2;
-    padding-top: 7px;
+    /*width: calc(100% - 354px);*/
+    height: 72px;
+    /*z-index: 2;*/
+    /*padding-top: 7px;*/
 
     /* ------------------ Stable version start ------------- */
     /* ------------------  Stable version end  ------------- */
@@ -1129,8 +1135,8 @@ body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper {
     background: var(--color-background-button);
     /*margin-right: 4px;*/
     color: var(--color-text-primary);
-    border: var(--border-thin-accent);
-    border-right: unset;
+    border: none;
+    /*border-right: unset;*/
     border-radius: unset;
     /*position: unset;*/
     padding: 3px 12px;
@@ -1207,7 +1213,11 @@ body.theme-allure-clear div.standard-top-widget button {
     margin: 0 8px;
 }
 body.theme-allure-clear div.standard-top-widget button.btn.btn-sm.noborder {
-    border-bottom: none !important;
+    /*border-bottom: none !important;*/
+    background-image: var(--color-button);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    padding: 3px;
 }
 body.theme-allure-clear div.global-menu button.btn.btn-sm:hover,
 body.theme-allure-clear div.standard-top-widget button.btn.btn-sm:hover,
@@ -1225,7 +1235,7 @@ body.theme-allure-clear .global-menu-wrapper {
     border: none;
     padding: 0;
 }
-body.theme-allure-clear .global-menu-wrapper .global-menu button.btn.btn-sm {
+body.theme-allure-clear .global-menu-wrapper .global-menu .btn.btn-sm {
     font-family: var(--font-headers);
     font-size: var(--size-left-pane-button);
     border-radius: var(--border-radius-standard);
@@ -1242,20 +1252,18 @@ body.theme-allure-clear div.global-menu button.dropdown-toggle span {
 /* LEFT BUTTON - Sync button */
 body.theme-allure-clear .sync-status-widget {
     position: absolute;
-    top: 36px;
-    border: none;
-    margin: 20px 8px 0;
+    top: 7px;
+    left: 44px;
+    /*margin: 20px 8px 0;*/
 }
 body.theme-allure-clear .sync-status {
     height: unset;
 }
 body.theme-allure-clear .sync-status .sync-status-icon {
-    border: var(--border-thin);
     height: unset;
-    padding: 6px;
-    background: var(--color-background-secondary);
+    padding: 2px 4px;
     line-height: 1rem;
-    border-radius: var(--border-radius-standard);
+    font-size: 1rem;
 }
 body.theme-allure-clear .sync-status-icon:not(.sync-status-in-progress):hover {
     background: var(--color-background-accent);
@@ -1273,15 +1281,16 @@ body.theme-allure-clear .bxs-star:before {
 /* LEFT BUTTON - Button above */
 body.theme-allure-clear .standard-top-widget {
     position: absolute;
-    background: var(--color-background-primary);
-    width: var(--width-left-button-pane);
-    display: inline-block;
+    background: transparent;
+    /*width: var(--width-left-button-pane);*/
+    /*display: inline-block;*/
     margin-left: 0;
-    margin-top: 102px;
+    /*margin-top: 102px;*/
     padding: 0;
 }
-body.theme-allure-clear .standard-top-widget > div:not(.component) {
-    flex-flow: column;
+body.theme-allure-clear .standard-top-widget > div:not(.component):not(#plugin-buttons) {
+    /*flex-flow: column;*/
+    margin: 6px 0 0 108px;
 }
 body.theme-allure-clear .standard-top-widget button span:first-of-type {
     font-size: initial;
@@ -1324,30 +1333,30 @@ body.theme-allure-clear button#toolbar-button-Today span:before {
 body.theme-allure-clear .standard-top-widget .quick-search {
     margin: 0;
     position: absolute;
-    top: -95px;
-    left: var(--width-left-button-pane);
-    width: 144px !important;
+    top: 7px;
+    left: 300px;
+    width: 300px !important;
     /*display: flex !important;*/
     border-radius: var(--border-radius-standard);
 }
 body.theme-allure-clear .btn-outline-secondary.search-button {
     display: none;
 }
-body.theme-allure-clear div.standard-top-widget .btn.btn-sm.enter-protected-session-button.noborder {
+body.theme-allure-clear .standard-top-widget .btn.btn-sm.enter-protected-session-button.noborder {
     border-bottom-left-radius: var(--border-radius-standard);
     border-bottom-right-radius: var(--border-radius-standard);
-    border-bottom: var(--border-thin) !important;
 }
 /* plugin buttons */
+body.theme-allure-clear #plugin-buttons {
+    margin-top: 6px;
+}
 body.theme-allure-clear #plugin-buttons button.noborder.btn.btn-sm:first-of-type {
-    margin-top: 12px;
     border-top-left-radius: var(--border-radius-standard);
     border-top-right-radius: var(--border-radius-standard);
 }
 body.theme-allure-clear #plugin-buttons button.noborder.btn.btn-sm:last-of-type {
     border-bottom-left-radius: var(--border-radius-standard);
     border-bottom-right-radius: var(--border-radius-standard);
-    border: var(--border-thin) !important;
 }
 
 /* Quick search */
@@ -1398,8 +1407,8 @@ body.theme-allure-clear button.btn.btn-sm.icon-button.collapse-tree-button {
 }
 
 /* LEFT BUTTON - Buttons below - hide/show pane */
-body.theme-allure-clear .hide-right-pane-button,
-body.theme-allure-clear .show-right-pane-button {
+body.theme-allure-clear .hide-right-pane-button.btn.btn-sm.icon-button.bx,
+body.theme-allure-clear .show-right-pane-button.btn.btn-sm.icon-button.bx {
     bottom: 2px;
     right: 6px;
     font-size: var(--size-left-pane-button);
