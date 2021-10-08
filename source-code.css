@@ -93,14 +93,18 @@ html {
     --color-gray-lighter  : #DADCDB;
     --color-gray-light    : #C3C3C3;
     --color-gray          : #9DA6B1;
-    --color-gray-dark     : #666;
-    --color-gray-darker   : #525051;
-    --color-gray-darkest  : #121419;
+    --color-gray-dark     : ;
+    --color-gray-darker   : ;
+    --color-gray-darkest  : ;
+
     --color-blue          : #315BEF;
     --color-white         : #FFF;
     --color-red           : #FF5252;
-    --color-black-light   : #282828;
-    --color-black         : #1E1E1E;
+
+    --color-black-lighter : #666;
+    --color-black-light   : #525051;
+    --color-black-darker  : #282828;
+    --color-black-darkest : #121419;
 
     --color-dialog-translucent     : rgb(126,126,126, 0.5);
     --color-background-translucent : rgb(126,126,126, 0.1);
@@ -142,22 +146,22 @@ html {
     --color-text-accent          : var(--color-gray-lightest);
     --color-text-primary         : var(--color-gray-lighter);
     --color-text-secondary       : var(--color-gray);
-    --color-text-inconspicuous   : var(--color-gray-dark);
+    --color-text-inconspicuous   : var(--color-black-lighter);
 
     --color-background-titlebar  : ;
 
-    --color-background-primary   : var(--color-black-light);
-    --color-background-secondary : var(--color-black);
+    --color-background-primary   : var(--color-black-darker);
+    --color-background-secondary : var(--color-black-darkest);
     --color-background-accent    : var(--color-gray-darkest);
     --color-background-item      : var(--color-gray-darkest);
 
-    --color-background-button       : var(--color-gray-darker);
-    --color-button-accent        : var(--color-gray-dark);
+    --color-background-button       : var(--color-black-light);
+    --color-button-accent        : var(--color-black-lighter);
     --color-button-accent-border : var(--color-gray);
-    --color-button-hover-center  : var(--color-black-light);
+    --color-button-hover-center  : var(--color-black-darker);
 
-    --color-line                 : var(--color-gray-darker);
-    --color-line-accent          : var(--color-gray-dark);
+    --color-line                 : var(--color-black-light);
+    --color-line-accent          : var(--color-black-lighter);
 
     --color-border-button              : ;
     /* ------------------- Night mode end ---------------- */
@@ -188,7 +192,7 @@ html {
     --shadow-card          : 0px 0px 18px -8px var(--color-background-accent);
     --shadow-mobile        : 0px 0px 12px  0px var(--color-text-inconspicuous);
     --shadow-standard      : 3px 4px  3px -3px var(--color-background-accent);
-    --shadow-accented      : 2px 2px  5px -2px var(--color-gray-dark);
+    --shadow-accented      : 2px 2px  5px -2px var(--color-black-lighter);
     --shadow-mobile-popup  : 0px 0px 16px  0px var(--color-background-accent);
     --shadow-center-pane   : 1px 0 8px #d8dee2;
 
@@ -209,7 +213,7 @@ html {
     --spacing-content-small  : .4em;
     --spacing-content-normal : .8em;
     --spacing-content-large  : 1.8em;
-    --spacing-center-pane    : 42px;
+    --spacing-center-pane    : 24px;
 
     --width-note-body        : 680px;
     --width-left-button-pane : 50px;
@@ -217,7 +221,7 @@ html {
     --height-tabsbar         : 26px;
 
     /* Use a larger size for the frequently used buttons on the left */
-    --size-left-pane-button  : 1.2em;
+    --size-left-pane-button  : 1.1rem;
 }
 
 
@@ -321,7 +325,7 @@ body.theme-allure-clear div#root-widget > div:nth-of-type(3) {
     /*margin-left: var(--width-left-button-pane);*/
     /*background: var(--color-background-secondary);*/
     margin-top: var(--height-tabsbar);
-    border-top: var(--border-thin);
+    border-top: var(--border-thin-accent);
 }
 
 /* List */
@@ -1052,6 +1056,7 @@ body.theme-allure-clear .standard-top-widget .quick-search {
     background-origin: border-box;
     border: var(--border-transparent) !important;
     border-radius: var(--border-radius-standard);
+    padding: 3px 8px;
 }
 
 /* NOTE TABS */
@@ -1068,7 +1073,7 @@ body.theme-allure-clear .note-tab-row-container .note-new-tab {
     border-radius: unset;
     top: 39px;
     border: unset;
-    border-right: var(--border-thin);
+    /*border-right: var(--border-thin);*/
 
 /* ------------------ Stable version start ------------- */
 /* ------------------  Stable version end  ------------- */
@@ -1090,7 +1095,7 @@ body.theme-allure-clear .note-tab-row-container .note-new-tab {
     /*height: 29px;*/
     /*border-top-right-radius: var(--border-radius-standard);*/
     /*border-bottom-right-radius: var(--border-radius-standard);*/
-    background: var(--color-background-button);
+    /*background: var(--color-background-button);*/
     /*border: var(--border-thin-accent);*/
     font-size: 0;
 }
@@ -1108,7 +1113,7 @@ body.theme-allure-clear .note-tab-row {
     margin: 0;
     /*left: 250px;*/
     position: absolute;
-    /*width: calc(100% - 354px);*/
+    width: calc(100% - 76px);
     height: 72px;
     /*z-index: 2;*/
     /*padding-top: 7px;*/
@@ -1132,9 +1137,9 @@ body.theme-allure-clear .tab-row-filler .tab-row-border {
     display: none !important;
 }*/
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper {
-    background: var(--color-background-button);
+    background: var(--color-background-accent);
     /*margin-right: 4px;*/
-    color: var(--color-text-primary);
+    color: var(--color-text-secondary);
     border: none;
     /*border-right: unset;*/
     border-radius: unset;
@@ -1144,14 +1149,16 @@ body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper {
     text-align: center;
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-wrapper:hover {
-    background: var(--color-background-secondary);
+    background: var(--color-background-primary);
     /*text-align: left;*/
     /*border: var(--border-thin);*/
 }
 body.theme-allure-clear .note-tab-row .note-tab[active] .note-tab-wrapper {
-    background: var(--color-background-highlight);
-    color: var(--color-text-white);
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
     font-weight: normal;
+    border-left: var(--border-thin);
+    border-right: var(--border-thin);
     /*border-bottom-left-radius: 0;*/
     /*border-bottom-right-radius: 0;*/
 }
@@ -1166,7 +1173,10 @@ body.theme-allure-clear .note-tab-row .note-tab .note-tab-title {
 
 /* TAB - Button */
 body.theme-allure-clear div.tab-row-filler {
-    height: inherit;
+    height: 38px;
+    left: 598px;
+    min-width: 600px;
+    transform: unset;
 }
 body.theme-allure-clear .note-tab-row .note-tab .note-tab-close {
     border-radius: 0;
@@ -1206,18 +1216,9 @@ body.theme-allure-clear ul.fancytree-container {
 
 
 /* LEFT BUTTON */
-
-body.theme-allure-clear div.global-menu button,
 body.theme-allure-clear div.standard-top-widget button {
     font-size: 0;
-    margin: 0 8px;
-}
-body.theme-allure-clear div.standard-top-widget button.btn.btn-sm.noborder {
-    /*border-bottom: none !important;*/
-    background-image: var(--color-button);
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
-    padding: 3px;
+    margin: 0 3px;
 }
 body.theme-allure-clear div.global-menu button.btn.btn-sm:hover,
 body.theme-allure-clear div.standard-top-widget button.btn.btn-sm:hover,
@@ -1239,10 +1240,10 @@ body.theme-allure-clear .global-menu-wrapper .global-menu .btn.btn-sm {
     font-family: var(--font-headers);
     font-size: var(--size-left-pane-button);
     border-radius: var(--border-radius-standard);
-    margin-top: 9px;
+    margin: 9px 8px 0;
     height: 26px;
     display: flex;
-    padding: 3px;
+    padding: 3px 8px;
 }
 body.theme-allure-clear div.global-menu button.dropdown-toggle span {
     font-size: initial;
@@ -1253,7 +1254,7 @@ body.theme-allure-clear div.global-menu button.dropdown-toggle span {
 body.theme-allure-clear .sync-status-widget {
     position: absolute;
     top: 7px;
-    left: 44px;
+    left: 50px;
     /*margin: 20px 8px 0;*/
 }
 body.theme-allure-clear .sync-status {
@@ -1261,7 +1262,6 @@ body.theme-allure-clear .sync-status {
 }
 body.theme-allure-clear .sync-status .sync-status-icon {
     height: unset;
-    padding: 2px 4px;
     line-height: 1rem;
     font-size: 1rem;
 }
@@ -1269,7 +1269,7 @@ body.theme-allure-clear .sync-status-icon:not(.sync-status-in-progress):hover {
     background: var(--color-background-accent);
 }
 body.theme-allure-clear .sync-status .sync-status-icon span {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 body.theme-allure-clear .tooltip p {
     margin-top: 0;
@@ -1287,18 +1287,21 @@ body.theme-allure-clear .standard-top-widget {
     margin-left: 0;
     /*margin-top: 102px;*/
     padding: 0;
+    left: 128px;
 }
-body.theme-allure-clear .standard-top-widget > div:not(.component):not(#plugin-buttons) {
-    /*flex-flow: column;*/
-    margin: 6px 0 0 108px;
+body.theme-allure-clear .standard-top-widget > div:not(.component):not(#plugin-buttons),
+body.theme-allure-clear #plugin-buttons {
+    margin-top: 5px;
 }
+/*body.theme-allure-clear .standard-top-widget > div:not(.component):not(#plugin-buttons) {
+    margin-left: 140px;
+}*/
 body.theme-allure-clear .standard-top-widget button span:first-of-type {
-    font-size: initial;
+    font-size: var(--size-left-pane-button);
     top: inherit;
 }
 body.theme-allure-clear .standard-top-widget button span:before {
     font-family: 'trilium-allure-icons';
-    font-size: var(--size-left-pane-button);
 }
 body.theme-allure-clear .standard-top-widget .bx-file-blank:before {
     content: '\eaec';
@@ -1327,17 +1330,18 @@ body.theme-allure-clear button.leave-protected-session-button span:before {
     font-weight: bold;
     color: var(--color-button-highlight);
 }
-body.theme-allure-clear button#toolbar-button-Today span:before {
+body.theme-allure-clear button#toolbar-button-Today .bx-calendar:before {
     content: '\e745';
 }
 body.theme-allure-clear .standard-top-widget .quick-search {
     margin: 0;
     position: absolute;
     top: 7px;
-    left: 300px;
+    left: 170px;
     width: 300px !important;
     /*display: flex !important;*/
-    border-radius: var(--border-radius-standard);
+    /*border-radius: var(--border-radius-standard);*/
+    padding: 0;
 }
 body.theme-allure-clear .btn-outline-secondary.search-button {
     display: none;
@@ -1347,9 +1351,6 @@ body.theme-allure-clear .standard-top-widget .btn.btn-sm.enter-protected-session
     border-bottom-right-radius: var(--border-radius-standard);
 }
 /* plugin buttons */
-body.theme-allure-clear #plugin-buttons {
-    margin-top: 6px;
-}
 body.theme-allure-clear #plugin-buttons button.noborder.btn.btn-sm:first-of-type {
     border-top-left-radius: var(--border-radius-standard);
     border-top-right-radius: var(--border-radius-standard);
@@ -1453,6 +1454,13 @@ body.theme-allure-clear div#left-pane label.form-check-label {
 }
 
 
+
+/* NEW TAB - search bar */
+body.theme-allure-clear .input-group {
+    background: var(--color-background-primary);
+    border-radius: var(--border-radius-standard);
+    padding: 0 6px;
+}
 
 
 /* Search Result - note list */
@@ -1605,9 +1613,9 @@ body.theme-allure-clear span.fancytree-title {
     overflow: hidden;
     /*display: block;*/
     max-width: calc(100% - 18px);
-    font-size: .9em;
+    /*font-size: .9em;*/
     /*margin: auto 0;*/
-    margin: 0 !important;
+    margin-left: 3px !important;
 }
 body.theme-allure-clear span.fancytree-node {
     /*margin-left: 18px;*/
@@ -1700,6 +1708,7 @@ body.theme-allure-clear span.fancytree-active .fancytree-title {
     background: transparent !important;
     /*border-radius: 3px;*/
     color: inherit !important;
+    font-weight: normal;
 }
 
 
@@ -1707,7 +1716,7 @@ body.theme-allure-clear span.fancytree-active .fancytree-title {
 /* CENTER PANE                                                                   */
 /* ----------------------------------------------------------------------------- */
 
-body.theme-allure-clear div#center-pane {
+body.theme-allure-clear #center-pane {
     background: var(--color-background-secondary);
     overflow: auto;
     padding: 16px 0 0 12px;
@@ -1717,7 +1726,7 @@ body.theme-allure-clear div#center-pane {
     /*box-shadow: var(--shadow-center-pane);*/
 }
 
-body.theme-allure-clear div#center-pane > .component {
+body.theme-allure-clear #center-pane > .component {
     overflow: unset !important;
 }
 
@@ -1774,10 +1783,10 @@ body.theme-allure-clear .attribute-list .add-new-attribute-button:hover {
 }
 
 /* similar notes - content */
-body.theme-allure-clear div#center-pane hr.w-100 {
+body.theme-allure-clear #center-pane hr.w-100 {
     display: none !important;
 }
-body.theme-allure-clear div#center-pane div.similar-notes-widget a {
+body.theme-allure-clear #center-pane div.similar-notes-widget a {
     border: none;
     font-size: .9rem;
     font-family: var(--font-headers);
@@ -1788,7 +1797,7 @@ body.theme-allure-clear div#center-pane div.similar-notes-widget a {
     line-height: 1.6em;
     margin: 2px 8px;
 }
-body.theme-allure-clear div#center-pane div.similar-notes-widget a:before {
+body.theme-allure-clear #center-pane div.similar-notes-widget a:before {
     content: '\e659';
     font-family: 'trilium-allure-icons';
     margin-right: 10px;
@@ -1847,7 +1856,7 @@ body.theme-allure-clear .title-row > * {
 }
 
 /* Title - Note type and more menu button */
-body.theme-allure-clear div#center-pane .title-row button.btn:not(.execute-script-button) {
+body.theme-allure-clear #center-pane .title-row button.btn:not(.execute-script-button) {
     font-size: 0;
     border-radius: var(--border-radius-standard);
     /*background-color: unset;*/
@@ -2037,6 +2046,9 @@ body.theme-allure-clear .note-book-children .note-book-open-children-button {
 body.theme-allure-clear .CodeMirror {
     color: var(--color-text-primary);
 }
+/*body.theme-allure-clear .CodeMirror-scroll .CodeMirror-sizer {
+    margin-left: var(--spacing-center-pane) !important;
+}*/
 
 /* book view */
 body.theme-allure-clear .note-detail-book > .note-detail-book-content > div.note-book-card .note-book-content {
@@ -2314,10 +2326,10 @@ body.theme-allure-clear .dropdown-item[data-note-type=code] strong:before {
 /* NOTE BODY */
 
 /* note details */
-body.theme-allure-clear div#center-pane .component:nth-of-type(8) {
+body.theme-allure-clear #center-pane .component:nth-of-type(8) {
     margin-top: 12px;
 }
-/*body.theme-allure-clear div#center-pane div:nth-of-type(11) {
+/*body.theme-allure-clear #center-pane div:nth-of-type(11) {
     margin: 4px 0;
 }*/
 
@@ -2446,7 +2458,7 @@ body.theme-allure-clear div.note-detail .bx-edit-alt:before {
     color: var(--color-text-secondary);
     /* ------------------  Radical version end  ------------- */
 }
-/*body.theme-allure-clear div#center-pane.component div.note-detail-read-only-code div.alert {
+/*body.theme-allure-clear #center-pane.component div.note-detail-read-only-code div.alert {
     padding: 0;
 }*/
 /*body.theme-allure-clear div.note-detail-readonly-text div.edit-text-note-container {
