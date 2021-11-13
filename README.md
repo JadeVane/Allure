@@ -11,17 +11,21 @@ There are currently three theme styles to choose from: `Allure` (original versio
 ## Features
 
 1. more minimalist interface
-1. more diverse color scheme
-1. highlighting important content in a prominent style
-1. both mobile and web support
+1. Cool and comfortable color scheme
+1. Hierarchical content layout
+<!-- 1. both mobile and web support -->
+
+Adapted version: `0.48.x`
 
 ## Screenshot
 
 Allure theme has made some interface element changes to provide a better-looking interface
 
-![screenshot](./resources/screenshot.png)
+![screenshot](./resources/screenshot-clear.png)
 
-## What's different between stable version and radical version
+![screenshot](./resources/screenshot-night.png)
+
+<!-- ## What's different between stable version and radical version
 
 The radical version has made some radical changes than the stable version to simplify the interface as much as possible, so some changes may not be suitable for everyone.
 
@@ -29,33 +33,35 @@ The additional changes in the current radical version:
 
 1. Remove similar notes
 1. Move attrs to the bottom of the note content
-1. Move the note type button and menu button to the right side of the note content
+1. Move the note type button and menu button to the right side of the note content -->
 
-## :warning: ATTENTION :warning:
+<!-- ## :warning: ATTENTION :warning:
 
-**Do NOT keep more than one version of css style to trilium, or the styles of several css style will affect each other and cause unexpected errors**
+**Do NOT keep more than one version of css style to trilium, or the styles of several css style will affect each other and cause unexpected errors** -->
 
 ## Steps
 
 Install the theme by following these steps:
 
-1. create a new note in trilium (of type **CSS**) named `Allure` / `Allure-clear` / `Allure-night` *(the name of note depends on which theme you want to apply)*
+1. create a new note in trilium (of type **CSS**) named `Allure-clear` / `Allure-night` *(the name of note depends on which theme you want to apply)*
 1. pick a theme below, copy the content of it and paste it into the new note created above:
-    - [Allure.css](./Allure.css)
     - [Allure-clear.css](./Allure-clear.css)
     - [Allure-night.css](./Allure-night.css)
-1. add `#appTheme` attribute to the note
+1. add `#appTheme=[theme_name]` attribute to the note
 1. download all the fonts in [fonts](./fonts/), then right-click on the note and select `Import to note` to import all fonts
-1. add attribute `#customResourceProvider="font-name.ttf"` to each fonts
-1. go to Menu > Options, and select `Allure` / `Allure-clear` / `Allure-night` as your new theme
+1. add attribute `#customResourceProvider="font-name.suffix"` to each fonts
+1. go to Menu > Options, and select `Allure-clear` / `Allure-night` as your new theme
 1. Press `F5` or `Ctrl` + `R` to reload the page
 
-![steps](./resources/steps.png)
+<!-- ![steps](./resources/steps.png) -->
 
 ## Known bugs
 
-- [ ] The search bar cannot be collapsed following the left pane
-- [ ] The width of the search bar and tab bar cannot be changed with the page width
+- [ ] When a note is being edited, open another note and refresh the page at the same time, the edit button will disappear, but refreshing the page can restore the button. *(Not sure if this bug belongs to Trilium or Allure)*
+- [ ] As the property bar moved to the bottom of the page, the Link Map could not be expanded to full screen display, and copy note attributes will cause the content of the note to scroll
+- [ ] The mobile style does not match yet
+
+The 0.48.x version of Trilium has changed too much. These above bugs may exist for a long time and cannot be solved because I don’t have enough time to deal with it. If these bugs affect you greatly, please use it with caution
 
 ## Donation
 
