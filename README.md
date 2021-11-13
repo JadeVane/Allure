@@ -6,8 +6,6 @@ English | [简体中文](./README_zh.md)
 
 trilium is an excellent note taking app with powerful features, however, the excellent features don't lead to a pleasant experience, mainly because the interface with all the content side by side, buttons containing long text, and monotonous without layers is really not good enough, so after a period of time, I create allure theme after using it for a while, hoping to provide a more immersive visual experience.
 
-There are currently three theme styles to choose from: `Allure` (original version), `Allure-clear` (lastest version), Allure-night (the night mode of lastest version). Due to limited time, only `Allure-clear` and `Allure-night` will be maintained, the version of `Allure` will be the last one.
-
 > Adapted version: `0.48.x`
 
 ## Features
