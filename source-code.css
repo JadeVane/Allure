@@ -954,9 +954,11 @@ body .protected-note-switch .slider {
 }
 body .bookmark-switch .slider:before,
 body .protected-note-switch .slider:before {
-    background: var(--color-text-secondary);
+    background: var(--color-background-primary);
 }
-
+body .bookmark-switch .slider.checked {
+    background: var(--color-background-highlight);
+}
 
 /* Note Details - operation bar */
 /*     - hide note id           */
