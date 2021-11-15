@@ -625,6 +625,7 @@ body .sync-status-icon:not(.sync-status-in-progress):hover {
 body .bx-wifi:before {
     content: "\ec9e";
     font-family: 'trilium-allure-icons';
+    font-size: .9em;
 }
 
 
@@ -835,7 +836,7 @@ body .title-row {
 }*/
 body .title-row .note-title-widget .note-title {
     padding: 6px 12px;
-    margin-left: -12px;
+    margin-left: -6px;
     font-size: 2em;
     font-weight: bold;
     color: var(--color-text-primary) !important;
@@ -844,6 +845,14 @@ body .title-row .note-title-widget .note-title {
 body .title-row .note-title-widget .note-title:focus-visible {
     outline: none;
     background: var(--color-background-accent) !important;
+}
+
+/* Note details - close button */
+span.button-widget.icon-action.bx.component.bx-x {
+    height: unset;
+    width: unset;
+    display: inline-table;
+    margin-top: 16px;
 }
 
 /* Note Details - operation bar */
@@ -884,7 +893,7 @@ body .ribbon-button-container {
 }
 
 body .ribbon-tab-title {
-    padding: 1px 5px 3px 5px;
+    padding: 1px 5px 3px 5px !important;
     box-sizing: border-box;
     border-top: 2px solid transparent;
 }
@@ -897,7 +906,7 @@ body .ribbon-container {
     position: absolute;
     bottom: 0;
     background: var(--color-background-secondary);
-    padding: 4px 0;
+    padding: 4px 0 4px 30px;
     margin: 0;
     z-index: 9;
     width: 100%;
@@ -948,6 +957,15 @@ body .note-info-widget-table tr > td:first-of-type {
 body .map-type-switcher,
 body .ribbon-tab-title.active .ribbon-tab-title-label {
     display: none;
+}
+
+/* split note button */
+body .bx-dock-right {
+    position: absolute;
+    bottom: -1px;
+    z-index: 10;
+    font-size: 1.3em;
+    padding: 7px;
 }
 
 /* actived ribbon tab */
