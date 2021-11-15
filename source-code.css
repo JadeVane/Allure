@@ -1384,12 +1384,8 @@ body .bx-x:before {
 body .bx-time:before {
     content: "\e672";
     font-family: 'trilium-allure-icons';
+    font-size: .9em;
 }
-
-
-
-
-/* ------------------------- need more testing ------------------------- */
 
 /* Note Details - others */
 body .note-detail .ck-content p {
@@ -1412,8 +1408,4 @@ body .split-note-container-widget > .component > .component:nth-of-type(7) {
     padding-bottom: 24px;
     margin-bottom: 24px;
     padding-top: 16px;
-}
-body .split-note-container-widget > .component > .component:nth-of-type(4) > .component:last-child,
-body .split-note-container-widget > .component > .component:nth-of-type(5) > .component:last-child {
-    /*overflow: auto;*/
 }
