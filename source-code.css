@@ -819,7 +819,8 @@ body #center-pane {
 /* Note Details */
 body .note-detail,
 body .note-list-widget {
-    margin: 0 var(--spacing-center-pane);
+    margin: auto;
+    max-width: var(--width-note-body);
 }
 body .note-detail {
     padding-bottom: 12px;
@@ -844,11 +845,15 @@ body .cm-matchhighlight {
 
 /* Note Details - title */
 body .title-row {
-    margin: 24px calc(var(--spacing-center-pane) - 8px) 16px;
+    margin: 24px 0 16px -6px;
 }
-/*body .title-row .note-title-widget {
-    margin-left: 20px;
-}*/
+body .title-row .note-title-widget {
+    margin: auto;
+    max-width: var(--width-note-body);
+}
+body .title-row .spacer {
+    display: none;
+}
 body .title-row .note-title-widget .note-title {
     padding: 6px 12px;
     margin-left: -6px;
@@ -921,11 +926,10 @@ body .ribbon-container {
     position: absolute;
     bottom: 0;
     background: var(--color-background-secondary);
-    padding: 4px 0 4px 30px;
+    padding: 4px 0 4px 34px;
     margin: 0;
     z-index: 9;
     width: 100%;
-    margin-left: var(--spacing-center-pane);
 }
 body .ribbon-top-row {
     width: fit-content;
@@ -1036,6 +1040,7 @@ body .split-note-container-widget > .component > .component {
 body .split-note-container-widget > .component {
     overflow: auto;
     margin-bottom: 36px;
+    padding: 0 36px;
 }
 
 /* table */
