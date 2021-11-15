@@ -384,6 +384,9 @@ body .modal-header .close:before {
 body .modal-dialog-scrollable .modal-body {
     overflow: hidden;
 }
+body #recent-changes-dialog .modal-dialog-scrollable .modal-body {
+    overflow: auto;
+}
 body .form-control {
     color: var(--color-text-primary) !important;
     border: unset;
@@ -445,6 +448,18 @@ body #note-revision-content-wrapper {
 body #note-revision-content {
     padding-right: 4px;
     margin: 12px -16px -16px 0;
+}
+
+/* Recent changes */
+body #recent-changes-dialog ul {
+    padding-left: 0;
+}
+body #recent-changes-dialog li {
+    font-size: 0;
+}
+body #recent-changes-dialog li span {
+    font-size: initial;
+    margin-left: 16px;
 }
 
 /* Dropdown menu */
