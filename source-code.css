@@ -235,7 +235,7 @@ body .btn:not(.btn-primary) {
     color: var(--color-text-primary);
 }
 body .btn.btn-primary {
-    background: var(--color-button-primary);
+    background: var(--color-background-item-active);
     border: none;
     padding: 8px 16px;
     color: var(--color-text-primary);
@@ -935,11 +935,11 @@ body .file-table {
 /* slider */
 body .bookmark-switch .slider,
 body .protected-note-switch .slider {
-    background: var(--color-button-primary);
+    background: var(--color-background-item-active);
 }
 body .bookmark-switch .slider:before,
 body .protected-note-switch .slider:before {
-    background: var(--color-text-primary);
+    background: var(--color-text-secondary);
 }
 
 
