@@ -981,7 +981,7 @@ body .ribbon-tab-title.active .ribbon-tab-title-label {
 }
 
 /* split note button */
-body .bx-dock-right {
+body .title-row .bx-dock-right {
     position: absolute;
     bottom: -1px;
     z-index: 10;
