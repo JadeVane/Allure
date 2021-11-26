@@ -19,9 +19,7 @@ trilium 作为一款笔记应用，功能已经足够强大，但是与强大功
 
 为了简化界面，Allure 主题对 trilium 上世纪的画风进行了不少改动
 
-![screenshot](./resources/screenshot-clear.png)
-
-![screenshot](./resources/screenshot-night.png)
+![screenshot](./resources/screenshot.png)
 
 <!-- ## stable（稳定版）和 radical（激进版）有什么区别
 

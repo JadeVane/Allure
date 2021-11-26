@@ -1039,7 +1039,7 @@ body .split-note-container-widget > .component > .component {
 }*/
 body .split-note-container-widget > .component {
     overflow: auto;
-    margin-bottom: 36px;
+    margin-bottom: 46px;
     padding: 0 36px;
 }
 
@@ -1047,6 +1047,16 @@ body .split-note-container-widget > .component {
 body table td,
 body table th {
     color: var(--color-text-primary);
+}
+body .ck-content .table table {
+    background: inherit !important;
+    border: var(--border-accent);
+}
+body .ck-content .table table td,
+body .ck-content .table table th {
+    padding: 8px 12px !important;
+    height: unset !important;
+    border-color: var(--color-button-accent) !important;
 }
 
 
@@ -1201,6 +1211,9 @@ body .note-book-card {
     border-radius: 3px;
     background: var(--color-background-secondary);
     padding: 16px 20px;
+}
+body .note-book-card .note-book-card {
+    border: var(--border-light);
 }
 body .note-list.grid-view .note-book-card {
     /*border: var(--border-light);*/
