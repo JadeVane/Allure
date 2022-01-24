@@ -225,7 +225,7 @@ body ::-webkit-scrollbar-thumb:hover {
 /* LAYOUT - Button */
 body .icon-action {
     border: none;
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
 }
 body .icon-action:hover:not(.disabled) {
     background: var(--color-background-primary);
@@ -354,7 +354,7 @@ body .tooltip {
 
 /* Modal */
 body .modal-content {
-    background: var(--color-background-popup-body) !important;
+    background: var(--color-background-secondary) !important;
     border: var(--border-light);
     color: var(--color-text-primary);
 }
@@ -404,7 +404,7 @@ body .nav-tabs {
 body .nav-tabs .nav-item.show .nav-link,
 body .nav-tabs .nav-link.active {
     border: unset;
-    background: var(--color-background-popup-body) !important;
+    background: var(--color-background-secondary) !important;
     color: var(--color-text-primary) !important;
 }
 body .nav-tabs .nav-link {
@@ -824,6 +824,7 @@ body .note-list-widget {
 }
 body .note-detail {
     padding-bottom: 12px;
+    margin-bottom: 68px;
 }
 body .CodeMirror {
     color: var(--color-text-primary);
@@ -836,6 +837,7 @@ body .note-detail-readonly-code-content,
 body .note-detail-readonly-code {
     font-family: var(--font-body);
     padding: 0;
+    min-height: 0;
 }
 
 /* Note Details - code editor */
@@ -845,18 +847,17 @@ body .cm-matchhighlight {
 
 /* Note Details - title */
 body .title-row {
-    margin: 24px 0 16px -6px;
+    margin: 32px 0 16px;
 }
 body .title-row .note-title-widget {
     margin: auto;
-    max-width: var(--width-note-body);
+    max-width: calc(var(--width-note-body) + 66px);
 }
 body .title-row .spacer {
     display: none;
 }
 body .title-row .note-title-widget .note-title {
-    padding: 6px 12px;
-    margin-left: -6px;
+    padding: 6px 36px;
     font-size: 2em;
     font-weight: bold;
     color: var(--color-text-primary) !important;
@@ -882,7 +883,7 @@ body .ribbon-button-container > * {
 body .ribbon-tab-title .bx,
 body .ribbon-button-container .icon-action {
     font-size: 1.2em;
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     padding: 2px;
 }
 body .ribbon-button-container .icon-action.bx-history,
@@ -1206,6 +1207,8 @@ body section.include-note div.include-note-content.type-text br {
 /*------------------------------------------------------*/
 
 
+
+
 /* rendered note */
 body .note-book-card {
     border-radius: 3px;
@@ -1215,9 +1218,23 @@ body .note-book-card {
 body .note-book-card .note-book-card {
     border: var(--border-light);
 }
+body .note-list-widget .note-list {
+    padding: 0;
+}
+body .note-list-widget .note-list img {
+    display: none;
+}
 body .note-list.grid-view .note-book-card {
     /*border: var(--border-light);*/
     background: inherit;
+    max-height: 140px;
+    flex: unset;
+    width: 100%;
+    margin: 0;
+    padding: 16px 20px;
+}
+body .note-list.grid-view .note-book-card:not(:first-of-type) {
+    border-top: var(--border-light);
 }
 body .note-book-title .note-icon,
 body .note-book-title .rendered-note-attributes {
@@ -1239,8 +1256,17 @@ body .rendered-note-content pre {
     white-space: inherit;
 }
 body .note-list-widget {
-    margin-top: 68px;
+    /*margin-top: 68px;*/
     background: var(--color-background-primary);
+}
+body .rendered-note-content .ck-content * {
+    margin: 0 !important;
+    font-size: 1rem;
+    border: none;
+    display: inline;
+    padding: 0;
+    background: inherit;
+    font-family: var(--font-body);
 }
 /*body .note-book-title .rendered-note-attributes {
     display: block;
@@ -1332,8 +1358,8 @@ body .note-detail-read-only-code {
 /* h2 */
 body .ck-content h2 {
     font-size: 1.4em;
-    margin-bottom: 1.4rem;
-    margin-top: 3.4rem;
+    margin-top: 2.4em;
+    margin-bottom: 1.2em;
     border-bottom: var(--border-light);
     padding-bottom: 12px;
 }
@@ -1424,8 +1450,8 @@ body .bx-time:before {
 
 /* Note Details - others */
 body .note-detail .ck-content p {
-    line-height: 2em;
-    margin: 1.6em 0;
+    line-height: 1.6em;
+    margin: 1.4em 0;
 }
 body .note-detail .ck-content p:last-child {
     margin-bottom: 0;
@@ -1440,7 +1466,4 @@ body .split-note-container-widget > .component > .component:nth-of-type(5),
 body .split-note-container-widget > .component > .component:nth-of-type(6),
 body .split-note-container-widget > .component > .component:nth-of-type(7) {
     overflow: visible !important;
-    padding-bottom: 24px;
-    margin-bottom: 24px;
-    padding-top: 16px;
 }
