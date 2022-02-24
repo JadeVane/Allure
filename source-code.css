@@ -96,6 +96,9 @@ html {
     --color-button-primary          : var(--color-gray-lighter);
     --color-button-accent           : var(--color-gray-light);
     --color-button-hover-center     : var(--color-gray-lighter);
+
+    --more-accented-background-color: #ddd;
+
     /* ------------------- Default mode end -------------- */
 
 
@@ -119,6 +122,8 @@ html {
     --color-button-primary          : var(--color-gray-darker);
     --color-button-accent           : var(--color-gray-dark);
     --color-button-hover-center     : var(--color-black-light);
+
+    --more-accented-background-color: #333;
     /* ------------------- Night mode end ---------------- */
 
 
@@ -240,6 +245,18 @@ body .btn.btn-primary {
     padding: 8px 16px;
     color: var(--color-text-primary);
 }
+body .btn:not(:disabled):not(.disabled):active,
+body .btn:not(:disabled):not(.disabled).active {
+    background: var(--color-button-primary);
+    border: var(--border-transparent);
+}
+body #left-pane .btn:not(.btn-primary) {
+    color: var(--color-text-inconspicuous);
+    border: var(--border-transparent);
+}
+body #left-pane .dropdown-item:hover:not(.disabled) button {
+    color: inherit;
+}
 
 /* LAYOUT - Note Icon */
 body .note-icon-widget,
@@ -353,6 +370,9 @@ body .tooltip {
 }
 
 /* Modal */
+.modal-open .modal {
+    background: var(--color-dialog-translucent);
+}
 body .modal-content {
     background: var(--color-background-secondary) !important;
     border: var(--border-light);
@@ -481,7 +501,7 @@ body .dropdown-item:hover:not(.disabled) {
 }
 body .dropdown-divider {
     border: none;
-    border-top: var(--border-standard);
+    border-top: var(--border-light);
 }
 body #context-menu-container .dropdown-item {
     padding: 4px 8px;
@@ -493,6 +513,13 @@ body #context-menu-container .dropdown-menu {
 body #context-menu-container .dropdown-submenu .dropdown-menu {
     border: var(--border-standard);
     margin-left: -2px;
+}
+body .editability-dropdown .dropdown-item div {
+    color: inherit;
+    font-style: italic;
+}
+body .dropdown-item .check {
+    margin-left: -16px;
 }
 
 /* Toast */
@@ -963,6 +990,12 @@ body .protected-note-switch .slider:before {
 }
 body .bookmark-switch .slider.checked {
     background: var(--color-background-highlight);
+}
+body .switch-widget .slider {
+    background: var(--color-background-accent);
+}
+body .switch-widget .slider:before {
+    background: var(--color-background-primary);
 }
 
 /* Note Details - operation bar */
