@@ -620,6 +620,10 @@ body #launcher-pane .icon-action.global-menu-button:before {
 body .global-menu {
     height: 48px;
 }
+body .global-menu-button-update-available {
+    right: -20px;
+    bottom: -20px;
+}
 
 /* add note */
 body #launcher-pane .bx-file-blank:before {
