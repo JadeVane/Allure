@@ -624,6 +624,12 @@ body .global-menu-button-update-available {
     right: -20px;
     bottom: -20px;
 }
+body .global-menu .dropdown-menu .bx {
+    line-height: 1.2em;
+    vertical-align: middle;
+    margin-right: 8px;
+    color: var(--color-text-secondary);
+}
 
 /* add note */
 body #launcher-pane .bx-file-blank:before {
