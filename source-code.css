@@ -806,6 +806,10 @@ body .tab-row-widget .note-tab .note-tab-wrapper {
     background: var(--color-background-item);
     color: var(--color-text-secondary);
 }
+body .tab-row-widget .note-tab:hover .note-tab-wrapper {
+    background: var(--color-background-item-active);
+    color: var(--color-text-item-active);
+}
 body .tab-row-widget .note-tab[active] .note-tab-wrapper {
     font-weight: normal;
     background: var(--color-background-item-active);
