@@ -56,7 +56,7 @@ html {
 /* COLOR VARIABLES                                                               */
 /* ----------------------------------------------------------------------------- */
 
-    --color-gray-lighter : #F3F3F3;
+    --color-gray-lighter : #F4F4F4;
     --color-gray-light   : #DADCDB;
     --color-gray         : #8e8787;
     --color-gray-dark    : #666;
@@ -64,7 +64,6 @@ html {
     --color-gray-darkest : #393939;
     --color-blue         : #526DE9;
     --color-white        : #FFF;
-    --color-red          : #FF5252;
     --color-black-light  : #262626;
     --color-black        : #161616;
     --color-red          : #FE4365;
@@ -159,9 +158,9 @@ html {
 /* FONT VARIABLES                                                                */
 /* ----------------------------------------------------------------------------- */
 
-    --font-headers : Bodoni, 'Open Sans', Noto Sans CJK SC, 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
-    --font-body    : 'Open Sans', Noto Sans CJK SC, 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
-    --font-code    : 'Fira Code', 'Source Code Pro', Courier, Monospace;
+    --font-headers : Monaco, 'Open Sans', Noto Sans CJK SC, 'Source Sans Pro', 'Liberation Sans', Helvetica Neue, Microsoft YaHei, Sans-serif;
+    --font-body    : var(--font-headers);
+    --font-code    : Monaco, 'Fira Code', 'Source Code Pro', Courier, Monospace;
 
 /* ----------------------------------------------------------------------------- */
 /* LAYOUT VARIABLES                                                                */
@@ -323,13 +322,15 @@ body .gutter.gutter-horizontal {
 
 /* WINDOWS BUTTON */
 body .title-bar-buttons {
-    margin-top: 4px;
-    margin-right: 12px;
+    line-height: 1;
 }
 body .title-bar-buttons div {
     width: unset;
     height: unset;
-    margin: 4px;
+    margin: 12px 0 0;
+}
+body .title-bar-buttons div:last-of-type {
+    margin-right: 12px;
 }
 body .title-bar-buttons div button.icon-action {
     background: var(--color-background-item-active) !important;
@@ -418,7 +419,7 @@ body pre:not(.CodeMirror-line) {
 body .nav-tabs {
     border-bottom: unset;
     margin: -16px;
-    padding: 0 16px;
+    padding: 10px 12px;
     background: var(--color-background-popup-header);
 }
 body .nav-tabs .nav-item.show .nav-link,
@@ -429,6 +430,10 @@ body .nav-tabs .nav-link.active {
 }
 body .nav-tabs .nav-link {
     border: none;
+    width: 100%;
+    white-space: nowrap;
+    padding: 6px 16px;
+    margin: 4px 0;
 }
 body .modal-body table td[colspan="4"] {
     background: var(--color-background-secondary) !important;
@@ -440,20 +445,44 @@ body .modal-footer {
 }
 
 /* Note Revisions */
-body #note-revision-title-buttons button:first-of-type,
-body #note-revision-title-buttons button:nth-of-type(2) {
-    font-size: 0;
+body .note-revisions-dialog .dropdown .note-revision-list {
     border: none;
+    margin: -16px;
+    padding: 10px 12px;
+    background: var(--color-background-primary) !important;
 }
-body #note-revision-title-buttons button:first-of-type:before {
+body .note-revisions-dialog .dropdown .note-revision-list .dropdown-item {
+    font-size: 14px;
+    line-height: 1.2em;
+    padding: 6px 12px;
+    margin: 4px 0;
+    border-radius: var(--border-radius-standard);
+    border: none !important;
+}
+body .note-revisions-dialog .dropdown .note-revision-list .dropdown-item.active {
+    background: var(--color-background-secondary) !important;
+}
+body .note-revision-title-buttons {
+    font-size: 0;
+}
+body .note-revision-title-buttons button {
+    border: none !important;
+    padding: 2px 8px !important;
+    margin: 0 4px;
+    background: unset !important;
+}
+body .note-revision-title-buttons button:before {
     font-family: 'trilium-allure-icons';
-    font-size: 1rem;
+    font-size: 1.2rem;
+}
+body .note-revision-title-buttons button:first-of-type:before {
     content: "\e6a6";
 }
-body #note-revision-title-buttons button:nth-of-type(2):before {
-    font-family: 'trilium-allure-icons';
-    font-size: 1rem;
+body .note-revision-title-buttons button:nth-of-type(2):before {
     content: "\e60d";
+}
+body .note-revision-title-buttons button:nth-of-type(3):before {
+    content: "\e682";
 }
 body #note-revision-list {
     margin: -16px;
@@ -468,6 +497,9 @@ body #note-revision-content-wrapper {
 body #note-revision-content {
     padding-right: 4px;
     margin: 12px -16px -16px 0;
+}
+body .note-revisions-dialog .note-revision-content-wrapper > div {
+    padding: 10px 16px;
 }
 
 /* Recent changes */
@@ -489,6 +521,11 @@ body .dropdown-menu {
 }
 body .dropdown-item {
     color: var(--color-text-primary) !important;
+    padding: .25rem .5rem;
+}
+body .dropdown-item .bx {
+    vertical-align: middle;
+    margin-right: -18px;
 }
 body .dropdown-menu a:hover:not(.disabled), .dropdown-item:hover:not(.disabled) {
     background: var(--color-button-accent) !important;
@@ -504,7 +541,7 @@ body .dropdown-divider {
     border-top: var(--border-light);
 }
 body #context-menu-container .dropdown-item {
-    padding: 4px 8px;
+    padding: 0px 8px;
 }
 body #context-menu-container,
 body #context-menu-container .dropdown-menu {
@@ -520,6 +557,9 @@ body .editability-dropdown .dropdown-item div {
 }
 body .dropdown-item .check {
     margin-left: -16px;
+}
+body .dropdown-item .bx-info-circle:before {
+    content: "\e64a";
 }
 
 /* Toast */
@@ -578,10 +618,23 @@ body .find-close-inner2 {
 /*---------------------------------------------------------------*/
 
 body #launcher-pane {
-    background: var(--color-background-primary);
+    background: var(--color-background-secondary);
+    margin: 8px 14px;
+    border-radius: var(--border-radius-large);
 }
 body #launcher-pane .icon-action:hover {
     background-color: var(--color-background-accent);
+}
+
+body #launcher-pane > .spacer {
+    display: none;
+}
+body #launcher-pane > .spacer ~ .spacer {
+    display: block;
+}
+body .right-dropdown-widget {
+    width: 40px;
+    height: 40px;
 }
 
 /* icon */
@@ -593,7 +646,11 @@ body #launcher-pane .icon-action {
     padding: 8px;
     margin: 2px 8px;
 }
-body #launcher-pane .button-widget.icon-action.bx.component.bx-chevrons-left {
+body #launcher-pane .bx {
+    font-family: 'trilium-allure-icons' !important;
+}
+body #launcher-pane .button-widget.icon-action.bx.component.bx-chevrons-left,
+body #launcher-pane .button-widget.icon-action.bx.component.bx-chevrons-right {
     margin-bottom: 8px;
 }
 
@@ -627,46 +684,28 @@ body .global-menu-button-update-available {
 body .global-menu .dropdown-menu .bx {
     line-height: 1.2em;
     vertical-align: middle;
-    margin-right: 8px;
-    color: var(--color-text-secondary);
-}
-
-/* add note */
-body #launcher-pane .bx-file-blank:before {
-    content: "\e603";
-    font-family: "trilium-allure-icons";
-}
-
-/* history */
-body #launcher-pane .bx-history:before {
-    content: "\e6da";
-    font-family: "trilium-allure-icons";
+    margin-right: 4px;
 }
 
 /* calander */
-body #launcher-pane .bx-calendar:before {
-    content: "\e745";
-    font-family: "trilium-allure-icons";
-}
-
-/* today */
-body #launcher-pane #toolbar-button-Today:before {
-    content: "\e64a";
-}
-
-/* protected note */
-body #launcher-pane .bx-shield-quarter:before {
-    content: "\e736";
-    font-family: 'trilium-allure-icons';
+body #launcher-pane .button-widget.bx-calendar:before {
+    content: "\e647";
 }
 
 /* sync button */
+body #launcher-pane .sync-status-widget.icon-action {
+    margin-bottom: 28px;
+}
+body #launcher-pane .sync-status-widget.icon-action:after {
+    width: 100%;
+    height: 1px;
+    background: var(--color-background-accent);
+    content: " ";
+    display: block;
+    margin-top: 16px;
+}
 body #launcher-pane .bxs-star.sync-status-sub-icon {
     display: none;
-}
-body .bx-wifi-off:before {
-    content: "\e613";
-    font-family: 'trilium-allure-icons';
 }
 body .sync-status .sync-status-icon {
     top: unset;
@@ -674,13 +713,15 @@ body .sync-status .sync-status-icon {
 body .sync-status-icon:not(.sync-status-in-progress):hover {
     background: inherit;
 }
-body .bx-wifi:before {
-    content: "\ec9e";
-    font-family: 'trilium-allure-icons';
-    font-size: .9em;
+body .sync-status-icon.sync-status-connected-no-changes.bx-wifi {
+    top: -1px;
 }
 
 
+
+body #root-widget {
+    background: var(--color-background-primary);
+}
 
 
 
@@ -694,6 +735,9 @@ body #left-pane {
     color: var(--color-text-primary);
     background: var(--color-background-primary);
 }
+body .ui-fancytree > li > ul {
+    padding-left: 0;
+}
 body .fancytree-active,
 body .fancytree-active.fancytree-selected,
 body .fancytree-node,
@@ -701,10 +745,10 @@ body .tree .fancytree-node:hover {
     border: none;
     border-radius: var(--border-radius-standard) !important;
 }
-body .fancytree-active,
-body .fancytree-active.fancytree-selected {
-    background: var(--color-button-accent) !important;
-    color: var(--color-text-item-active) !important;
+body .fancytree-container .fancytree-active,
+body .fancytree-container .fancytree-active.fancytree-selected {
+    background: var(--color-background-secondary) !important;
+    color: var(--color-text-primary) !important;
 }
 body .tree .fancytree-node:hover {
     background: var(--color-button-accent);
@@ -714,12 +758,18 @@ body .tree .fancytree-node:hover {
 
 /* search bar */
 body #left-pane input {
-    background: var(--color-background-primary) !important;
+    background: var(--color-background-secondary) !important;
     color: var(--color-text-primary) !important;
     box-shadow: none;
+    text-align: center;
+    height: calc(1.5em + .5rem);
 }
 body #left-pane .search-button {
     display: none;
+}
+body #left-pane input::placeholder {
+    font-size: 14px;
+    color: var(--color-text-secondary);
 }
 
 /* icon */
@@ -742,7 +792,8 @@ body .fancytree-node {
     padding: 2px 12px;
     line-height: 2em;
     height: unset;
-    margin: 2px 0;
+    margin: 0;
+    font-size: 14px;
 }
 
 /* title */
@@ -759,13 +810,22 @@ body .fancytree-active .fancytree-title {
 }
 
 /* expander */
+body .fancytree-node:not(.fancytree-loading) .fancytree-expander {
+    line-height: 1ex;
+    vertical-align: middle;
+}
 body .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
     content: "\e622";
     font-family: "trilium-allure-icons" !important;
+    font-size: .8em;
+    top: 0;
 }
 body .fancytree-node.fancytree-expanded .fancytree-expander:before {
     content: "\e616";
     font-family: "trilium-allure-icons" !important;
+    font-size: .8em;
+    line-height: 1ex;
+    vertical-align: middle;
 }
 
 /* tree button */
@@ -793,18 +853,19 @@ body #rest-pane > .component:first-child {
 body .tab-row-widget .tab-row-widget-container {
     background: var(--color-background-secondary);
 }
-body .tab-row-widget {
-    margin: 16px 20px 0 20px;
-}
 body .tab-row-widget .note-tab .note-tab-title {
     font-size: .9em;
     align-self: center;
 }
 body .tab-row-widget .note-tab .note-tab-wrapper {
-    border-radius: 30px;
+    border-radius: var(--border-radius-standard);
     height: 32px;
-    background: var(--color-background-item);
+    background: var(--color-background-accent);
     color: var(--color-text-secondary);
+    margin-top: 10px;
+}
+body .tab-row-widget .note-tab .note-tab-wrapper:first-of-type {
+    margin-left: 5px;
 }
 body .tab-row-widget .note-tab:hover .note-tab-wrapper {
     background: var(--color-background-item-active);
@@ -812,8 +873,8 @@ body .tab-row-widget .note-tab:hover .note-tab-wrapper {
 }
 body .tab-row-widget .note-tab[active] .note-tab-wrapper {
     font-weight: normal;
-    background: var(--color-background-item-active);
-    color: var(--color-text-item-active);
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
 }
 /* Tabs - note tab close button */
 body .tab-row-widget .note-tab .note-tab-close span {
@@ -839,9 +900,10 @@ body .note-new-tab {
     width: 32px;
     height: 32px;
     font-size: 0;
-    line-height: 28px;
+    line-height: 32px;
     margin-left: 4px;
     color: var(--color-text-primary);
+    margin-top: 10px;
 }
 body .note-new-tab:before {
     content: "\e654";
@@ -870,6 +932,9 @@ body .note-detail {
 body .CodeMirror {
     color: var(--color-text-primary);
 }
+body .CodeMirror-scroll {
+    background: var(--color-background-translucent);
+}
 body #confirm-dialog-content,
 body .note-detail-readonly-text,
 body .note-detail-relation-map,
@@ -880,10 +945,19 @@ body .note-detail-readonly-code {
     padding: 0;
     min-height: 0;
 }
+body .ck.ck-editor__editable_inline {
+    overflow: hidden;
+}
 
 /* Note Details - code editor */
 body .cm-matchhighlight {
     background: var(--color-background-accent);
+}
+body .cm-s-default .cm-def {
+    color: var(--blue);
+}
+.cm-s-default .cm-string {
+    color: var(--red);
 }
 
 /* Note Details - title */
@@ -930,10 +1004,11 @@ body .ribbon-button-container .icon-action {
 body .ribbon-button-container .icon-action.bx-history,
 body .ribbon-button-container .icon-action.bx-edit-alt {
     padding: 8px;
+    margin: 0 4px;
 }
 body .ribbon-button-container .note-actions,
 body .ribbon-button-container .icon-action.bx-history {
-    margin: 0;
+    margin: 0 4px;
 }
 body .ribbon-tab-spacer {
     display: none;
@@ -958,23 +1033,11 @@ body .ribbon-tab-title {
     padding: 1px 5px 3px 5px !important;
     box-sizing: border-box;
     border-top: 2px solid transparent;
+    margin: 0 4px;
 }
 body .ribbon-tab-title:hover {
     color: var(--main-text-color);
     background: var(--color-background-primary);
-}
-
-body .ribbon-container {
-    position: absolute;
-    bottom: 0;
-    background: var(--color-background-secondary);
-    padding: 4px 0 4px 34px;
-    margin: 0;
-    z-index: 9;
-    width: 100%;
-}
-body .ribbon-top-row {
-    width: fit-content;
 }
 
 body .ribbon-tab-container {
@@ -1036,6 +1099,10 @@ body .title-row .bx-dock-right {
     font-size: 1.3em;
     padding: 7px;
 }
+body .title-row .bx-dock-right:before {
+    font-family: 'trilium-allure-icons';
+    content: "\e657";
+}
 
 /* actived ribbon tab */
 body .ribbon-tab-title.active {
@@ -1064,20 +1131,39 @@ body .attribute-list {
     margin-top: 0;
 }
 
+
+
+
+body .ribbon-container {
+    position: absolute;
+    bottom: 0;
+    background: var(--color-background-secondary);
+    padding: 4px 0 4px 42px;
+    margin: 0;
+    z-index: 9;
+    width: 100%;
+}
+body .ribbon-top-row {
+    width: fit-content;
+}
+
+body .ribbon-container .bx {
+    font-family: 'trilium-allure-icons' !important;
+}
+
 /* link map dialog */
 body .bx-arrow-to-bottom,
 body .bx-arrow-to-top {
     font-size: 1em;
     color: var(--color-text-primary);
 }
-body .bx-arrow-to-bottom:before {
+
+/*body .bx-arrow-to-bottom:before {
     content: "\e64e";
-    font-family: 'trilium-allure-icons';
 }
 body .bx-arrow-to-top:before {
     content: "\e607";
-    font-family: 'trilium-allure-icons';
-}
+}*/
 
 /* note body */
 /*body .ribbon-container,
@@ -1208,7 +1294,7 @@ body .ck-content .image > figcaption {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 16px 16px 8px;
     text-align: center;
     color: var(--color-text-secondary) !important;
     margin-top: 6px;
@@ -1217,7 +1303,6 @@ body .ck-content .image > figcaption {
     display: block;
 }
 body section[data-box-size=small].include-note > div:nth-of-type(1) > div {
-    height: 4.5rem;
     overflow: hidden;
     margin: 0 16px 16px;
 }
@@ -1273,15 +1358,20 @@ body .note-list-widget .note-list img {
 }
 body .note-list.grid-view .note-book-card {
     /*border: var(--border-light);*/
-    background: inherit;
+    background: var(--color-background-primary);
     max-height: 140px;
     flex: unset;
     width: 100%;
-    margin: 0;
+    margin: 6px 0;
     padding: 16px 20px;
 }
-body .note-list.grid-view .note-book-card:not(:first-of-type) {
+/*body .note-list.grid-view .note-book-card:not(:first-of-type) {
     border-top: var(--border-light);
+}*/
+body h5.note-book-title {
+    font-size: inherit;
+    font-weight: bold;
+    margin-bottom: 4px;
 }
 body .note-book-title .note-icon,
 body .note-book-title .rendered-note-attributes {
@@ -1294,17 +1384,41 @@ body .note-list.grid-view .note-book-card:hover {
 body .note-list-container p {
     margin: 0;
 }
-body .note-list-container p,
-body .rendered-note-content *,
-body .rendered-note-content pre {
-    color: var(--color-text-secondary) !important;
+body .note-book-card.expanded .note-book-content {
+    padding-top: 0;
+    line-height: 1.2em;
+}
+body .rendered-note-content > *:first-child {
+    margin-top: 6px;
+}
+body .rendered-note-content > * {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+body .rendered-note-content > span,
+body .rendered-note-content > br {
+    display: none;
+}
+body .rendered-note-content {
+    padding: 0 !important;
 }
 body .rendered-note-content pre {
     white-space: inherit;
 }
-body .note-list-widget {
-    /*margin-top: 68px;*/
+/*body .note-list-widget {
+    margin-top: 68px;
     background: var(--color-background-primary);
+}*/
+body .note-list-widget:before {
+    content: " ";
+    height: 1px;
+    background: var(--color-background-primary);
+    margin: 0 42px 24px;
+    display: block;
 }
 body .rendered-note-content .ck-content * {
     margin: 0 !important;
@@ -1435,12 +1549,15 @@ body .ck-content h3 {
 }
 body .note-detail h3::before {
     content: ' ' !important;
-    height: 16px;
-    width: 4px;
+    height: 6px;
+    width: 6px;
     background: var(--color-background-highlight);
     display: inline-block;
-    margin-left: -10px;
-    margin-right: 6px;
+    margin-left: -18px;
+    margin-right: 12px;
+    line-height: 1ex;
+    vertical-align: middle;
+    border-radius: 50%;
 }
 
 /* h4, h5, h6 */
