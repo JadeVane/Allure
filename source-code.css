@@ -249,6 +249,10 @@ body #left-pane .btn:not(.btn-primary) {
 body #left-pane .dropdown-item:hover:not(.disabled) button {
     color: inherit;
 }
+body .btn.focus,
+body .btn:focus {
+    box-shadow: unset !important;
+}
 
 /* LAYOUT - Note Icon */
 body .note-icon-widget,
