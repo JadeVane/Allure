@@ -437,7 +437,8 @@ body .modal-footer {
 /* Note Revisions */
 body .note-revisions-dialog .dropdown .note-revision-list {
     border: none;
-    margin: -16px;
+    margin: 0;
+    border-radius: 0;
     padding: 10px 12px;
     background: var(--color-background-primary) !important;
 }
@@ -493,6 +494,11 @@ body .note-revisions-dialog .note-revision-content-wrapper > div {
 }
 body .note-revisions-dialog .note-revision-content-wrapper .note-revision-title {
     font-size: 1.2em;
+    line-height: inherit;
+}
+body .note-revisions-dialog .note-revision-content-wrapper {
+    margin-left: 0;
+    margin-top: 12px;
 }
 
 /* Recent changes */
