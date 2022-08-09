@@ -491,6 +491,9 @@ body #note-revision-content {
 body .note-revisions-dialog .note-revision-content-wrapper > div {
     padding: 10px 16px;
 }
+body .note-revisions-dialog .note-revision-content-wrapper .note-revision-title {
+    font-size: 1.2em;
+}
 
 /* Recent changes */
 body #recent-changes-dialog ul {
