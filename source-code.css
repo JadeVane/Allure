@@ -927,10 +927,10 @@ body .note-detail,
 body .note-list-widget {
     margin: auto;
     max-width: var(--width-note-body);
+    margin-bottom: 68px;
 }
 body .note-detail {
     padding-bottom: 12px;
-    margin-bottom: 68px;
 }
 body .CodeMirror {
     color: var(--color-text-primary);
@@ -1010,7 +1010,7 @@ body .title-row .spacer {
 }
 body .title-row .note-title-widget .note-title {
     padding: 6px 12px;
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: bold;
     color: var(--color-text-primary) !important;
     font-family: var(--font-headers);
@@ -1254,6 +1254,13 @@ body .ck-content .table table th {
     border-color: var(--color-button-accent) !important;
 }
 
+/* hr */
+body .ck-content hr {
+    margin: 48px 64px;
+    height: 1px;
+    background: var(--color-background-accent);
+}
+
 
 /* blockquote */
 body .ck-content blockquote {
@@ -1430,14 +1437,14 @@ body .note-list.grid-view .note-book-card {
 /*body .note-list.grid-view .note-book-card:not(:first-of-type) {
     border-top: var(--border-light);
 }*/
-body h5.note-book-title {
+body h5.note-book-header {
     font-size: inherit;
     font-weight: bold;
     margin-bottom: 4px;
 }
-body .note-book-title .note-icon,
-body .note-book-title .rendered-note-attributes {
-    display: none;
+body .note-list-container .note-icon,
+body .note-list-container .rendered-note-attributes {
+    display: none !important;
 }
 body .note-list.grid-view .note-book-card:hover {
     border: var(--border-light);
@@ -1484,14 +1491,14 @@ body .note-list-widget:before {
 }
 body .rendered-note-content .ck-content * {
     margin: 0 !important;
-    font-size: 1rem;
+    font-size: 14px;
     border: none;
     display: inline;
     padding: 0;
     background: inherit;
     font-family: var(--font-body);
 }
-/*body .note-book-title .rendered-note-attributes {
+/*body .note-book-header .rendered-note-attributes {
     display: block;
     font-size: small;
     position: absolute;
@@ -1504,7 +1511,7 @@ body .rendered-note-content .ck-content * {
     border-bottom-right-radius: 3px;
     width: calc(100% - 25px);
 }
-body .note-book-title .rendered-note-attributes:before {
+body .note-book-header .rendered-note-attributes:before {
     content: none;
 }*/
 
@@ -1527,6 +1534,17 @@ body .ck-content pre:not(.CodeMirror-line) {
     margin: 1.6em 0;
 }
 
+/* Make the title scrollable */
+body #center-pane .split-note-container-widget > .type-text,
+body #center-pane .split-note-container-widget > .type-file,
+body #center-pane .split-note-container-widget > .type-code {
+    overflow: auto;
+    padding: 0 16px;
+}
+body #center-pane .split-note-container-widget > div > div {
+    overflow: unset !important;
+}
+
 
 /*body #center-pane > .component:first-of-type > .component:last-of-type > * {
     max-width: var(--width-note-body);
@@ -1545,7 +1563,7 @@ body .ck-content pre:not(.CodeMirror-line) {
 body .ck-content h2,
 body .ck-content h3,
 body .ck-content h4:not(.include-note-title),
-body .ck-content h5:not(.modal-title):not(.note-book-title),
+body .ck-content h5:not(.modal-title):not(.note-book-header),
 body .ck-content h6 {
     color: var(--color-text-accent);
     font-family: var(--font-headers);
@@ -1624,7 +1642,7 @@ body .note-detail h3::before {
 
 /* h4, h5, h6 */
 body .ck-content h4:not(.include-note-title),
-body .ck-content h5:not(.modal-title):not(.note-book-title),
+body .ck-content h5:not(.modal-title):not(.note-book-header),
 body .ck-content h6 {
     font-size: 1.2em;
     margin-bottom: 1.2rem;
