@@ -13,13 +13,13 @@
   font-family: 'Monaco';
   font-style: normal;
   font-weight: 400;
-  src: url('/custom/fonts/monaco-regular.woff2') format('woff2');
+  src: url('/custom/fonts/monaco.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Monaco';
   font-style: normal;
   font-weight: 600;
-  src: url('/custom/fonts/monaco-600.woff2') format('woff2');
+  src: url('/custom/fonts/monaco.woff2') format('woff2');
 }
 
 
