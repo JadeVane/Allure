@@ -549,7 +549,7 @@ body .editability-dropdown .dropdown-item div {
     font-style: italic;
 }
 body .dropdown-item .check {
-    margin-left: -16px;
+    margin-left: 4px;
 }
 body .dropdown-item .bx-info-circle:before {
     content: "\e64a";
@@ -909,7 +909,7 @@ body .note-new-tab {
     margin-top: 10px;
 }
 body .note-new-tab:before {
-    content: "\e654";
+    content: "\ebc0";
     font-size: 18px;
 }
 body .note-new-tab:hover {
@@ -1161,6 +1161,29 @@ body .ribbon-body.active {
 }
 body .attribute-list {
     margin-top: 0;
+}
+body .bx-plus:before {
+    font-size: .8em;
+}
+
+
+/* table of content */
+body #right-pane {
+    padding-right: 8px;
+}
+body #right-pane .card-header {
+    border-radius: 0;
+}
+body .toc-widget {
+    padding: 8px 0;
+}
+body .toc-widget .toc > ol {
+    padding-left: 24px;
+}
+body .toc-widget .toc li {
+    font-size: .8em;
+    line-height: 1.6em;
+    margin-bottom: 8px;
 }
 
 
