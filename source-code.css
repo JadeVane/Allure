@@ -953,7 +953,7 @@ body .note-detail-readonly-code {
     min-height: 0;
 }
 body .ck.ck-editor__editable_inline {
-    overflow: hidden;
+    overflow: usnet;
 }
 
 /* Note Details - code editor */
