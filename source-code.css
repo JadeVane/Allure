@@ -13,13 +13,13 @@
   font-family: 'Monaco';
   font-style: normal;
   font-weight: 400;
-  src: url('/custom/fonts/monaco.ttf') format('ttf');
+  src: url('/custom/fonts/Monaco.ttf') format('ttf');
 }
 @font-face {
   font-family: 'Monaco';
   font-style: normal;
   font-weight: 600;
-  src: url('/custom/fonts/monaco.ttf') format('ttf');
+  src: url('/custom/fonts/Monaco.ttf') format('ttf');
 }
 
 
