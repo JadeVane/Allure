@@ -362,9 +362,9 @@ body textarea {
 /*---------------------------------------------------------------*/
 
 /* POPUP - Tooltip */
-body .tooltip {
+/*body .tooltip {
     top: 16px !important;
-}
+}*/
 body .tooltip-inner {
     border: none;
     background: var(--color-background-secondary) !important;
