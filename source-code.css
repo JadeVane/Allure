@@ -1220,7 +1220,7 @@ body .shared-info-widget .shared-link:hover {
 
 
 body .ribbon-container {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background: var(--color-background-secondary);
     padding: 4px 0 4px 42px;
