@@ -11,8 +11,8 @@ trilium is an excellent note taking app with powerful features, however, the exc
 ## Features
 
 1. more minimalist interface
-1. Cool and comfortable color scheme
-1. Hierarchical content layout
+1. more comfortable color scheme
+1. clearer layout
 <!-- 1. both mobile and web support -->
 
 
