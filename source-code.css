@@ -1055,6 +1055,7 @@ body .ribbon-button-container .icon-action.bx-history,
 body .ribbon-button-container .icon-action.bx-edit-alt {
     padding: 8px;
     margin: 0 4px;
+    display: inline-block !important;
 }
 body .ribbon-button-container .note-actions,
 body .ribbon-button-container .icon-action.bx-history {
