@@ -54,12 +54,12 @@ Install the theme by following these steps:
 
 ## Known bugs
 
-- [ ] When a note is being edited, open another note and refresh the page at the same time, the edit button will disappear, but refreshing the page can restore the button. *(Not sure if this bug belongs to Trilium or Allure)*
-- [ ] As the property bar moved to the bottom of the page, the Link Map could not be expanded to full screen display, and copy note attributes will cause the content of the note to scroll
-- [ ] The mobile style does not match yet
-- [ ] Split note button will not follow the operation bar to move up and down
+- [ ] Refreshing the page while opening another note while one is in edit mode causes the edit button to disappear, refreshing the page restores the button *(not sure if this bug belongs to Trilium or Allure)*
+- [ ] Link Map does not expand to full screen due to the properties bar moving to the bottom of the page, and copying note properties also causes the note content to scroll *(This is due to a change in layout, and I have not found a reliable solution yet)*
+- [ ] Mobile style does not match yet *(not much demand from users, and I have a lot of things to do, so not enough time to finish it for now)
+- [ ] Notes split button doesn't move up and down as the action bar expands and closes *(This is due to a change in layout, waiting for Trilium to fix)
 
-The 0.48.x version of Trilium has changed too much. These above bugs may exist for a long time and cannot be solved because I don’t have enough time to deal with it. If these bugs affect you greatly, please use it with caution
+Feel free to submit pr to help solve the above issue if you want.
 
 ## Donation
 
