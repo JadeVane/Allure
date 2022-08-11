@@ -142,7 +142,7 @@ html {
 
     --shadow-card                   : 0px 0px 18px -8px var(--color-background-accent);
     --shadow-mobile                 : 0px 0px 12px  0px var(--color-text-inconspicuous);
-    --shadow-standard               : 3px 4px  3px -3px var(--color-background-accent);
+    --shadow-standard               : 0px 1px 6px -1px var(--color-background-accent);
     --shadow-accented               : 2px 2px  5px -2px var(--color-gray-dark);
     --shadow-mobile-popup           : 0px 0px 16px  0px var(--color-background-accent);
 
@@ -305,8 +305,7 @@ body .modal-dialog a {
     word-break: break-all;
 }
 /* Hide the help link and the icon after a link */
-body a:after,
-body a.external:not(.page-url) {
+body a:after {
     display: none;
 }
 
@@ -364,7 +363,13 @@ body textarea {
 
 /* POPUP - Tooltip */
 body .tooltip {
-    display: none;
+    top: 16px !important;
+}
+body .tooltip-inner {
+    border: none;
+    background: var(--color-background-secondary) !important;
+    box-shadow: 0px 1px 6px -1px var(--color-background-accent);
+    padding: 12px 16px;
 }
 
 /* Modal */
@@ -524,7 +529,7 @@ body .dropdown-menu {
 }
 body .dropdown-item {
     color: var(--color-text-primary) !important;
-    padding: .25rem .5rem;
+    padding: .25rem 1.2rem;
 }
 body .dropdown-item .bx {
     vertical-align: middle;
@@ -680,6 +685,9 @@ body #launcher-pane .icon-action.global-menu-button:before {
 }
 body .global-menu {
     height: 48px;
+}
+body .global-menu .dropdown-menu {
+    min-width: 21em;
 }
 body .global-menu-button-update-available {
     right: -20px;
@@ -1196,7 +1204,19 @@ body .toc-widget .toc li {
     margin-bottom: 8px;
 }
 
-
+/* share note */
+body .shared-info-widget {
+    font-weight: normal;
+    font-size: .9em;
+    line-height: 1.6em;
+    border: none !important;
+    background: var(--color-background-primary) !important;
+    margin: 16px 0px;
+    padding: 10px 16px;
+}
+body .shared-info-widget .shared-link:hover {
+    color: var(--color-text-highlight);
+}
 
 
 body .ribbon-container {
@@ -1328,7 +1348,8 @@ body .ck-content .include-note-title a {
     border-bottom: none;
 }
 body .ck-content a,
-body .ck-content a * {
+body .ck-content a *,
+body .shared-info-widget a {
     border-bottom: var(--border-link);
 }
 body .ck-content a:hover,
