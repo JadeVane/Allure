@@ -138,6 +138,7 @@ html {
     --border-option                 : 2px solid var(--color-text-inconspicuous);
     --border-option-active          : 2px solid var(--color-text-highlight);
     --border-dashed                 : 1px dashed var(--color-text-secondary);
+    --border-dashed-light           : 1px dashed var(--color-background-accent);
 
     --shadow-card                   : 0px 0px 18px -8px var(--color-background-accent);
     --shadow-mobile                 : 0px 0px 12px  0px var(--color-text-inconspicuous);
@@ -164,8 +165,9 @@ html {
     --spacing-content-large         : 1.8em;
     --spacing-center-pane           : 36px;
 
-    --width-note-body               : 680px;
     --width-left-button-pane        : 50px;
+    --width-around-note-body        : 48px;
+    --width-note-body               : calc(680px + calc(var(--width-around-note-body) * 2));
 
     --height-top-bar                : 33px;
 
@@ -773,7 +775,7 @@ body #left-pane input {
     box-shadow: none;
     text-align: center;
     background: transparent !important;
-    border: var(--border-dashed);
+    border: var(--border-dashed-light);
     border-radius: var(--border-radius-standard);
 }
 body #left-pane input:focus {
@@ -1014,7 +1016,7 @@ body .title-row {
 }
 body .title-row .note-title-widget {
     margin: auto;
-    max-width: calc(var(--width-note-body) + 66px);
+    max-width: var(--width-note-body);
 }
 body .title-row .spacer {
     display: none;
@@ -1026,6 +1028,8 @@ body .title-row .note-title-widget .note-title {
     color: var(--color-text-primary) !important;
     font-family: var(--font-headers);
     line-height: 1.4em;
+    margin-left: -12px;
+    width: calc(100% + 24px);
 }
 body .title-row .note-title-widget .note-title:focus-visible {
     outline: none;
@@ -1151,6 +1155,7 @@ body .title-row .bx-dock-right {
     z-index: 10;
     font-size: 1.3em;
     padding: 7px;
+    margin: 4px;
 }
 body .title-row .bx-dock-right:before {
     font-family: 'trilium-allure-icons';
@@ -1224,10 +1229,11 @@ body .ribbon-container {
     position: fixed;
     bottom: 0;
     background: var(--color-background-secondary);
-    padding: 4px 24px 4px 42px;
+    padding: 4px var(--width-around-note-body) 4px 42px;
     margin: 0;
     z-index: 9;
-    width: 100%;
+    width: calc(100% - var(--width-around-note-body));
+    max-width: var(--width-note-body);
 }
 body .ribbon-top-row {
     width: fit-content;
@@ -1565,12 +1571,16 @@ body .ck-content pre:not(.CodeMirror-line) {
 }
 
 /* Make the title scrollable */
+body .split-note-container-widget {
+    overflow: auto;
+}
 body #center-pane .split-note-container-widget > .type-text,
 body #center-pane .split-note-container-widget > .type-file,
 body #center-pane .split-note-container-widget > .type-code {
-    overflow: auto;
-    padding: 0 48px;
-    margin-bottom: 43px;
+    padding: 0 var(--width-around-note-body);
+    max-width: var(--width-note-body);
+    margin: 0 auto 43px auto;
+    width: 100%;
 }
 body #center-pane .split-note-container-widget > div > div {
     overflow: unset !important;
@@ -1721,8 +1731,7 @@ body .bx-time:before {
 
 /* Note Details - others */
 body .note-detail .ck-content p {
-    line-height: 1.4em;
-    margin: .4em 0;
+    margin: .6em 0;
 }
 body .note-detail .ck-content p:last-child {
     margin-bottom: 0;
