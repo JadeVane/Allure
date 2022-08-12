@@ -167,7 +167,8 @@ html {
 
     --width-left-button-pane        : 50px;
     --width-around-note-body        : 48px;
-    --width-note-body               : calc(680px + calc(var(--width-around-note-body) * 2));
+    --width-note-body               : 680px;
+    --width-actual-note-body        : calc(var(--width-note-body) + calc(var(--width-around-note-body) * 2));
 
     --height-top-bar                : 33px;
 
@@ -939,7 +940,7 @@ body .note-new-tab:hover {
 body .note-detail,
 body .note-list-widget {
     margin: auto;
-    max-width: var(--width-note-body);
+    max-width: var(--width-actual-note-body);
     margin-bottom: 68px;
 }
 body .note-detail {
@@ -1016,7 +1017,7 @@ body .title-row {
 }
 body .title-row .note-title-widget {
     margin: auto;
-    max-width: var(--width-note-body);
+    max-width: var(--width-actual-note-body);
 }
 body .title-row .spacer {
     display: none;
@@ -1171,10 +1172,8 @@ body .ribbon-tab-title.active {
 /*body .ribbon-tab-title.active .ribbon-tab-title-icon {
     color: var(--color-text-highlight);
 }*/
-body .ribbon-body {
-    margin-left: 0;
-}
 body .ribbon-body.active {
+    margin: 0;
     /*position: absolute;*/
     background: var(--color-background-primary);
     border: none;
@@ -1233,7 +1232,7 @@ body .ribbon-container {
     margin: 0;
     z-index: 9;
     width: calc(100% - var(--width-around-note-body));
-    max-width: var(--width-note-body);
+    max-width: calc(var(--width-note-body) + var(--width-around-note-body));
 }
 body .ribbon-top-row {
     width: fit-content;
@@ -1261,7 +1260,7 @@ body .bx-arrow-to-top:before {
 /*body .ribbon-container,
 body .title-row,
 body .split-note-container-widget > .component > .component {
-    max-width: var(--width-note-body);
+    max-width: var(--width-actual-note-body);
 }*/
 body .split-note-container-widget > .component {
     overflow: auto;
@@ -1578,7 +1577,7 @@ body #center-pane .split-note-container-widget > .type-text,
 body #center-pane .split-note-container-widget > .type-file,
 body #center-pane .split-note-container-widget > .type-code {
     padding: 0 var(--width-around-note-body);
-    max-width: var(--width-note-body);
+    max-width: var(--width-actual-note-body);
     margin: 0 auto 43px auto;
     width: 100%;
 }
@@ -1588,7 +1587,7 @@ body #center-pane .split-note-container-widget > div > div {
 
 
 /*body #center-pane > .component:first-of-type > .component:last-of-type > * {
-    max-width: var(--width-note-body);
+    max-width: var(--width-actual-note-body);
     margin: 12px auto;
     overflow: hidden;
     contain: content;
