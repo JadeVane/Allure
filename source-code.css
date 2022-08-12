@@ -1290,7 +1290,7 @@ body .ck-content hr {
 /* blockquote */
 body .ck-content blockquote {
     border: none;
-    background: var(--color-background-accent);
+    background: var(--color-background-primary);
     padding: 1.2em 1.6em;
     font-style: normal;
     border-radius: var(--border-radius-standard);
