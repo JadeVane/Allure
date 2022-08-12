@@ -132,13 +132,12 @@ html {
 
     --border-standard               : 1px solid var(--color-button-accent);
     --border-light                  : 1px solid var(--color-background-accent);
-    --border-dashed                 : 1px dashed var(--color-background-accent);
     --border-transparent            : 1px solid transparent;
     --border-accent                 : 2px solid var(--color-button-accent);
     --border-accent-alt             : 2px solid var(--color-background-primary);
     --border-option                 : 2px solid var(--color-text-inconspicuous);
     --border-option-active          : 2px solid var(--color-text-highlight);
-    --border-link                   : 1px dashed var(--color-text-secondary);
+    --border-dashed                 : 1px dashed var(--color-text-secondary);
 
     --shadow-card                   : 0px 0px 18px -8px var(--color-background-accent);
     --shadow-mobile                 : 0px 0px 12px  0px var(--color-text-inconspicuous);
@@ -1042,6 +1041,9 @@ span.button-widget.icon-action.bx.component.bx-x {
 }
 
 /* Note Details - operation bar */
+body #center-pane {
+    transform: scale3d(1, 1, 1);
+}
 body .ribbon-button-container > * {
     top: 0;
 }
@@ -1144,8 +1146,8 @@ body .ribbon-tab-title.active .ribbon-tab-title-label {
 
 /* split note button */
 body .title-row .bx-dock-right {
-    position: absolute;
-    bottom: -1px;
+    position: fixed;
+    bottom: 0;
     z-index: 10;
     font-size: 1.3em;
     padding: 7px;
@@ -1165,8 +1167,6 @@ body .ribbon-tab-title.active {
     color: var(--color-text-highlight);
 }*/
 body .ribbon-body {
-    max-width: var(--width-note-body);
-    min-width: var(--width-note-body);
     margin-left: 0;
 }
 body .ribbon-body.active {
@@ -1224,7 +1224,7 @@ body .ribbon-container {
     position: fixed;
     bottom: 0;
     background: var(--color-background-secondary);
-    padding: 4px 0 4px 42px;
+    padding: 4px 24px 4px 42px;
     margin: 0;
     z-index: 9;
     width: 100%;
@@ -1350,8 +1350,9 @@ body .ck-content .include-note-title a {
 }
 body .ck-content a,
 body .ck-content a *,
-body .shared-info-widget a {
-    border-bottom: var(--border-link);
+body .shared-info-widget a,
+body .page-url {
+    border-bottom: var(--border-dashed);
 }
 body .ck-content a:hover,
 body .ck-content a *:hover {
@@ -1568,7 +1569,7 @@ body #center-pane .split-note-container-widget > .type-text,
 body #center-pane .split-note-container-widget > .type-file,
 body #center-pane .split-note-container-widget > .type-code {
     overflow: auto;
-    padding: 0 16px;
+    padding: 0 48px;
     margin-bottom: 43px;
 }
 body #center-pane .split-note-container-widget > div > div {
