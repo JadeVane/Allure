@@ -1524,6 +1524,8 @@ body .rendered-note-content .ck-content * {
     padding: 0;
     background: inherit;
     font-family: var(--font-body);
+    font-weight: normal;
+    color: inherit;
 }
 /*body .note-book-header .rendered-note-attributes {
     display: block;
