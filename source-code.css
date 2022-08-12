@@ -881,7 +881,7 @@ body .tab-row-widget .note-tab .note-tab-title {
 body .tab-row-widget .note-tab .note-tab-wrapper {
     border-radius: var(--border-radius-standard);
     height: 32px;
-    background: var(--color-background-accent);
+    background: var(--color-background-primary);
     color: var(--color-text-secondary);
     margin-top: 10px;
 }
@@ -894,7 +894,7 @@ body .tab-row-widget .note-tab:hover .note-tab-wrapper {
 }
 body .tab-row-widget .note-tab[active] .note-tab-wrapper {
     font-weight: normal;
-    background: var(--color-background-primary);
+    background: var(--color-background-accent);
     color: var(--color-text-primary);
 }
 /* Tabs - note tab close button */
@@ -1458,7 +1458,8 @@ body .note-list.grid-view .note-book-card {
     flex: unset;
     width: 100%;
     margin: 6px 0;
-    padding: 16px 20px;
+    padding: 12px 16px;
+    font-size: 14px;
 }
 /*body .note-list.grid-view .note-book-card:not(:first-of-type) {
     border-top: var(--border-light);
@@ -1466,7 +1467,7 @@ body .note-list.grid-view .note-book-card {
 body h5.note-book-header {
     font-size: inherit;
     font-weight: bold;
-    margin-bottom: 4px;
+    margin-bottom: 0;
 }
 body .note-list-container .note-icon,
 body .note-list-container .rendered-note-attributes {
