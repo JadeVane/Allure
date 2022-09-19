@@ -21,6 +21,7 @@ trilium is an excellent note taking app with powerful features, however, the exc
 Allure theme has made some interface element changes to provide a better-looking interface
 
 ![screenshot](./resources/screenshot.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FJadeVane%2FAllure.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FJadeVane%2FAllure?ref=badge_shield)
 
 <!-- ## What's different between stable version and radical version
 
@@ -75,3 +76,7 @@ Donation list：
 - Jonathon Fuller
 
 Thank you for your donation which really inspired me!
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FJadeVane%2FAllure.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FJadeVane%2FAllure?ref=badge_large)
