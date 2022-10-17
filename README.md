@@ -73,5 +73,6 @@ If Allure theme has helped you, considering buying me a cup of coffee
 Donation list：
 - Chee Rabbits
 - Jonathon Fuller
+- Artjom Vitsjuk
 
 Thank you for your donation which really inspired me!
