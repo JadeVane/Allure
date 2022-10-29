@@ -29,7 +29,7 @@ html {
 /* ----------------------------------------------------------------------------- */
 
     --color-gray-lighter            : #F4F4F4;
-    --color-gray-light              : #C4C4C4;
+    --color-gray-light              : #DCDADB;
     --color-gray                    : #8e8787;
     --color-gray-dark               : #666;
     --color-gray-darker             : #506176;
@@ -254,9 +254,24 @@ body .btn:focus {
 }
 
 /* LAYOUT - Note Icon */
-body .note-icon-widget,
+body .note-icon-widget {
+
+}
 body .fancytree-custom-icon {
-    display: none;
+    margin: 0 8px;
+}
+body .fancytree-expander {
+    visibility: visible;
+}
+ul.fancytree-container > li > .fancytree-node:before,
+body .fancytree-node:not(.fancytree-folder) .fancytree-expander:before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--color-text-secondary);
+    display: inline-block;
+    margin: 5px;
 }
 
 /* LAYOUT - Title Bar Button */
@@ -792,8 +807,9 @@ body #left-pane input::placeholder {
 body .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
     font-size: inherit;
     font-family: 'trilium-allure-icons' !important;
-    color: #B8BEC5;
+    color: #CCCED1;
     top: 0;
+    margin-right: 0;
 }
 
 body .tree-item-button,
@@ -820,7 +836,7 @@ body .fancytree-title {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    margin-left: 2px;
+    margin-left: 0;
     font-family: var(--font-body);
 }
 body .fancytree-active .fancytree-title {
