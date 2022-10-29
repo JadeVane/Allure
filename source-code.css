@@ -32,7 +32,7 @@ html {
     --color-gray-light              : #DCDADB;
     --color-gray                    : #8e8787;
     --color-gray-dark               : #666;
-    --color-gray-darker             : #506176;
+    --color-gray-darker             : #4C4F52;
     --color-gray-darkest            : #1E2134;
     --color-white                   : #FFF;
     --color-black-light             : #262626;
@@ -96,12 +96,12 @@ html {
 
     --color-background-primary      : var(--color-black);
     --color-background-secondary    : var(--color-black-light);
-    --color-background-accent       : var(--color-gray-darkest);
+    --color-background-accent       : var(--color-gray-darker);
     --color-background-item         : var(--color-gray-darkest);
     --color-background-item-active  : var(--color-gray-dark);
     --color-background-popup-header : var(--color-gray-darkest);
     --color-background-popup-body   : var(--color-black);
-    --color-background-menu         : var(--color-gray-darkest);
+    --color-background-menu         : var(--color-gray-darker);
 
     --color-button-primary          : var(--color-gray-darker);
     --color-button-accent           : var(--color-gray-dark);
@@ -254,8 +254,9 @@ body .btn:focus {
 }
 
 /* LAYOUT - Note Icon */
-body .note-icon-widget {
-
+body .note-icon-widget button.note-icon,
+body .note-icon-widget .icon-list {
+    color: var(--color-text-primary);
 }
 body .fancytree-custom-icon {
     margin: 0 8px;
@@ -557,6 +558,7 @@ body .dropdown-menu a:hover:not(.disabled),
 body .dropdown-item:hover:not(.disabled) {
     background: var(--color-button-accent) !important;
     color: var(--color-text-item-active) !important;
+    border-color: unset !important;
 }
 body .dropdown-divider {
     border: none;
