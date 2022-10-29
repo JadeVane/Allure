@@ -29,11 +29,11 @@ html {
 /* ----------------------------------------------------------------------------- */
 
     --color-gray-lighter            : #F4F4F4;
-    --color-gray-light              : #DADCDB;
+    --color-gray-light              : #C4C4C4;
     --color-gray                    : #8e8787;
     --color-gray-dark               : #666;
-    --color-gray-darker             : #525051;
-    --color-gray-darkest            : #393939;
+    --color-gray-darker             : #506176;
+    --color-gray-darkest            : #1E2134;
     --color-white                   : #FFF;
     --color-black-light             : #262626;
     --color-black                   : #161616;
@@ -53,8 +53,7 @@ html {
     --code-purple-dark              : #6A097D;
     --code-pink                     : #D42F4D;
 
-    --color-text-accent             : var(--color-gray-darkest);
-    --color-text-primary            : var(--color-gray-darker);
+    --color-text-primary            : var(--color-gray-darkest);
     --color-text-secondary          : var(--color-gray);
     --color-text-inconspicuous      : var(--color-gray-light);
     --color-text-item-active        : var(--color-gray-darker);
@@ -90,8 +89,7 @@ html {
     --code-purple-dark              : #892CDC;
     --code-pink                     : #F55988;
 
-    --color-text-accent             : var(--color-gray-lighter);
-    --color-text-primary            : var(--color-gray-light);
+    --color-text-primary             : var(--color-gray-lighter);
     --color-text-secondary          : var(--color-gray);
     --color-text-inconspicuous      : var(--color-gray-dark);
     --color-text-item-active        : var(--color-black);
@@ -137,8 +135,7 @@ html {
     --border-accent-alt             : 2px solid var(--color-background-primary);
     --border-option                 : 2px solid var(--color-text-inconspicuous);
     --border-option-active          : 2px solid var(--color-text-highlight);
-    --border-dashed                 : 1px dashed var(--color-text-secondary);
-    --border-dashed-light           : 1px dashed var(--color-background-accent);
+    --border-dashed                 : 1px dashed var(--color-text-inconspicuous);
 
     --shadow-card                   : 0px 0px 18px -8px var(--color-background-accent);
     --shadow-mobile                 : 0px 0px 12px  0px var(--color-text-inconspicuous);
@@ -766,7 +763,7 @@ body .fancytree-container .fancytree-active.fancytree-selected {
 }
 body .tree .fancytree-node:hover {
     background: var(--color-button-accent);
-    color: var(--color-text-item-active);
+    /*color: var(--color-text-item-active);*/
 }
 
 
@@ -776,7 +773,7 @@ body #left-pane input {
     box-shadow: none;
     text-align: center;
     background: transparent !important;
-    border: var(--border-dashed-light);
+    border: var(--border-dashed);
     border-radius: var(--border-radius-standard);
 }
 body #left-pane input:focus {
@@ -794,6 +791,9 @@ body #left-pane input::placeholder {
 /* icon */
 body .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
     font-size: inherit;
+    font-family: 'trilium-allure-icons' !important;
+    color: #B8BEC5;
+    top: 0;
 }
 
 body .tree-item-button,
@@ -808,7 +808,7 @@ body .tree {
     padding-right: 12px;
 }
 body .fancytree-node {
-    padding: 2px 12px;
+    padding: 1px 12px;
     line-height: 2em;
     height: unset;
     margin: 0;
@@ -832,7 +832,7 @@ body .fancytree-node:not(.fancytree-loading) .fancytree-expander {
     line-height: 1ex;
     vertical-align: middle;
 }
-body .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
+/*body .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
     content: "\e622";
     font-family: "trilium-allure-icons" !important;
     font-size: .8em;
@@ -844,7 +844,7 @@ body .fancytree-node.fancytree-expanded .fancytree-expander:before {
     font-size: .8em;
     line-height: 1ex;
     vertical-align: middle;
-}
+}*/
 
 /* tree button */
 body button.tree-floating-button {
@@ -1605,7 +1605,7 @@ body .ck-content h3,
 body .ck-content h4:not(.include-note-title),
 body .ck-content h5:not(.modal-title):not(.note-book-header),
 body .ck-content h6 {
-    color: var(--color-text-accent);
+    color: var(--color-text-primary);
     font-family: var(--font-headers);
     font-weight: bold;
 }
