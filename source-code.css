@@ -91,7 +91,7 @@ html {
     --color-background-accent       : #4C4F52;
     --color-background-item         : #565656;
     --color-background-item-active  : #666;
-    --color-background-popup-header : #1E2134;
+    --color-background-popup-header : #262626;
     --color-background-popup-body   : #161616;
     --color-background-menu         : #363636;
 
@@ -1147,6 +1147,16 @@ body .floating-buttons-children .floating-button {
     color: var(--color-text-secondary);
 }
 
+/* edited notes */
+body .ribbon-tab-container .bx-calendar-edit:before {
+    content: "\ec71";
+}
+
+/* promoted attributes */
+body .ribbon-tab-container .bx-table:before {
+    content: "\e634";
+}
+
 /* Note Details - operation bar - hide button */
 body .ribbon-tab-title[data-ribbon-component-name="similarNotes"],
 body .ribbon-tab-title[data-ribbon-component-name="notePaths"],
@@ -1778,7 +1788,7 @@ body .quick-search {
 body .input-group input,
 body .input-group .input-group-append a {
     border: none;
-    background: var(--color-background-primary) !important;
+    background: var(--color-background-secondary) !important;
     color: var(--color-text-primary) !important;
 }
 body .form-control:focus {
