@@ -6,7 +6,7 @@
 
 trilium 作为一款笔记应用，功能已经足够强大，但是与强大功能对应的确实上世纪画风的界面设计，使用体验很差，主要是因为这种把所有内容并排、按钮包含长文本、单调没有层次的界面并无法让人专注于应该专注的地方，所以我在使用一段时间后，花了点时间写了这个主题，希望能够提供更沉浸的体验。
 
-> 测试版本：`0.54.2`
+> 测试版本：`0.60.4`
 
 ## 特点
 
@@ -19,7 +19,13 @@ trilium 作为一款笔记应用，功能已经足够强大，但是与强大功
 
 为了简化界面，Allure 主题对 trilium 上世纪的画风进行了不少改动
 
-![screenshot](./resources/screenshot.png)
+### Allure-light
+
+![screenshot](./resources/screenshot_light.png)
+
+### Allure-night
+
+![screenshot](./resources/screenshot_night.png)
 
 <!-- ## stable（稳定版）和 radical（激进版）有什么区别
 
