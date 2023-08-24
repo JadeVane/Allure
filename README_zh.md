@@ -21,11 +21,15 @@ trilium 作为一款笔记应用，功能已经足够强大，但是与强大功
 
 ### Allure-light
 
-<img src="/JadeVane/Allure/raw/main/resources/screenshot_light.png" alt="screenshot" style="max-width: 100%; box-shadow: 0 1px 12px -4px #00000070; border: 1px solid #E3E3E3;">
+<div style="box-shadow: 0 1px 12px -4px #00000070; border: 1px solid #E3E3E3;">
+    <img src="/JadeVane/Allure/raw/main/resources/screenshot_light.png" alt="screenshot" style="max-width: 100%;">
+</div>
 
 ### Allure-night
 
-<img src="/JadeVane/Allure/raw/main/resources/screenshot_night.png" alt="screenshot" style="max-width: 100%; box-shadow: 0 1px 12px -4px #00000070; border: 1px solid #E3E3E3;">
+<div style="box-shadow: 0 1px 12px -4px #00000070; border: 1px solid #E3E3E3;">
+    <img src="/JadeVane/Allure/raw/main/resources/screenshot_night.png" alt="screenshot" style="max-width: 100%;">
+</div>
 
 <!-- ## stable（稳定版）和 radical（激进版）有什么区别
 
