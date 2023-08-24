@@ -23,7 +23,7 @@ trilium 作为一款笔记应用，功能已经足够强大，但是与强大功
 
 <div style="box-shadow: 0 1px 12px -4px #00000070; border: 1px solid #E3E3E3;">
 
-    ![Screenshot](./resources/screenshot_light.png)
+![Screenshot](./resources/screenshot_light.png)
 
 </div>
 
@@ -31,7 +31,7 @@ trilium 作为一款笔记应用，功能已经足够强大，但是与强大功
 
 <div style="box-shadow: 0 1px 12px -4px #00000070; border: 1px solid #E3E3E3;">
 
-    ![Screenshot](./resources/screenshot_night.png)
+![Screenshot](./resources/screenshot_night.png)
 
 </div>
 

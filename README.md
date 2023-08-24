@@ -24,7 +24,7 @@ Allure theme has made some interface element changes to provide a better-looking
 
 <div style="box-shadow: 0 1px 12px -4px #00000070; border: 1px solid #E3E3E3;">
 
-    ![Screenshot](./resources/screenshot_light.png)
+![Screenshot](./resources/screenshot_light.png)
 
 </div>
 
@@ -32,7 +32,7 @@ Allure theme has made some interface element changes to provide a better-looking
 
 <div style="box-shadow: 0 1px 12px -4px #00000070; border: 1px solid #E3E3E3;">
 
-    ![Screenshot](./resources/screenshot_night.png)
+![Screenshot](./resources/screenshot_night.png)
 
 </div>
 
