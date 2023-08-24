@@ -101,7 +101,7 @@ html {
     --color-button-hover-center     : #262626;
 
     --color-border                  : #565656;
-    --color-border-light            : #363636;
+    --color-border-light            : #3F3F3F;
     --more-accented-background-color: #333;
     --shadow-mobile-popup           : 0px 0px 16px 0px #1A1A1A;
     /* ------------------- Night mode end ---------------- */
@@ -416,7 +416,7 @@ body .gutter.gutter-horizontal:hover {
     background-color: unset;
 }
 body #center-pane + .gutter.gutter-horizontal {
-    border-left: var(--border-standard);
+    border-left: var(--border-light);
 }
 
 
@@ -694,16 +694,16 @@ body #launcher-pane > .spacer ~ .spacer {
 
 /* icon */
 body #launcher-pane .icon-action {
-    font-size: 1.6em;
+    font-size: 1.2em;
     width: unset;
     height: unset;
     padding: 8px;
-    margin: 4px 8px;
+    margin: 4px 8px 0px 8px;
 }
 body #launcher-pane .launcher-button {
     font-family: 'trilium-allure-icons' !important;
-    font-size: 1.4em;
-    padding: 10px;
+    font-size: 1.2em;
+    padding: 8px;
     margin: 6px 8px;
     width: unset;
     height: unset;
@@ -1306,6 +1306,7 @@ body #right-pane {
 body #right-pane .card-header {
     border-radius: 0;
     padding: 6px 12px;
+    border-bottom: var(--border-light);
 }
 body #right-pane .card-body {
     padding: 12px;
