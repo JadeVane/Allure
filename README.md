@@ -22,15 +22,11 @@ Allure theme has made some interface element changes to provide a better-looking
 
 ### Allure-light
 
-<div style="box-shadow: 0 1px 12px -4px #00000070; border: 1px solid #E3E3E3;">
-    <img src="/JadeVane/Allure/raw/main/resources/screenshot_light.png" alt="screenshot" style="max-width: 80%;">
-</div>
+![Screenshot](./resources/screenshot_light.png)
 
 ### Allure-night
 
-<div style="box-shadow: 0 1px 12px -4px #00000070; border: 1px solid #E3E3E3;">
-    <img src="/JadeVane/Allure/raw/main/resources/screenshot_night.png" alt="screenshot" style="max-width: 80%;">
-</div>
+![Screenshot](./resources/screenshot_night.png)
 
 <!-- ## What's different between stable version and radical version
 
