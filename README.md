@@ -20,13 +20,7 @@ trilium is an excellent note taking app with powerful features, however, the exc
 
 Allure theme has made some interface element changes to provide a better-looking interface
 
-### Allure-light
-
-![Screenshot](./resources/screenshot_light.png)
-
-### Allure-night
-
-![Screenshot](./resources/screenshot_night.png)
+![Screenshot](./resources/screenshot.png)
 
 <!-- ## What's different between stable version and radical version
 

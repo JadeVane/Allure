@@ -3,8 +3,8 @@
 # Select which theme to copy will be automatically transferred to the clipboard,
 # Only valid in linux, and you should install xclip by hand
 # Value: clear, night
-# clip=clear
-clip=night
+clip=clear
+# clip=night
 
 # Choose whether to use the radical version by default
 # Only valid in linux, and you should install xclip by hand
