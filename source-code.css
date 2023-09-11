@@ -1585,7 +1585,7 @@ body .note-list-container p {
 }
 body .note-book-card.expanded .note-book-content {
     padding-top: 0;
-    line-height: 1.2em;
+/*    line-height: 1.2em;*/
 }
 body .rendered-note-content > *:first-child {
     margin-top: 6px;
@@ -1598,7 +1598,7 @@ body .rendered-note-content > * {
     text-overflow: ellipsis;
     margin: 0;
 }
-body .rendered-note-content > span,
+/*body .rendered-note-content > span,
 body .rendered-note-content > br {
     display: none;
 }
@@ -1607,7 +1607,7 @@ body .rendered-note-content {
 }
 body .rendered-note-content pre {
     white-space: inherit;
-}
+}*/
 /*body .note-list-widget {
     margin-top: 68px;
 }*/
@@ -1618,15 +1618,15 @@ body .note-list-widget:before {
     display: block;
 }
 body .rendered-note-content .ck-content * {
-    margin: 0 !important;
+/*    margin: 0 !important;
     font-size: 14px;
-    border: none;
+    border: none;*/
 /*    display: inline;*/
-    padding: 0;
+/*    padding: 0;*/
     font-family: var(--font-body);
-    font-weight: normal;
+/*    font-weight: normal;
     color: inherit;
-    line-height: 1.6;
+    line-height: 1.6;*/
 }
 /*body .note-book-header .rendered-note-attributes {
     display: block;
