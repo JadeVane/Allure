@@ -1,12 +1,20 @@
 English | [简体中文](./README_zh.md)
 
+## Project Status
+
+I used Trilium for a while, then developed a set of themes to my liking, and then open sourced it to GitHub on a whim, hoping that more people could use it.
+
+Now I no longer use Trilium, but considering that many people are still using this theme, I will continue to maintain this project. If I have new ideas for this theme one day in the future, I may upgrade it. theme, but in any case, in order to make this theme available on the latest version of Trilium, I will ensure basic adaptation.
+
+Therefore, when Trilium updates cause Allure to become unusable, you can open an issue to notify me, and I will complete the adaptation work when I am free.
+
+> tested on: `0.63.5`
+
 ## About
 
 **Allure** is a theme for trilium with a more beautiful interface and higher focus which means that just focus on what you need.
 
 trilium is an excellent note taking app with powerful features, however, the excellent features don't lead to a pleasant experience, mainly because the interface with all the content side by side, buttons containing long text, and monotonous without layers is really not good enough, so after a period of time, I create allure theme after using it for a while, hoping to provide a more immersive visual experience.
-
-> tested on: `0.60.4`
 
 ## Features
 
