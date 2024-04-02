@@ -1669,7 +1669,7 @@ body #center-pane .split-note-container-widget > .type-file,
 body #center-pane .split-note-container-widget > .type-code {
 /*    padding: 0 var(--padding-around-note-body);*/
 /*    max-width: var(--width-actual-note-body);*/
-    margin: 0 0 43px 0;
+    margin-bottom: 43px;
     width: 100%;
     border-radius: var(--border-radius-standard);
 }
