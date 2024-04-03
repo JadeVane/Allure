@@ -50,8 +50,10 @@ Install the theme by following these steps:
 
 1. create a new note in trilium (of type **CSS**) named `Allure-clear` / `Allure-night` *(the name of note depends on which theme you want to apply)*
 1. pick a theme below, copy the content of it and paste it into the new note created above:
-    - [Allure-clear.css](https://github.com/JadeVane/Allure/releases/latest/download/Allure-clear.css)
-    - [Allure-night.css](https://github.com/JadeVane/Allure/releases/latest/download/Allure-night.css)
+    <!-- - [Allure-clear.css](https://github.com/JadeVane/Allure/releases/latest/download/Allure-clear.css) -->
+    - [Allure-clear.css](./Allure-clear.css)
+    <!-- - [Allure-night.css](https://github.com/JadeVane/Allure/releases/latest/download/Allure-night.css) -->
+    - [Allure-night.css](./Allure-night.css)
 1. add `#appTheme=[theme_name]` attribute to the note
 1. download all the fonts in [fonts](./fonts/), then right-click on the note and select `Import to note` to import all fonts
 1. add attribute `#customResourceProvider="font-name.suffix"` to each fonts

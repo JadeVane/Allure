@@ -49,8 +49,8 @@ radical 版比 stable 版对界面做了更大的改动，目的是尽最大可�
 
 1. 创建一个新笔记，类型为 `CSS`，命名为 `Allure-clear` / `Allure-night` *(笔记叫什么名字取决于你要使用哪个主题)*
 1. 选择一个主题，然后复制主题的内容到刚才创建的笔记
-    - [Allure-clear.css](https://github.com/JadeVane/Allure/releases/latest/download/Allure-clear.css)
-    - [Allure-night.css](https://github.com/JadeVane/Allure/releases/latest/download/Allure-night.css)
+    - [Allure-clear.css](./Allure-clear.css)
+    - [Allure-night.css](./Allure-night.css)
 1. 添加 `#appTheme=主题名称` 属性
 1. 下载 [fonts](./fonts/) 里面的全部字体，然后在主题笔记右键，选择 `Import to note` 导入全部字体
 1. 为每个字体添加 `#customResourceProvider="字体名称.字体文件后缀"` 属性
