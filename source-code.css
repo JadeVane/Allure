@@ -731,8 +731,8 @@ body #launcher-pane .bx-map-alt {
 }
 
 /* global menu */
-body #launcher-pane .icon-action.global-menu-button {
-    background: unset;
+body #launcher-pane .icon-action.global-menu-button > svg {
+    display: none;
 }
 body #launcher-pane .icon-action.global-menu-button:hover {
     background-color: var(--color-background-menu);
