@@ -730,10 +730,17 @@ body #launcher-pane .bx-map-alt {
     display: none;
 }
 
-/* global menu */
+
+/* global menu: hide original icon */
+/* for Trilium */
+body #launcher-pane .icon-action.global-menu-button {
+    background: unset;
+}
+/* for TriliumNext */
 body #launcher-pane .icon-action.global-menu-button > svg {
     display: none;
 }
+
 body #launcher-pane .icon-action.global-menu-button:hover {
     background-color: var(--color-background-menu);
 }
