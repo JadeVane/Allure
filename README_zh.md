@@ -8,7 +8,7 @@
 
 所以，当 Trilium 更新导致 Allure 用不了时，你可以开个 issue 通知我，我将在有空时完成适配工作。
 
-> 当前测试版本：`0.63.5`
+> 当前测试版本：`Trilium 0.63.7` `TriliumNext 0.90.4` `Trilium-translation 2024-05-30`
 
 ## 介绍
 
