@@ -609,7 +609,8 @@ body .dropdown-item {
 }
 body .dropdown-item .bx {
     vertical-align: middle;
-    margin-right: -18px;
+/*    下面这条用于优化官方原版样式，但translated版本已默认优化，为了兼容两方，所以注释掉  */
+/*    margin-right: -18px;*/
 }
 body .dropdown-item.active,
 body .dropdown-menu a:hover:not(.disabled),
