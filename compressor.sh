@@ -52,6 +52,7 @@ for (( i = 0; i <= ${#theme[@]}; i++ )); do
         #                           ${source_file}`
         content_raw=`sed -r -e '/Default mode start/,/Default mode end/d' ${source_file}`
 
+        # elif [[ ${theme[i]} == "night" ]]; then
     else
         exit 0;
     fi

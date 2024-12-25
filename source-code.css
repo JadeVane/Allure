@@ -602,20 +602,35 @@ body #recent-changes-dialog li span {
 body .dropdown-menu {
     border: none;
     box-shadow: var(--shadow-mobile-popup);
+    border-radius: 8px;
 }
 body .dropdown-item {
-    padding: .25rem 1.2rem;
+    padding: .1rem .8rem;
     font-size: 14px;
+    margin: 4px 0;
+}
+body .dropdown-item.disabled {
+    font-size: 12px;
+    border-bottom: var(--border-standard);
 }
 body .dropdown-item .bx {
     vertical-align: middle;
 /*    下面这条用于优化官方原版样式，但translated版本已默认优化，为了兼容两方，所以注释掉  */
 /*    margin-right: -18px;*/
 }
+body .dropdown-item:focus {
+    background: var(--hover-item-background-color) !important;
+}
 body .dropdown-item.active,
 body .dropdown-menu a:hover:not(.disabled),
 body .dropdown-item:hover:not(.disabled) {
     border: 1px solid transparent !important;
+}
+body .dropdown-item a {
+    border: none;
+}
+body .dropdown-item small {
+    color: var(--color-text-inconspicuous);
 }
 body .dropdown-divider {
     border: none;
@@ -1359,9 +1374,13 @@ body .ribbon-container {
     padding: 4px var(--padding-inside-note-body) 4px 42px;
     margin: 0;
     z-index: 9;
-    width: calc(100% - var(--padding-inside-note-body) - var(--padding-around-note-body));
+/*    width: calc(100% - var(--padding-inside-note-body) - var(--padding-around-note-body));*/
 /*    max-width: calc(var(--width-note-body) + var(--padding-inside-note-body));*/
     background-color: var(--color-background-secondary);
+    width: -webkit-fill-available;
+}
+body .ribbon-container .btn.btn-primary {
+    background: var(--color-button-accent);
 }
 body .ribbon-top-row {
     width: fit-content;
@@ -1815,6 +1834,38 @@ body .note-detail .input-group {
 body .quick-search {
     padding: 0;
     height: var(--height-top-bar);
+}
+body .quick-search .dropdown-menu {
+    max-height: 646px;
+    color: var(--color-text-inconspicuous) !important;
+    box-shadow: var(--shadow-standard);
+    border: var(--border-light);
+}
+body .quick-search .dropdown-menu .dropdown-item {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--color-text-inconspicuous) !important;
+    width: auto;
+}
+body .quick-search .dropdown-menu .dropdown-item a {
+    color: var(--color-text-primary);
+}
+body .quick-search a.dropdown-item button {
+    padding: 0;
+}
+body .quick-search .dropdown-menu span.dropdown-item:not(.disabled):before,
+body .quick-search a.dropdown-item:before {
+    font-family: 'trilium-allure-icons';
+    margin-right: 8px;
+    font-size: 16px;
+    color: var(--color-text-primary);
+}
+body .quick-search .dropdown-menu span.dropdown-item:not(.disabled):before {
+    content: "\e638";
+}
+body .quick-search a.dropdown-item:before {
+    content: "\ebf7";
 }
 /*body .input-group input,
 body .input-group .input-group-append a {
