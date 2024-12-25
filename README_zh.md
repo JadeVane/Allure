@@ -81,5 +81,6 @@ radical 版比 stable 版对界面做了更大的改动，目的是尽最大可�
 - Chee Rabbits
 - Jonathon Fuller
 - Artjom Vitsjuk
+- Judging Xu
 
 感谢你们的捐赠！

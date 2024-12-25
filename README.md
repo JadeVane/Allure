@@ -84,5 +84,6 @@ Donation list：
 - Chee Rabbits
 - Jonathon Fuller
 - Artjom Vitsjuk
+- Judging Xu
 
 Thank you for your donation which really inspired me!
