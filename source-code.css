@@ -622,7 +622,6 @@ body .dropdown-item:focus {
     background: var(--hover-item-background-color) !important;
 }
 body .dropdown-item.active,
-body .dropdown-menu a:hover:not(.disabled),
 body .dropdown-item:hover:not(.disabled) {
     border: 1px solid transparent !important;
 }
@@ -694,7 +693,7 @@ body .find-box .find-input {
 
 body #launcher-pane {
     width: fit-content !important;
-    padding: 12px 0;
+    padding: 4px 0;
 }
 
 body #launcher-pane > .spacer {
@@ -1836,10 +1835,12 @@ body .quick-search {
     height: var(--height-top-bar);
 }
 body .quick-search .dropdown-menu {
-    max-height: 646px;
+    max-height: unset;
     color: var(--color-text-inconspicuous) !important;
     box-shadow: var(--shadow-standard);
     border: var(--border-light);
+    transform: translate(-1px, 42px) !important;
+    padding: 4px 0;
 }
 body .quick-search .dropdown-menu .dropdown-item {
     text-overflow: ellipsis;
