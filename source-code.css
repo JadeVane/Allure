@@ -462,13 +462,17 @@ body textarea:focus-visible {
 /*---------------------------------------------------------------*/
 
 /* POPUP - Tooltip */
-/*body .tooltip {
-    top: 16px !important;
-}*/
+body .tooltip {
+    z-index: 1080 !important;
+}
 body .tooltip-inner {
-    border: none;
-    box-shadow: 0px 1px 6px -1px var(--color-background-accent);
+    box-shadow: var(--shadow-standard);
     padding: 12px 16px;
+    background: var(--color-background-menu) !important;
+    border: var(--border-light);
+}
+body .note-tooltip-content {
+    overflow: hidden;
 }
 
 /* Modal */
@@ -1839,8 +1843,9 @@ body .quick-search .dropdown-menu {
     color: var(--color-text-inconspicuous) !important;
     box-shadow: var(--shadow-standard);
     border: var(--border-light);
-    transform: translate(-1px, 42px) !important;
+    transform: unset !important;
     padding: 4px 0;
+    top: 100% !important;
 }
 body .quick-search .dropdown-menu .dropdown-item {
     text-overflow: ellipsis;
