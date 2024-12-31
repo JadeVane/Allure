@@ -610,17 +610,8 @@ body .dropdown-menu {
 }
 body .dropdown-item {
     padding: .1rem .8rem;
-    font-size: 14px;
+/*    font-size: 14px;*/
     margin: 4px 0;
-}
-body .dropdown-item.disabled {
-    font-size: 12px;
-    border-bottom: var(--border-standard);
-}
-body .dropdown-item .bx {
-    vertical-align: middle;
-/*    下面这条用于优化官方原版样式，但translated版本已默认优化，为了兼容两方，所以注释掉  */
-/*    margin-right: -18px;*/
 }
 body .dropdown-item:focus {
     background: var(--hover-item-background-color) !important;
@@ -637,22 +628,32 @@ body .dropdown-item small {
 }
 body .dropdown-divider {
     border: none;
-    border-top: var(--border-standard);
+    border-top: var(--border-light);
+    margin-left: .8rem;
+    margin-right: .8rem;
 }
 body #context-menu-container .dropdown-item {
-    padding: 0px 8px;
+    padding: .1rem .8rem;
 }
 body #context-menu-container,
 body #context-menu-container .dropdown-menu {
-    padding: 12px 0;
+    padding: 6px 0;
+    border: var(--border-light);
+}
+body .dropdown-menu.dropend .bx {
+    margin-right: -12px;
 }
 body #context-menu-container .dropdown-submenu .dropdown-menu {
-    border: var(--border-standard);
+    border: var(--border-light);
     margin-left: -2px;
 }
+body .editability-dropdown .dropdown-item:not(:last-child) {
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+}
 body .editability-dropdown .dropdown-item div {
-    color: inherit;
-    font-style: italic;
+    padding-left: 22px;
+    line-height: 1rem;
 }
 body .dropdown-item .check {
     margin-left: 4px;
@@ -724,8 +725,8 @@ body #launcher-pane .launcher-button {
     font-size: 1.2em;
     padding: 8px;
     margin: 6px 8px;
-    width: unset;
-    height: unset;
+    width: unset !important;
+    height: unset !important;
     border-radius: var(--border-radius-middle);
 }
 body #launcher-pane .launcher-button.bx-check-shield {
@@ -773,17 +774,18 @@ body .global-menu {
 }
 body .global-menu .dropdown-menu {
     min-width: 21em;
+    border: var(--border-light);
 }
 body .global-menu-button-update-available {
     right: -20px;
     bottom: -20px;
 }
-body .global-menu .dropdown-menu .bx {
-    line-height: 1.2em;
-    vertical-align: middle;
+body .dropdown-menu .bx {
+/*    vertical-align: middle;*/
     font-family: 'trilium-allure-icons' !important;
-    font-size: 1.2em;
-    top: unset;
+/*    line-height: 1.2em;*/
+/*    font-size: 1.2em;*/
+    top: unset !important;
 }
 
 body #launcher-pane .global-menu .zoom-container.dropdown-item .bx {
@@ -1724,6 +1726,9 @@ body #center-pane .split-note-container-widget > .type-code {
 }
 body #center-pane .split-note-container-widget > div > div {
     overflow: unset !important;
+}
+body #center-pane .split-note-container-widget .scrolling-container {
+    contain: size;
 }
 
 
