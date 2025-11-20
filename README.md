@@ -44,9 +44,14 @@ The additional changes in the current radical version:
 
 **Do NOT keep more than one version of css style to trilium, or the styles of several css style will affect each other and cause unexpected errors** -->
 
-## Steps
+## Steps by Steps
 
-Install the theme by following these steps:
+### Easy installation (Recommend)
+
+1. Download `Allure-clear.zip` or `Allure-night.zip` in the release page, then right-click on any note and select "Import to note"
+2. Select the file you just downloaded and **uncheck Safe Import**, then click "Import"
+
+### Manual installation
 
 1. create a new note in trilium (of type **CSS**) named `Allure-clear` / `Allure-night` *(the name of note depends on which theme you want to apply)*
 1. pick a theme below, copy the content of it and paste it into the new note created above:
@@ -57,6 +62,9 @@ Install the theme by following these steps:
 1. add `#appTheme=[theme_name]` attribute to the note
 1. download all the fonts in [fonts](./fonts/), then right-click on the note and select `Import to note` to import all fonts
 1. add attribute `#customResourceProvider="font-name.suffix"` to each fonts
+
+## Enable Allure Theme
+
 1. go to Menu > Options, and select `Allure-clear` / `Allure-night` as your new theme
 1. Press `F5` or `Ctrl` + `R` to reload the page
 
