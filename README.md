@@ -8,7 +8,7 @@ Now I no longer use Trilium, but considering that many people are still using th
 
 Therefore, when Trilium updates cause Allure to become unusable, you can open an issue to notify me, and I will complete the adaptation work when I am free.
 
-> tested on: `Trilium 0.63.7` `TriliumNext 0.90.4` `Trilium-translation 2024-05-30`
+> tested on: `TriliumNext 0.99.5`
 
 ## About
 
