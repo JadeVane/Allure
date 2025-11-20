@@ -327,43 +327,41 @@ body .fancytree-node:not(.fancytree-folder) .fancytree-expander:before {
     margin-right: 8px;
     z-index: 999;
 }*/
+body .title-bar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-right: 16px;
+}
 body .title-bar-buttons div button {
     font-size: .7rem;
     padding: 0 !important;
     border-radius: 12px;
     margin: 2px;
-    color: var(--color-button-accent) !important;
+    color: transparent !important;
     height: 16px;
     width: 16px;
-    display: inline-block;
-    background-color: var(--color-background-item-active) !important;
+    border: 1px solid #00000020 !important;
 }
 body .title-bar-buttons .top-btn button {
     font-size: 1em;
 }
 body .title-bar-buttons div:hover button {
-    background-color: var(--color-background-item-active) !important;
     color: var(--color-text-primary) !important;
-}
-body .title-bar-buttons div button:hover {
-    border: none !important;
 }
 body .title-bar-buttons .top-btn:hover button {
     border: none !important;
     background-color: unset !important  ;
 }
-body .title-bar-buttons div button:before {
-    font-family: 'trilium-allure-icons';
+body .title-bar-buttons .maximize-btn button:before {
+    content: '\e628';
 }
-body .title-bar-buttons div button.minimize-btn:before {
-    content: '\e9c0';
-}
-body .title-bar-buttons div button.maximize-btn:before {
-    content: '\e9bc';
-}
-body .title-bar-buttons div button.close-btn:before {
-    content: '\e9bb';
-}
+body .title-bar-buttons .minimize-btn button { background: #fdc92d !important; }
+body .title-bar-buttons .maximize-btn button { background: #28d33f !important; }
+body .title-bar-buttons .close-btn button    { background: #fe6254 !important; }
+/*body .title-bar-buttons div button.minimize-btn:before  { content: '\e9c0'; }
+body .title-bar-buttons div button.maximize-btn:before  { content: '\e9bc'; }
+body .title-bar-buttons div button.close-btn:before     { content: '\e9bb'; }*/
 
 /* pin button */
 body .title-bar-buttons .top-btn button {
@@ -428,10 +426,6 @@ body .title-bar-buttons {
 body .title-bar-buttons div {
     width: unset;
     height: unset;
-    margin: calc((var(--height-top-bar) - 20px) / 2) 0 0;
-}
-body .title-bar-buttons div:last-of-type {
-    margin-right: 12px;
 }
 body .title-bar-buttons div button.icon-action {
     border-radius: 20px;
@@ -504,7 +498,8 @@ body #recent-changes-dialog .modal-dialog-scrollable .modal-body {
     overflow: auto;
 }
 body .form-control {
-    border: var(--border-standard);
+    border: unset;
+    background: inherit;
 }
 body .nav-tabs {
     border-bottom: unset;
@@ -626,6 +621,9 @@ body .dropdown-item a {
 body .dropdown-item small {
     color: var(--color-text-inconspicuous);
 }
+body .dropdown-item .keyboard-shortcut {
+    color: var(--color-text-secondary);
+}
 body .dropdown-divider {
     border: none;
     border-top: var(--border-light);
@@ -639,9 +637,6 @@ body #context-menu-container,
 body #context-menu-container .dropdown-menu {
     padding: 6px 0;
     border: var(--border-light);
-}
-body .dropdown-menu.dropend .bx {
-    margin-right: -12px;
 }
 body #context-menu-container .dropdown-submenu .dropdown-menu {
     border: var(--border-light);
@@ -780,7 +775,9 @@ body .global-menu-button-update-available {
     right: -20px;
     bottom: -20px;
 }
-body .dropdown-menu .bx {
+body .global-menu .dropdown-menu .bx,
+body #context-menu-container .bx,
+body .note-actions .dropdown-menu .bx {
 /*    vertical-align: middle;*/
     font-family: 'trilium-allure-icons' !important;
 /*    line-height: 1.2em;*/
@@ -979,18 +976,21 @@ body .scroll-padding-widget {
 
 /* Tabs */
 body .tab-row-widget .tab-row-widget-container .note-tab {
-    display: inline-block;
+    display: flex;
     transform: none;
     max-width: fit-content;
     flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
 }
 body .tab-row-widget .note-tab,
 body .tab-row-widget .note-tab .note-tab-wrapper,
 body .tab-row-widget .note-new-tab {
     position: relative;
 }
-body .tab-row-widget .tab-row-widget-container {
+body .tab-row-widget-container {
     display: flex;
+    width: unset !important;
 }
 body .tab-row-widget .note-tab .note-tab-title {
     font-size: .9em;
@@ -1003,23 +1003,20 @@ body .tab-row-widget .note-tab .note-tab-wrapper {
 /*    margin-top: 10px;*/
 }
 body .tab-row-widget:first-of-type .note-tab .note-tab-wrapper {
-    padding: 6px 16px 6px 14px;
-/*    margin-left: -5px;*/
-/*    border-right: var(--border-light);*/
-/*    border-bottom: var(--border-light);*/
+    padding: 2px 12px 2px 10px;
+    border-radius: var(--border-radius-middle);
+    margin: 4px;
 }
 
 body .tab-row-widget .note-tab[active] .note-tab-wrapper {
     font-weight: normal;
     border-bottom: none;
 }
-body .tab-row-widget .note-tab[active] .note-tab-wrapper:after {
+body .tab-row-widget .note-tab[active]:after {
     content: "";
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    height: 4px;
+    width: 20px;
+    border-radius: 4px;
     background-color: var(--code-blue);
 }
 /* Tabs - note tab close button */
@@ -1049,7 +1046,7 @@ body .note-tab-close:before {
     font-size: 12px;
 }
 /* new tab button */
-body .tab-row-widget .tab-row-widget-container .note-new-tab {
+body .tab-row-widget .note-new-tab {
     transform: none;
     width: unset;
     height: unset;
@@ -1080,7 +1077,7 @@ body .note-list-widget {
     margin-bottom: 68px;
 }
 body .note-detail {
-    padding: var(--padding-inside-note-body);
+    padding: 12px var(--padding-inside-note-body);
 }
 body .CodeMirror {
     color: var(--color-text-primary);
@@ -1157,28 +1154,48 @@ body .cm-s-default .cm-builtin {
 
 /* Note Details - title */
 body .title-row {
-    margin: 32px 0 16px;
+    margin: 24px 0 0 -4px;
     line-height: 4em;
 }
 body .title-row .note-title-widget {
 /*    margin: auto;*/
     max-width: var(--width-actual-note-body);
 }
+body .note-title-widget input {
+    background: unset !important;
+}
 body .title-row .spacer {
     display: none;
 }
 body .title-row .note-title-widget .note-title {
-    padding: 6px 12px;
+    /*padding: 6px 12px;*/
     font-size: 1.6em;
     font-weight: bold;
     font-family: var(--font-headers);
     line-height: 1.4em;
-    margin-left: -12px;
+    /*margin-left: -12px;*/
     width: calc(100% + 24px);
+    padding: 0;
 }
 body .title-row .note-title-widget .note-title:focus-visible {
     outline: none;
 }
+
+/* title icon */
+body .note-icon-widget {
+    width: unset;
+    padding-inline-start: unset;
+}
+body .note-icon-widget .note-icon {
+    opacity: 0;
+    padding: 0;
+    font-size: 20px;
+}
+body .title-row:hover .note-icon {
+    opacity: 1;
+}
+
+
 
 /* Note details - close button */
 span.button-widget.icon-action.bx.component.bx-x {
@@ -1223,12 +1240,43 @@ body .note-icon-widget button.note-icon:hover {
     border-color: transparent;
 }
 
-/* float button */
-body .floating-buttons .floating-buttons-children > button,
-body .floating-buttons .floating-buttons-children .floating-button {
+/* Float button */
+body .floating-buttons-children,
+body .show-floating-buttons {
+    box-shadow: var(--shadow-card);
+    border: var(--border-light);
+    border-radius: 30px;
+    background: var(--color-background-secondary);
+}
+body .floating-buttons-children {
+    padding: 0 6px;
+}
+body .floating-buttons .btn {
     font-size: 1.2em;
-    padding: 4px;
     width: unset;
+    border-radius: unset;
+    padding: 6px;
+    border: none !important;
+    background: unset !important;
+}
+body .floating-buttons .btn:before {
+    font-family: 'trilium-allure-icons';
+}
+body .floating-buttons-children > * {
+    margin: 0 !important;
+    margin-inline-start: 0 !important;
+}
+body .backlinks-ticker {
+    border-color: unset;
+    background: unset;
+}
+body .close-floating-buttons {
+    border-left: var(--border-light);
+    padding-left: 2px;
+    margin-left: 6px !important;
+}
+body .bx-chevrons-left:before {
+    content: "";
 }
 
 /* edited notes */
@@ -1316,6 +1364,9 @@ body .ribbon-tab-title.active {
     background-color: var(--color-background-primary);
     /*border-top: var(--border-option-active);*/
 }
+body .ribbon-body {
+    border-bottom: unset;
+}
 body .ribbon-body.active {
     margin: 0;
     /*position: absolute;*/
@@ -1332,7 +1383,6 @@ body .attribute-list {
 body .bx-plus:before {
     font-size: .8em;
 }
-
 
 /* table of content */
 body #right-pane {
@@ -1729,6 +1779,7 @@ body #center-pane .split-note-container-widget > div > div {
 }
 body #center-pane .split-note-container-widget .scrolling-container {
     contain: size;
+    background: unset !important;
 }
 
 
@@ -1838,6 +1889,26 @@ body .ck-content h6 {
 body .note-detail .input-group {
     padding-right: 8px;
     border-radius: var(--border-radius-standard);
+    display: flex;
+    align-items: center;
+    background: var(--color-background-secondary);
+    box-shadow: var(--shadow-card);
+    border-radius: var(--border-radius-middle);
+    gap: 6px;
+    border: var(--border-light);
+}
+body .note-detail .input-group input {
+    background: unset;
+}
+body .note-detail-empty-results .aa-dropdown-menu {
+    border: var(--border-light);
+    border-radius: var(--border-radius-middle);
+    box-shadow: var(--shadow-card);
+    overflow-x: hidden;
+    padding: 10px 4px;
+}
+body .full-text-search-button {
+    line-height: 1ex;
 }
 body .quick-search {
     padding: 0;
@@ -1924,4 +1995,14 @@ body .split-note-container-widget > .component > .component:nth-of-type(5),
 body .split-note-container-widget > .component > .component:nth-of-type(6),
 body .split-note-container-widget > .component > .component:nth-of-type(7) {
     overflow: visible !important;
+}
+
+
+.ck.ck-dropdown .ck-dropdown__panel.ck-dropdown__panel_se,
+.ck.ck-dropdown .ck-dropdown__panel.ck-dropdown__panel_sw,
+.ck.ck-dropdown .ck-dropdown__panel.ck-dropdown__panel_smw,
+.ck.ck-dropdown .ck-dropdown__panel.ck-dropdown__panel_sme,
+.ck.ck-dropdown .ck-dropdown__panel.ck-dropdown__panel_s {
+    bottom: 100%;
+    top: auto;
 }
