@@ -51,6 +51,9 @@ The additional changes in the current radical version:
 1. Download `Allure-clear.zip` or `Allure-night.zip` in the release page, then right-click on any note and select "Import to note"
 2. Select the file you just downloaded and **uncheck Safe Import**, then click "Import"
 
+> How to upgrade?
+> Just delete the theme file and re-import the latest version.
+
 ### Manual installation
 
 1. create a new note in trilium (of type **CSS**) named `Allure-clear` / `Allure-night` *(the name of note depends on which theme you want to apply)*
@@ -62,6 +65,9 @@ The additional changes in the current radical version:
 1. add `#appTheme=[theme_name]` attribute to the note
 1. download all the fonts in [fonts](./fonts/), then right-click on the note and select `Import to note` to import all fonts
 1. add attribute `#customResourceProvider="font-name.suffix"` to each fonts
+
+> How to upgrade?
+> Copy the latest css file content and replace Allure-icon.woff2 in it. If other fonts are updated, other font files also need to be replaced.
 
 ## Enable Allure Theme
 
